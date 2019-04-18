@@ -56,7 +56,7 @@ var XFInit = cc.Class({
                 G.SceneManager.Instance.Execute(eventCode, message);
                 break;
             case G.AreaCode.Net:
-                G.NetManager.Instance.Execute(eventCode, message);
+                G.NetManager.Instance.Execcute(eventCode, message);
                 break;
             default:
                 break;

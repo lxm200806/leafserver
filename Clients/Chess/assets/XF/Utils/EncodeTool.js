@@ -108,7 +108,6 @@ EncodeTool.DecodePacket = function(_recBuffer){
     var packet = {};
     packet.Flag =  buffView.getUint8(2, true);
     packet.OpCode = buffView.getUint16(3, true);
-    var buffView = null;
     if(packet.Flag == 0){
         packet.RpcID = 0;
         packet.bytes = _recBuffer.slice(5);
@@ -118,6 +117,89 @@ EncodeTool.DecodePacket = function(_recBuffer){
         packet.bytes = _recBuffer.slice(9);
     }
     return packet;
+}
+
+/**
+ * Leaf Server Packet
+ * 
+ * OpCode : Uint16 2个字节
+ * bytes ://protobuffer 数据
+ * 
+ *  */
+EncodeTool.EncodePacket_Leaf = function(_pbMsg, _opCode){
+
+    var msgBuff = _pbMsg.toArrayBuffer();
+    let packetBuff=new Uint8Array(msgBuff.length+2);
+
+    let opCodeBinary = this.IntToUint8Array(_opCode,16);
+    let opCodeUnit8 = new Uint8Array(opCodeBinary);
+    packetBuff.set(opCodeUnit8,0);
+    packetBuff.set(msgBuff.subarray(0, msgBuff.length),2);
+
+    // var msgView = new Uint8Array(msgBuff);
+    // var buffView = new DataView(packetBuff, 0, 2);
+    // buffView.setUint16(0, _opCode, true);
+    // buffView = new Uint8Array(packetBuff, 2, msgBuff.length);
+    // buffView.set(msgView);
+
+    return packetBuff;
+
+
+},
+
+EncodeTool.DecodePacket_Leaf = function(_recBuffer){
+
+    var packet = {};
+
+    let dataUnit8Array = new Uint8Array(_recBuffer);
+    let opCode = EncodeTool.Uint8ArrayToInt(dataUnit8Array.slice(0,2));
+    console.log("receive message id = "+id);
+    dataUnit8Array = dataUnit8Array.slice(2);
+    packet.OpCode = opCode;
+    packet.bytes = dataUnit8Array;
+
+    // var buffView = new DataView(_recBuffer, 0, 2);    
+    // packet.OpCode = buffView.getUint16(0, true);
+    // packet.bytes =  _recBuffer.slice(2);
+
+    return packet;
+}
+
+
+/**
+ * int 转 Uint8Array
+ *  */
+EncodeTool.IntToUint8Array = function(num, Bits){
+    let resArry = [];
+    let xresArry = [];
+    let binaryStr = num.toString(2);
+    for(let i=0;i<binaryStr.length;i++)
+        resArry.push(parseInt(binaryStr[i]));
+
+    if (Bits) {
+        for(let r = resArry.length; r < Bits; r++) {
+            resArry.unshift(0);
+        }
+    }
+
+    let  resArryStr= resArry.join("");
+    for(let j=0;j<Bits;j+=8)
+        xresArry.push(parseInt(resArryStr.slice(j,j+8),2));
+
+    return xresArry;
+}
+
+/**
+ * Uint8Array[]转int
+ * 相当于二进制加上4位。同时，使用|=号拼接数据，将其还原成最终的int数据
+ * @param uint8Ary Uint8Array类型数组
+ * @return int数字
+ */
+EncodeTool.Uint8ArrayToInt = function(_uint8Ary){
+    let retInt =0;
+    for(let i= 0;i<_uint8Ary.length;i++)
+        retInt|=(_uint8Ary[i] << (8*(_uint8Ary.length-i-1)));
+    return retInt;
 }
 
 

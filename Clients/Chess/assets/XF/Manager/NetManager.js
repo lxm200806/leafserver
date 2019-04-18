@@ -19,7 +19,8 @@ var NetManager = cc.Class({
 
     Send(pbMsg, opCode){
         if(this.ws){
-            this.ws.send(EncodeTool.EncodeActorPacket(pbMsg, opCode));
+            // this.ws.send(EncodeTool.EncodeActorPacket(pbMsg, opCode));
+            this.ws.send(EncodeTool.EncodePacket_Leaf(pbMsg, opCode));
         }else{
             console.error("this.ws is null");
         }
@@ -80,7 +81,16 @@ var NetManager = cc.Class({
         console.log('NetManager close'+ev);
     },
 
-    OnMessage: function(ev, param){
+    OnMessage(ev, param){
+        this.OnMessage_Leaf(ev, param);
+    },
+
+    OnMessage_Leaf(ev, param){
+        var packet = EncodeTool.DecodePacket_Leaf(ev.data);
+        this.messageHandler.OnReceive(packet.OpCode, packet.bytes);
+    },
+
+    OnMessage_ET(ev, param){
         var packet = EncodeTool.DecodePacket(ev.data);
         if(!packet) return;
         if(packet.Flag == 0x00){
