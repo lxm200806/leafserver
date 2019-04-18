@@ -1,0 +1,45 @@
+var SceneManager = cc.Class({
+    extends: require("ManagerBase"),
+
+    Execute: function(eventCode, sceneMsg){
+        switch (eventCode) {
+            case G.Event_Scene.LOADING_SCENE:
+                this.LoadingScene(sceneMsg);
+                break;
+            case G.Event_Scene.LOAD_SCENE_LOGIN:
+                var msg = new SceneMsg('Login');
+                this.Dispatch(G.AreaCode.Scene, G.Event_Scene.LOADING_SCENE, msg);
+                break;
+            case G.Event_Scene.LOAD_SCENE_MAIN:
+                var msg = new SceneMsg('Main');
+                this.Dispatch(G.AreaCode.Scene, G.Event_Scene.LOADING_SCENE, msg);
+                break;
+            case G.Event_Scene.LOAD_SCENE_FIGHT:
+                var msg = new SceneMsg('Fight');
+                this.Dispatch(G.AreaCode.Scene, G.Event_Scene.LOADING_SCENE, msg);
+                break;
+            default:
+                break;
+        }
+    },
+
+    Init: function () {
+        G.SceneManager.Instance = this;
+
+    },
+
+    LoadingScene: function(sceneMsg){
+        cc.director.preloadScene(sceneMsg.name, function(err){
+            if(!err){
+                cc.director.loadScene(sceneMsg.name, function(err){
+                    sceneMsg.loaded(err);
+                });
+            }else{
+                sceneMsg.loaded(err);
+            }
+        });
+    },
+
+});
+
+module.exports = SceneManager;

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ab634be3-5d42-43b2-8b0a-6848cd06c87c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "gps_icon04": {
+      "ver": "1.0.3",
+      "uuid": "2cd592e4-3faa-404c-a626-b6746f51df4e",
+      "rawTextureUuid": "ab634be3-5d42-43b2-8b0a-6848cd06c87c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 20,
+      "height": 27,
+      "rawWidth": 20,
+      "rawHeight": 27,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
