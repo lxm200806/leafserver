@@ -50,6 +50,8 @@ cc.Class({
         //     });
         // });
 
+        this.DispatchNet(cc.xf.Net_Event._C2R_Register_Req,{name:name, password:psd});
+
     },
 
     OnCloseClicked: function(){

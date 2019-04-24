@@ -1,7 +1,7 @@
-var XBase = require('XBase');
-cc.Class({
-    extends: XBase,
 
+cc.Class({
+    extends: require('XBase'),
+    
     properties:{
         isScrowTouch: {
             default: false,
@@ -9,52 +9,21 @@ cc.Class({
         },    
     },
 
-    SetLayerActive(_value){
+    SetPanelActive: function(_value){
         this.node.active = _value;
     },
 
-    ClosePanel(message){
-        if(!message){
-            this.Close();
-        }
-    },
-
-    Close(){
-        this.node.destroy();
-    },
-
-
-    //////////////////////////////////
-    ////系统方法不能被子类覆盖
-    /////////////////////////////////
-    onEnable: function(){
+    onEnable(){
         if(this.isScrowTouch){
-            this.node.on('touchstart', this.On_TouchStart.bind(this), this.node);
-            this.node.on('touchmove', this.On_TouchMove.bind(this), this.node);
-            this.node.on('touchcancel', this.On_ToucnUp.bind(this), this.node);
-            this.node.on('touchend', this.On_ToucnUp.bind(this), this.node);
+            this.node.on('touchstart', function(){
+                return false;
+            }, this.node);
+
         }
     },
 
-    onDisable: function(){
+    onDisable(){
         this.node.targetOff(this.node);
     },
-
-
-
-    ///////////////////////
-    //UIBase 引擎回调
-    ///////////////////////
-
-    On_TouchStart: function(event){
-        return false;
-    },
-
-    On_TouchMove: function(event){
-    },
-
-    On_ToucnUp: function(event){
-    },
-
-
+    
 });

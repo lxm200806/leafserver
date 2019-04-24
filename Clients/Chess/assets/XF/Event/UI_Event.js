@@ -1,4 +1,4 @@
-var Event_UI = cc.Enum({
+var UI_Event = cc.Enum({
 
     Event_None              : 0,
 
@@ -37,22 +37,7 @@ var Event_UI = cc.Enum({
     OUT_ROOM                : -1,
     READY                   : -1,
 
-    _Actor_GamerEnterRoom_Ntt               : -1,
-    _Actor_GamersInRoom_Ntt                 : -1,
-    _Actor_GamerExitRoom_Ntt                : -1,
-    _Actor_GamerReconnect_Ntt               : -1,
-    _Actor_GameStart_Ntt                    : -1,
-    _Actor_GamerReady_Ntt                   : -1,
-    _Actor_AuthorityGrabLandlord_Ntt        : -1,
-    _Actor_GamerGrabLandlordSelect_Ntt      : -1,
-    _Actor_AuthorityPlayCard_Ntt            : -1,
-    _Actor_SetMultiples_Ntt                 : -1,
-    _Actor_SetLandlord_Ntt                  : -1,
-    _Actor_Gameover_Ntt                     : -1,
-
-
-    
     TIP_BAR            : 99998,
     PROMPT_MSG              : 99999,
 })
-module.exports = Event_UI; 
+module.exports = UI_Event; 

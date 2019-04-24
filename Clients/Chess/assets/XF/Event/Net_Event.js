@@ -1,4 +1,4 @@
-var Event_Net = cc.Enum({
+var Net_Event = cc.Enum({
     _C2R_Login_Req : 30001,
     _R2C_Login_Ack : 30002,
     _C2R_Register_Req : 30003,
@@ -35,5 +35,6 @@ var Event_Net = cc.Enum({
     _Actor_SetLandlord_Ntt : 30034,
     _Actor_Gameover_Ntt : 30035,
     _Actor_GamerMoneyLess_Ntt : 30036,
+
 })
-module.exports = Event_Net; 
+module.exports = Net_Event; 

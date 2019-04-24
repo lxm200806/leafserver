@@ -1,31 +1,75 @@
-let XFInit = require("XFInit");
-let Base = require('Base');
-cc.Class({
-    extends: Base,
+var XFInit = require("XFInit");
+var CBase = require('CBase');
+var AreaCode = require('AreaCode');
 
-    properties:{
-        _eventList : [],
+var Base = cc.Class({
+    extends: CBase,
+
+    properties: {
+        _UIEventList : [],
+        _GameEventList : [],
+        _NetEventList : [],
+
+    },
+    
+    BindUI(eventCode){
+        this.Bind(AreaCode.UI, eventCode);
     },
 
-    Bind(eventCode){
-        if(eventCode == undefined) {
-            console.error("Bind undefined eventCode");
-            return;
+    BindGame(eventCode){
+        this.Bind(AreaCode.Game, eventCode);
+    },
+
+    BindNet(eventCode){
+        this.Bind(AreaCode.Net, eventCode);
+    },
+
+    Bind(areaCode, eventCode){
+        if(!areaCode) return;
+        if(!eventCode) return;
+
+        var eventManager = null;
+        var eventList = null;
+        switch (areaCode) {
+            case AreaCode.UI:
+                eventManager = G.UIManager.Instance;
+                eventList = this._UIEventList;
+                break;
+            case AreaCode.Game:
+                eventManager = G.GameManager.Instance;
+                eventList = this._GameEventList;
+                break;
+            case AreaCode.Net:
+                eventManager = G.NetManager.Instance;
+                eventList = this._NetEventList;
+                break;
+            default:
+                break;
         }
-        this._eventList.push(eventCode);
-        G.UIManager.Instance.Add(eventCode, this);
-    },
 
-    BindArray(eventCodes){
-        this._eventList.push(eventCodes);
-        G.UIManager.Instance.AddArray(eventCodes, this);
+        if(eventList && eventManager){
+            eventList.push(eventCode);
+            eventManager.Add(eventCode, this);
+        }        
     },
 
     UnBind(){
-        G.UIManager.Instance.RemoveArray(this._eventList, this);
-        this._eventList = [];
+        if(this._UIEventList > 0){
+            G.UIManager.Instance.RemoveArray(this._UIEventList, this);
+            this._UIEventList = [];
+        }
+
+        if(this._GameEventList > 0){
+            G.GameManager.Instance.RemoveArray(this._GameEventList, this);
+            this._UIEventList = [];
+        }
+
+        if(this._NetEventList > 0){
+            G.NetManager.Instance.RemoveArray(this._NetEventList, this);
+            this._UIEventList = [];
+        }
     },
-    
+
     Dispatch(areaCode, eventCode, message){
         XFInit.Instance.Dispatch(areaCode, eventCode, message);
     },
@@ -34,31 +78,17 @@ cc.Class({
         this.Dispatch(G.AreaCode.UI, eventCode, message);
     },
 
-    TipBar(message){
-        this.DispatchUI(G.Event_UI.TIP_BAR, message);
+    DispatchGame(eventCode, message){
+        this.Dispatch(G.AreaCode.Game, eventCode, message);
     },
 
-    GetInstantiate(node){
-        return cc.instantiate(node);
-    },
-
-    PopPanelWithTarget(panel, target){
-        panel.parent = target;
-        panel.x = 0;
-        panel.y = 0;
-    },
-
-    //////////////////////////////////
-    ////系统方法不能被子类覆盖
-    /////////////////////////////////
-    onLoad(){
-        Base.prototype.onLoad.apply(this);
+    DispatchNet(eventCode, message){
+        this.Dispatch(G.AreaCode.Net, eventCode, message);
     },
 
     onDestroy(){
-        Base.prototype.onDestroy.apply(this);
-        if(this._eventList.length > 0)
-            this.UnBind()
+        this.UnBind()
     },
 
 });
+module.exports = Base;

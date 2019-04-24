@@ -47,8 +47,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3063380281690141,
-      "y": 0.3063380281690141,
+      "x": 0.3203125,
+      "y": 0.3203125,
       "z": 1
     },
     "_quat": {
@@ -132,6 +132,9 @@
       "__id__": 2
     },
     "_enabled": true,
+    "_UIEventList": [],
+    "_GameEventList": [],
+    "_NetEventList": [],
     "_id": "40JaLAp3dFErLp8bW6iQL+"
   },
   {
@@ -583,7 +586,9 @@
       "__id__": 4
     },
     "_enabled": true,
-    "_eventList": [],
+    "_UIEventList": [],
+    "_GameEventList": [],
+    "_NetEventList": [],
     "isScrowTouch": false,
     "loginPrefab": {
       "__uuid__": "7abf2923-bc83-4557-a42c-799d9f3aef9a"
@@ -606,11 +611,7 @@
     "_children": [],
     "_active": true,
     "_level": 0,
-    "_components": [
-      {
-        "__id__": 16
-      }
-    ],
+    "_components": [],
     "_prefab": null,
     "_opacity": 255,
     "_color": {
@@ -656,16 +657,5 @@
     "_zIndex": 0,
     "groupIndex": 0,
     "_id": "9fnjc9F/ZOqLTj9vR+42MM"
-  },
-  {
-    "__type__": "c52eb9vttlPGb2AQWEDxV0I",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 15
-    },
-    "_enabled": true,
-    "_eventList": [],
-    "_id": "9febAiUOVP1KM0gXSX3i0R"
   }
 ]

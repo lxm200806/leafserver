@@ -19,7 +19,9 @@ var ManagerBase = cc.Class({
 
     Execute: function(eventCode, message){
         var list = this._messageMap.get(eventCode);
-        if(list == null) return console.log('event Code not bind ['+ eventCode +']');
+        if(list == null) {
+            return console.log('event Code not bind ['+ eventCode +']');
+        }
         for (var i = 0; i < list.length; i++) {
             list[i].Execute(eventCode, message);
         }
