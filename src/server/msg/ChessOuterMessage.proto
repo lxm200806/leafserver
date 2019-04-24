@@ -1,0 +1,231 @@
+syntax = "proto3";
+package msg;
+
+import "ChessModel.proto";
+
+
+// #region Client-Realm
+	 message _C2R_Login_Req
+	{
+		string Account = 1;
+		string Password = 2;
+	}
+
+	 message _R2C_Login_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+		int64 Key = 1;
+		string Address = 2;
+	}
+
+	 message _C2R_Register_Req
+	{
+		string Account = 1;
+		string Password = 2;
+	}
+
+	 message _R2C_Register_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+	}
+
+// #endregion
+// #region Client-Gate
+	 message _C2G_LoginGate_Req
+	{
+		int64 Key = 1;
+	}
+
+	 message _G2C_LoginGate_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+		int64 PlayerID = 1;
+		int64 UserID = 2;
+	}
+
+	 message _C2G_GetUserInfo_Req
+	{
+		int64 UserID = 1;
+	}
+
+	 message _G2C_GetUserInfo_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+		string NickName = 1;
+		int64 Money = 4;
+	}
+
+	 message _C2G_StartMatch_Req
+	{
+	}
+
+	 message _G2C_StartMatch_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+	}
+
+	 message _C2G_ReturnLobby_Ntt
+	{
+	}
+
+	 message _C2G_CreateRoom_Req
+	{
+		int32 Error = 90;
+		string Message = 91;
+		int64 UserID = 1;
+	}
+
+	 message _G2C_CreateRoom_Ack
+	{
+	}
+
+// #endregion
+// #region Gate-Client
+	 message _G2C_PlayerDisconnect_Ntt
+	{
+	}
+
+// #endregion
+// #region g-Center
+// #endregion Center-Client
+// #region Client-Map
+	 message _Actor_GamerReady_Ntt
+	{
+		int64 UserID = 1;
+	}
+
+	 message _Actor_GamerGrabLandlordSelect_Ntt
+	{
+		int64 UserID = 1;
+		bool IsGrab = 2;
+	}
+
+	 message _Actor_GamerPlayCard_Req
+	{
+		repeated CCard Cards = 1;
+	}
+
+	 message _Actor_GamerPlayCard_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+	}
+
+	 message _Actor_GamerPlayCard_Ntt
+	{
+		int64 UserID = 1;
+		repeated CCard Cards = 2;
+	}
+
+	 message _Actor_GamerPrompt_Req
+	{
+	}
+
+	 message _Actor_GamerPrompt_Ack
+	{
+		int32 Error = 90;
+		string Message = 91;
+		repeated CCard Cards = 1;
+	}
+
+	 message _Actor_GamerDontPlay_Ntt
+	{
+		int64 UserID = 1;
+	}
+
+	 message _Actor_Trusteeship_Ntt
+	{
+		int64 UserID = 1;
+		bool isTrusteeship = 2;
+	}
+
+// #endregion
+// #region Map-Client
+	 message _CGamerInfo
+	{
+		int64 UserID = 1;
+		string NickName = 2;
+		int64 Money = 3;
+		int32 SeatID = 10;
+		bool IsReady = 11;
+		bool IsOffline = 12;
+	}
+
+	 message _CGamerCards
+	{
+		repeated CCard GamerCards = 1;
+	}
+
+	 message _Actor_GamerEnterRoom_Ntt
+	{
+		_CGamerInfo Gamer = 1;
+	}
+
+	 message _Actor_GamersInRoom_Ntt
+	{
+		repeated _CGamerInfo Gamers = 3;
+	}
+
+	 message _Actor_GamerExitRoom_Ntt
+	{
+		int64 UserID = 1;
+	}
+
+	 message _Actor_GamerReconnect_Ntt
+	{
+		int32 Multiples = 1;
+		repeated CCard LordCards = 2;
+		repeated CIdentity GamersIdentity = 10;
+		repeated _CGamerCards DesksCards = 11;
+		repeated bool GamerGrabLandlordState = 12;
+	}
+
+	 message _Actor_GameStart_Ntt
+	{
+		repeated int64 GamersUserID = 1;
+		repeated int32 GamersCardsCount = 3;
+		repeated _CGamerCards GamersCards = 2;
+	}
+
+	 message _Actor_AuthorityGrabLandlord_Ntt
+	{
+		int64 UserID = 1;
+	}
+
+	 message _Actor_AuthorityPlayCard_Ntt
+	{
+		int64 UserID = 1;
+		bool IsFirst = 2;
+	}
+
+	 message _Actor_SetMultiples_Ntt
+	{
+		int32 Multiples = 1;
+	}
+
+	 message _Actor_SetLandlord_Ntt
+	{
+		int64 UserID = 1;
+		repeated CCard LordCards = 2;
+	}
+
+	 message _Actor_Gameover_Ntt
+	{
+		CIdentity Winner = 1;
+		int64 BasePointPerMatch = 2;
+		int32 Multiples = 3;
+	//[BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+	//object Dictionary<int64,int64> GamersScore = 4;
+	}
+
+	 message _Actor_GamerMoneyLess_Ntt
+	{
+		int64 UserID = 1;
+	}
+
+// #endregion
