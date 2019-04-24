@@ -4,14 +4,14 @@ var MessageHandler = require('MessageHandler');
 var NetManager = cc.Class({
     extends: require('ManagerBase'),
 
-    Init: function () {
+    Init() {
         G.NetManager.Instance = this;
         this.messageHandler = new MessageHandler();
 
         this.socketsCB = null;
     },
 
-    Execute: function(eventCode, msg){
+    Execute(eventCode, msg){
         if(this.ws){
             this.ws.send(EncodeTool.EncodePbPacket(msg));
         }
@@ -61,7 +61,7 @@ var NetManager = cc.Class({
         }
     },
 
-    IsOpen: function(){
+    IsOpen(){
         if(this.ws && this.ws.readyState == WebSocket.OPEN) return true;
         return false;
     },
@@ -83,6 +83,8 @@ var NetManager = cc.Class({
 
     OnMessage(ev, param){
         this.OnMessage_Leaf(ev, param);
+        //or
+        //this.OnMessage_ET(ev, param);
     },
 
     OnMessage_Leaf(ev, param){

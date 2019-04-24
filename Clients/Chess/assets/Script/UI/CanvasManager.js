@@ -11,9 +11,9 @@ cc.Class({
     Init(){
         this.InitData();
 
-        this.Bind(G.Event_UI.Canvas_ShowLogin);
-        this.Bind(G.Event_UI.Canvas_ShowMain);
-        this.Bind(G.Event_UI.Canvas_ShowFight);
+        this.BindUI(G.Event_UI.Canvas_ShowLogin);
+        this.BindUI(G.Event_UI.Canvas_ShowMain);
+        this.BindUI(G.Event_UI.Canvas_ShowFight);
     },
 
     Execute(eventCode, message){

@@ -13,8 +13,8 @@ cc.Class({
     Init() {
         this.InitData();
 
-        this.Bind(G.Event_UI.Fight_ResetGameStartUI);
-        this.Bind(G.Event_UI.Fight_ResetTurn);
+        this.BindUI(G.Event_UI.Fight_ResetGameStartUI);
+        this.BindUI(G.Event_UI.Fight_ResetTurn);
     },
 
     Execute(eventCode, message) {

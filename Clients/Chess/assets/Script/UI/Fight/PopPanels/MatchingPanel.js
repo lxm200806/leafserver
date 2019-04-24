@@ -7,7 +7,7 @@ cc.Class({
     Init: function(){
         this.InitData();
 
-        this.Bind(G.Event_UI.Fight_ShowMatchingPanel);
+        this.BindUI(G.Event_UI.Fight_ShowMatchingPanel);
     },
 
     Execute: function(eventCode, message){

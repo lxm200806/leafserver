@@ -7,7 +7,7 @@ cc.Class({
     Init: function () {
         this.InitData();
 
-        this.Bind(G.Event_UI.Canvas_ShowMain);
+        this.BindUI(G.Event_UI.Canvas_ShowMain);
     },
 
     Execute(eventCode, message){

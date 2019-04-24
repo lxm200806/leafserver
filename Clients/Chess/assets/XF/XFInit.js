@@ -28,10 +28,10 @@ var XFInit = cc.Class({
 
     Init: function () {
         XFInit.Instance = this;
-
-        let pbkiller = require('../../pbkiller/src/pbkiller');
-        pbkiller.root = 'proto';
-        G.PB =pbkiller.loadAll();
+        
+        // let pbkiller = require('../../pbkiller/src/pbkiller');
+        // pbkiller.root = 'proto';
+        // G.PB =pbkiller.loadAll();
 
         G.UIManager = require('UIManager');
         G.SceneManager = require('SceneManager');

@@ -1,15 +1,18 @@
+syntax = "proto3";
+package msg;
 
 enum CSuits
 {
+    CSuits_NULL        = 0;
     Club        = 1;//梅花
     Diamond     = 2;//方块
     Heart       = 3;//红桃
     Spad        = 4;//黑桃
-    None        = 5;
 }
 
 enum CWeight
 {
+    CWeight_NULl = 0;
     Three   = 3;
     Four    = 4;
     Five    = 5;
@@ -29,13 +32,13 @@ enum CWeight
 
 message CCard
 {
-    required CWeight CardWeight  = 1;
-    required CSuits CardSuits = 2;
+    CWeight CardWeight  = 1;
+    CSuits CardSuits = 2;
 }
 
 enum CIdentity
 {
-    None        = 0;
+    CIdentity_NULL        = 0;
     Farmer      = 1;     //平民
     Landlord    = 2;    //地主
 }

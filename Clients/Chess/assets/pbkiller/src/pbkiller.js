@@ -71,7 +71,7 @@ module.exports = {
             this.root = this.root.substr(0, this.root.length - 1);
         }
         
-        //获取this.root下的所有文件名
+        //获取this.root 下的所有文件名
         cc.loader._resources.getUuidArray(this.root, null, files);
         files = files.map((filePath) => {
             let str = filePath.substr(this.root.length + 1);

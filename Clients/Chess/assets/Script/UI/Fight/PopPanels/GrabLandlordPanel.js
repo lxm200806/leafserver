@@ -9,7 +9,7 @@ cc.Class({
     Init: function(){
         this.InitData();
 
-        this.Bind(G.Event_UI.Fight_ShowGrabLandlordPanel);
+        this.BindUI(G.Event_UI.Fight_ShowGrabLandlordPanel);
     },
 
     Execute: function(eventCode, message){

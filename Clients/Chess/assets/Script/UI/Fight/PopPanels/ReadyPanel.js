@@ -7,8 +7,8 @@ cc.Class({
     Init: function(){
         this.InitData();
 
-        this.Bind(G.Event_UI.Fight_ShowReadyPanel);
-        this.Bind(G.Event_UI.Fight_ResetGameStartUI);
+        this.BindUI(G.Event_UI.Fight_ShowReadyPanel);
+        this.BindUI(G.Event_UI.Fight_ResetGameStartUI);
     },
 
     Execute: function(eventCode, message){

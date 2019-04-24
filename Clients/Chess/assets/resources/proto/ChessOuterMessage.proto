@@ -1,59 +1,62 @@
+syntax = "proto3";
+package msg;
+
 import "ChessModel.proto";
 
 
 // #region Client-Realm
 	 message _C2R_Login_Req
 	{
-		required string Account = 1;
-		required string Password = 2;
+		string Account = 1;
+		string Password = 2;
 	}
 
 	 message _R2C_Login_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
-		optional int64 Key = 1;
-		optional string Address = 2;
+		int32 Error = 90;
+		string Message = 91;
+		int64 Key = 1;
+		string Address = 2;
 	}
 
 	 message _C2R_Register_Req
 	{
-		required string Account = 1;
-		required string Password = 2;
+		string Account = 1;
+		string Password = 2;
 	}
 
 	 message _R2C_Register_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
+		int32 Error = 90;
+		string Message = 91;
 	}
 
 // #endregion
 // #region Client-Gate
 	 message _C2G_LoginGate_Req
 	{
-		required int64 Key = 1;
+		int64 Key = 1;
 	}
 
 	 message _G2C_LoginGate_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
-		optional int64 PlayerID = 1;
-		optional int64 UserID = 2;
+		int32 Error = 90;
+		string Message = 91;
+		int64 PlayerID = 1;
+		int64 UserID = 2;
 	}
 
 	 message _C2G_GetUserInfo_Req
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 	 message _G2C_GetUserInfo_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
-		optional string NickName = 1;
-		optional int64 Money = 4;
+		int32 Error = 90;
+		string Message = 91;
+		string NickName = 1;
+		int64 Money = 4;
 	}
 
 	 message _C2G_StartMatch_Req
@@ -62,8 +65,8 @@ import "ChessModel.proto";
 
 	 message _G2C_StartMatch_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
+		int32 Error = 90;
+		string Message = 91;
 	}
 
 	 message _C2G_ReturnLobby_Ntt
@@ -72,9 +75,9 @@ import "ChessModel.proto";
 
 	 message _C2G_CreateRoom_Req
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
-		optional int64 UserID = 1;
+		int32 Error = 90;
+		string Message = 91;
+		int64 UserID = 1;
 	}
 
 	 message _G2C_CreateRoom_Ack
@@ -93,13 +96,13 @@ import "ChessModel.proto";
 // #region Client-Map
 	 message _Actor_GamerReady_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 	 message _Actor_GamerGrabLandlordSelect_Ntt
 	{
-		required int64 UserID = 1;
-		required bool IsGrab = 2;
+		int64 UserID = 1;
+		bool IsGrab = 2;
 	}
 
 	 message _Actor_GamerPlayCard_Req
@@ -109,13 +112,13 @@ import "ChessModel.proto";
 
 	 message _Actor_GamerPlayCard_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
+		int32 Error = 90;
+		string Message = 91;
 	}
 
 	 message _Actor_GamerPlayCard_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 		repeated CCard Cards = 2;
 	}
 
@@ -125,32 +128,32 @@ import "ChessModel.proto";
 
 	 message _Actor_GamerPrompt_Ack
 	{
-		required int32 Error = 90;
-		optional string Message = 91;
+		int32 Error = 90;
+		string Message = 91;
 		repeated CCard Cards = 1;
 	}
 
 	 message _Actor_GamerDontPlay_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 	 message _Actor_Trusteeship_Ntt
 	{
-		required int64 UserID = 1;
-		required bool isTrusteeship = 2;
+		int64 UserID = 1;
+		bool isTrusteeship = 2;
 	}
 
 // #endregion
 // #region Map-Client
 	 message _CGamerInfo
 	{
-		required int64 UserID = 1;
-		required string NickName = 2;
-		required int64 Money = 3;
-		required int32 SeatID = 10;
-		required bool IsReady = 11;
-		required bool IsOffline = 12;
+		int64 UserID = 1;
+		string NickName = 2;
+		int64 Money = 3;
+		int32 SeatID = 10;
+		bool IsReady = 11;
+		bool IsOffline = 12;
 	}
 
 	 message _CGamerCards
@@ -160,7 +163,7 @@ import "ChessModel.proto";
 
 	 message _Actor_GamerEnterRoom_Ntt
 	{
-		required _CGamerInfo Gamer = 1;
+		_CGamerInfo Gamer = 1;
 	}
 
 	 message _Actor_GamersInRoom_Ntt
@@ -170,12 +173,12 @@ import "ChessModel.proto";
 
 	 message _Actor_GamerExitRoom_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 	 message _Actor_GamerReconnect_Ntt
 	{
-		required int32 Multiples = 1;
+		int32 Multiples = 1;
 		repeated CCard LordCards = 2;
 		repeated CIdentity GamersIdentity = 10;
 		repeated _CGamerCards DesksCards = 11;
@@ -191,38 +194,38 @@ import "ChessModel.proto";
 
 	 message _Actor_AuthorityGrabLandlord_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 	 message _Actor_AuthorityPlayCard_Ntt
 	{
-		required int64 UserID = 1;
-		required bool IsFirst = 2;
+		int64 UserID = 1;
+		bool IsFirst = 2;
 	}
 
 	 message _Actor_SetMultiples_Ntt
 	{
-		required int32 Multiples = 1;
+		int32 Multiples = 1;
 	}
 
 	 message _Actor_SetLandlord_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 		repeated CCard LordCards = 2;
 	}
 
 	 message _Actor_Gameover_Ntt
 	{
-		required CIdentity Winner = 1;
-		required int64 BasePointPerMatch = 2;
-		required int32 Multiples = 3;
+		CIdentity Winner = 1;
+		int64 BasePointPerMatch = 2;
+		int32 Multiples = 3;
 	//[BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
 	//object Dictionary<int64,int64> GamersScore = 4;
 	}
 
 	 message _Actor_GamerMoneyLess_Ntt
 	{
-		required int64 UserID = 1;
+		int64 UserID = 1;
 	}
 
 // #endregion

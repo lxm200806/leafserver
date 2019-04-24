@@ -8,8 +8,8 @@ cc.Class({
     Init: function () {
         this.InitData();
 
-        this.Bind(G.Event_UI.Canvas_ShowLogin);
-        this.Bind(G.Event_UI.Login_ShowRegPanel);
+        this.BindUI(G.Event_UI.Canvas_ShowLogin);
+        this.BindUI(G.Event_UI.Login_ShowRegPanel);
     },
 
     Execute(eventCode, message){

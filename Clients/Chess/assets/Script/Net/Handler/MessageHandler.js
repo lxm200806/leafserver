@@ -3,7 +3,7 @@ var Opcode = require('ChessOuterOpcode');
 var MessageHandler = cc.Class({
     extends: require('HandlerBase'),
 
-    OnReceive: function(_opCode, _data){
+    OnReceive(_opCode, _data){
         switch (_opCode) {
             case Opcode._Actor_GamerEnterRoom_Ntt:
                 this._Actor_GamerEnterRoom_Ntt(G.PB._Actor_GamerEnterRoom_Ntt.decode(_data));

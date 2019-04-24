@@ -8,8 +8,8 @@ cc.Class({
 
     Init(){
         this.InitData();
-        this.Bind(G.Event_UI.Main_CreateRoomButton_Active);
-        this.Bind(G.Event_UI.Main_BackRoomButton_Active);
+        this.BindUI(G.Event_UI.Main_CreateRoomButton_Active);
+        this.BindUI(G.Event_UI.Main_BackRoomButton_Active);
     },
 
     Execute(eventCode, message){

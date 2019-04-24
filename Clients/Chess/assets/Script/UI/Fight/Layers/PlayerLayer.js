@@ -12,18 +12,18 @@ cc.Class({
     Init() {
         this.InitData();
 
-        this.Bind(G.Event_UI._Actor_GamerEnterRoom_Ntt);
-        this.Bind(G.Event_UI._Actor_GamersInRoom_Ntt);
-        this.Bind(G.Event_UI._Actor_GamerExitRoom_Ntt);
-        this.Bind(G.Event_UI._Actor_GamerReady_Ntt);
-        this.Bind(G.Event_UI._Actor_GameStart_Ntt);
-        this.Bind(G.Event_UI._Actor_AuthorityGrabLandlord_Ntt);
-        this.Bind(G.Event_UI._Actor_GamerGrabLandlordSelect_Ntt);
+        this.BindUI(G.Event_UI._Actor_GamerEnterRoom_Ntt);
+        this.BindUI(G.Event_UI._Actor_GamersInRoom_Ntt);
+        this.BindUI(G.Event_UI._Actor_GamerExitRoom_Ntt);
+        this.BindUI(G.Event_UI._Actor_GamerReady_Ntt);
+        this.BindUI(G.Event_UI._Actor_GameStart_Ntt);
+        this.BindUI(G.Event_UI._Actor_AuthorityGrabLandlord_Ntt);
+        this.BindUI(G.Event_UI._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.Bind(G.Event_UI.ShowSelf);
-        this.Bind(G.Event_UI.ENTER_ROOM);
-        this.Bind(G.Event_UI.OUT_ROOM);
-        this.Bind(G.Event_UI.READY);
+        this.BindUI(G.Event_UI.ShowSelf);
+        this.BindUI(G.Event_UI.ENTER_ROOM);
+        this.BindUI(G.Event_UI.OUT_ROOM);
+        this.BindUI(G.Event_UI.READY);
     },
 
     Execute(eventCode, message) {

@@ -4,7 +4,6 @@ cc.Class({
     extends: require('UIBase'),
 
     properties: {
-        pockers : cc.RawAsset,
     },
 
     Init(){

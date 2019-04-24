@@ -28,7 +28,7 @@ cc.Class({
     },
 
     Init: function(){
-        this.Bind(G.Event_UI.TIP_BAR);
+        this.BindUI(G.Event_UI.TIP_BAR);
         this.SetLayerActive(false);
     },
 

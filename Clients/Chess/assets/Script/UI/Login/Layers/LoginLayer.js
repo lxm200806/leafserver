@@ -9,7 +9,7 @@ cc.Class({
 
     Init: function(){
         this.InitData();
-        this.Bind(G.Event_UI.Login_LoginLayer_Active);
+        this.BindUI(G.Event_UI.Login_LoginLayer_Active);
     },
 
     Execute: function(eventCode, message){

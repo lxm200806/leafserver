@@ -17,7 +17,7 @@ cc.Class({
     },
 
     Init: function(){
-        this.Bind(G.Event_UI.SHOW_PLAYER_PANEL);
+        this.BindUI(G.Event_UI.SHOW_PLAYER_PANEL);
         this.SetLayerActive(false);
     },
 

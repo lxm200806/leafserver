@@ -8,7 +8,7 @@ cc.Class({
 
     Init(){
         this.InitData();
-        this.Bind(G.Event_UI.SHOW_MAIN_INFO_HUB);
+        this.BindUI(G.Event_UI.SHOW_MAIN_INFO_HUB);
     },
 
     Execute(eventCode, message){

@@ -10,10 +10,10 @@ cc.Class({
     Init: function () {
         this.InitData();
 
-        this.Bind(G.Event_UI.Canvas_ShowFight);
-        this.Bind(G.Event_UI.Fight_ShowMatchingPanel);
-        this.Bind(G.Event_UI.Fight_ShowReadyPanel);
-        this.Bind(G.Event_UI.Fight_ShowGrabLandlordPanel);
+        this.BindUI(G.Event_UI.Canvas_ShowFight);
+        this.BindUI(G.Event_UI.Fight_ShowMatchingPanel);
+        this.BindUI(G.Event_UI.Fight_ShowReadyPanel);
+        this.BindUI(G.Event_UI.Fight_ShowGrabLandlordPanel);
     },
 
     Execute(eventCode, message){
