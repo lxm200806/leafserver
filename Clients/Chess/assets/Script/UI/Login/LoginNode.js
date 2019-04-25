@@ -2,7 +2,7 @@
 cc.Class({
     extends: require('UIBase'),
 
-    Init() {
+    XFInit() {
         this.InitData();
     },
 
@@ -12,7 +12,7 @@ cc.Class({
 
     InitData(){
 
-        this.Dispatch(G.AreaCode.UI, G.Event_UI.Login_LoginLayer_Active, true);
+        this.Dispatch(G.AreaCode.UI, G.UI_Event.Login_LoginLayer_Active, true);
     },
 
 });

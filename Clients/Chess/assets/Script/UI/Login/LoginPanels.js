@@ -5,19 +5,19 @@ cc.Class({
         regPanelPrefab: cc.Prefab,
     },
 
-    Init: function () {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI.Canvas_ShowLogin);
-        this.BindUI(G.Event_UI.Login_ShowRegPanel);
+        this.BindUI(G.UI_Event.Canvas_ShowLogin);
+        this.BindUI(G.UI_Event.Login_ShowRegPanel);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Canvas_ShowLogin:
+            case G.UI_Event.Canvas_ShowLogin:
                 this.ClosePanel(message);
                 break;
-            case G.Event_UI.Login_ShowRegPanel:
+            case G.UI_Event.Login_ShowRegPanel:
                 this.On_Login_ShowRegPanel(message);
                 break;
         

@@ -3,7 +3,7 @@ cc.Class({
 
     Execute: function(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.SHOW_PLAYER_PANEL:
+            case G.UI_Event.SHOW_PLAYER_PANEL:
                 this.SetLayerActive(message);
                 break;
             default:
@@ -16,8 +16,8 @@ cc.Class({
 
     },
 
-    Init: function(){
-        this.BindUI(G.Event_UI.SHOW_PLAYER_PANEL);
+    XFInit(){
+        this.BindUI(G.UI_Event.SHOW_PLAYER_PANEL);
         this.SetLayerActive(false);
     },
 

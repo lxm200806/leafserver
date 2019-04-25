@@ -18,7 +18,7 @@ var AccountHandler = cc.Class({
     RegAck(_msg){
         switch (_msg.ackCode) {
             case 0:
-                this.DispatchUI(G.Event_UI.Login_ShowRegPanel, false);
+                this.DispatchUI(G.UI_Event.Login_ShowRegPanel, false);
                 this.TipBar('注册成功');
                 break;
             default:

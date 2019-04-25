@@ -1,21 +1,22 @@
 var EncodeTool = require('EncodeTool');
 var MessageHandler = require('MessageHandler');
+var NetConfig = require('NetConfig');
 
 var NetManager = cc.Class({
     extends: require('ManagerBase'),
 
-    Init() {
+    XFInit() {
         G.NetManager.Instance = this;
         this.messageHandler = new MessageHandler();
 
         this.socketsCB = null;
     },
 
-    Execute(eventCode, msg){
-        if(this.ws){
-            this.ws.send(EncodeTool.EncodePbPacket(msg));
-        }
-    },
+    // Execute(eventCode, msg){
+    //     if(this.ws){
+    //         this.ws.send(EncodeTool.EncodePacket_Leaf(msg));
+    //     }
+    // },
 
     Send(pbMsg, opCode){
         if(this.ws){
@@ -39,10 +40,11 @@ var NetManager = cc.Class({
     Open(ipPortAddress, callBack){
 
         if(!ipPortAddress){
-            ipPortAddress = '127.0.0.1:10002';
+            // ipPortAddress = '127.0.0.1:10002';
+            ipPortAddress = NetConfig.host + ':' + NetConfig.port;
         }
 
-        this.ws = new WebSocket('ws://'+ipPortAddress);
+        this.ws = new WebSocket(ipPortAddress);
         this.ws.binaryType = "arraybuffer";        
         this.ws.onopen = this.OnOpen.bind(this);
         this.ws.onerror  = this.OnError.bind(this);
@@ -89,14 +91,14 @@ var NetManager = cc.Class({
 
     OnMessage_Leaf(ev, param){
         var packet = EncodeTool.DecodePacket_Leaf(ev.data);
-        this.messageHandler.OnReceive(packet.OpCode, packet.bytes);
+        this.messageHandler.OnReceive(packet.Opcode, packet.bytes);
     },
 
     OnMessage_ET(ev, param){
         var packet = EncodeTool.DecodePacket(ev.data);
         if(!packet) return;
         if(packet.Flag == 0x00){
-            this.messageHandler.OnReceive(packet.OpCode, packet.bytes);
+            this.messageHandler.OnReceive(packet.Opcode, packet.bytes);
         }else{
             if(this.ws.ResponseList[this.ws.RpcId]){
                 this.ws.ResponseList[this.ws.RpcId](packet, this);

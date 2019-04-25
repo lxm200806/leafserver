@@ -4,26 +4,26 @@ var EncodeTool = require('EncodeTool');
 cc.Class({
     extends: UIBase,
 
-    Init(){
+    XFInit(){
 
-        this.BindNet(cc.xf._C2R_Login_Req);
-        this.BindNet(cc.xf._C2R_Register_Req);
-        this.BindNet(cc.xf._C2G_LoginGate_Req);
-        this.BindNet(cc.xf._C2G_GetUserInfo_Req);
+        this.BindNet(cc.xf.Net_Event._C2R_Login_Req);
+        this.BindNet(cc.xf.Net_Event._C2R_Register_Req);
+        this.BindNet(cc.xf.Net_Event._C2G_LoginGate_Req);
+        this.BindNet(cc.xf.Net_Event._C2G_GetUserInfo_Req);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case cc.xf._C2R_Login_Req:
+            case cc.xf.Net_Event._C2R_Login_Req:
                 this._C2R_Login_Req(message);
                 break;
-            case cc.xf._C2R_Register_Req:
+            case cc.xf.Net_Event._C2R_Register_Req:
                 this._C2R_Register_Req(message);
                 break;
-            case cc.xf._C2G_LoginGate_Req:
+            case cc.xf.Net_Event._C2G_LoginGate_Req:
                 this._C2G_LoginGate_Req(message);
                 break;
-            case cc.xf._C2G_GetUserInfo_Req:
+            case cc.xf.Net_Event._C2G_GetUserInfo_Req:
                 this._C2G_GetUserInfo_Req(message);
                 break;
             default:
@@ -46,9 +46,9 @@ cc.Class({
     },
 
     _C2R_Register_Req(message){
-        let packet = msg._C2R_Register_Req.create({name:message.name, password:message.password});
-        let buffer = msg._C2R_Register_Req.encode(package).finish();
-        EncodeTool.EncodePacket_Leaf(cc.xf.OpCode)
+        let packet = cc.xf.msg.C2R_Register_Req.create({Account:message.Account, Password:message.Password});
+        let buffer = cc.xf.msg.C2R_Register_Req.encode(packet).finish();
+        G.NetManager.Instance.Send(buffer, cc.xf.Opcode.C2R_Register_Req);
     },
 
     _C2G_LoginGate_Req(message){

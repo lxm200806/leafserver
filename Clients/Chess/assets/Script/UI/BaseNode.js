@@ -6,7 +6,7 @@ cc.Class({
     properties: {
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
     },
 

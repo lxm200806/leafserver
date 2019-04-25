@@ -3,13 +3,13 @@ cc.Class({
     properties: {
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.SHOW_MAIN_TOP_HUB:
+            case G.UI_Event.SHOW_MAIN_TOP_HUB:
                 this.SetLayerActive(message);
                 break;
             default:
@@ -23,7 +23,7 @@ cc.Class({
 
     OnClickBack(){
         G.NetManager.Instance.Close();
-        this.DispatchUI(G.Event_UI.Canvas_ShowLogin, true);
-        this.DispatchUI(G.Event_UI.Canvas_ShowMain, false);
+        this.DispatchUI(G.UI_Event.Canvas_ShowLogin, true);
+        this.DispatchUI(G.UI_Event.Canvas_ShowMain, false);
     },
 });

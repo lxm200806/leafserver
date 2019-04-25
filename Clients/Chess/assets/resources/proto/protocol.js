@@ -417,25 +417,25 @@ $root.msg = (function() {
         return values;
     })();
 
-    msg._C2R_Login_Req = (function() {
+    msg.C2R_Login_Req = (function() {
 
         /**
-         * Properties of a _C2R_Login_Req.
+         * Properties of a C2R_Login_Req.
          * @memberof msg
-         * @interface I_C2R_Login_Req
-         * @property {string|null} [Account] _C2R_Login_Req Account
-         * @property {string|null} [Password] _C2R_Login_Req Password
+         * @interface IC2R_Login_Req
+         * @property {string|null} [Account] C2R_Login_Req Account
+         * @property {string|null} [Password] C2R_Login_Req Password
          */
 
         /**
-         * Constructs a new _C2R_Login_Req.
+         * Constructs a new C2R_Login_Req.
          * @memberof msg
-         * @classdesc Represents a _C2R_Login_Req.
-         * @implements I_C2R_Login_Req
+         * @classdesc Represents a C2R_Login_Req.
+         * @implements IC2R_Login_Req
          * @constructor
-         * @param {msg.I_C2R_Login_Req=} [properties] Properties to set
+         * @param {msg.IC2R_Login_Req=} [properties] Properties to set
          */
-        function _C2R_Login_Req(properties) {
+        function C2R_Login_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -443,43 +443,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _C2R_Login_Req Account.
+         * C2R_Login_Req Account.
          * @member {string} Account
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @instance
          */
-        _C2R_Login_Req.prototype.Account = "";
+        C2R_Login_Req.prototype.Account = "";
 
         /**
-         * _C2R_Login_Req Password.
+         * C2R_Login_Req Password.
          * @member {string} Password
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @instance
          */
-        _C2R_Login_Req.prototype.Password = "";
+        C2R_Login_Req.prototype.Password = "";
 
         /**
-         * Creates a new _C2R_Login_Req instance using the specified properties.
+         * Creates a new C2R_Login_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
-         * @param {msg.I_C2R_Login_Req=} [properties] Properties to set
-         * @returns {msg._C2R_Login_Req} _C2R_Login_Req instance
+         * @param {msg.IC2R_Login_Req=} [properties] Properties to set
+         * @returns {msg.C2R_Login_Req} C2R_Login_Req instance
          */
-        _C2R_Login_Req.create = function create(properties) {
-            return new _C2R_Login_Req(properties);
+        C2R_Login_Req.create = function create(properties) {
+            return new C2R_Login_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2R_Login_Req message. Does not implicitly {@link msg._C2R_Login_Req.verify|verify} messages.
+         * Encodes the specified C2R_Login_Req message. Does not implicitly {@link msg.C2R_Login_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
-         * @param {msg.I_C2R_Login_Req} message _C2R_Login_Req message or plain object to encode
+         * @param {msg.IC2R_Login_Req} message C2R_Login_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2R_Login_Req.encode = function encode(message, writer) {
+        C2R_Login_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Account != null && message.hasOwnProperty("Account"))
@@ -490,33 +490,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _C2R_Login_Req message, length delimited. Does not implicitly {@link msg._C2R_Login_Req.verify|verify} messages.
+         * Encodes the specified C2R_Login_Req message, length delimited. Does not implicitly {@link msg.C2R_Login_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
-         * @param {msg.I_C2R_Login_Req} message _C2R_Login_Req message or plain object to encode
+         * @param {msg.IC2R_Login_Req} message C2R_Login_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2R_Login_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2R_Login_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2R_Login_Req message from the specified reader or buffer.
+         * Decodes a C2R_Login_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2R_Login_Req} _C2R_Login_Req
+         * @returns {msg.C2R_Login_Req} C2R_Login_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2R_Login_Req.decode = function decode(reader, length) {
+        C2R_Login_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2R_Login_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2R_Login_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -535,30 +535,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2R_Login_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2R_Login_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2R_Login_Req} _C2R_Login_Req
+         * @returns {msg.C2R_Login_Req} C2R_Login_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2R_Login_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2R_Login_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2R_Login_Req message.
+         * Verifies a C2R_Login_Req message.
          * @function verify
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2R_Login_Req.verify = function verify(message) {
+        C2R_Login_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Account != null && message.hasOwnProperty("Account"))
@@ -571,17 +571,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _C2R_Login_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2R_Login_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2R_Login_Req} _C2R_Login_Req
+         * @returns {msg.C2R_Login_Req} C2R_Login_Req
          */
-        _C2R_Login_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2R_Login_Req)
+        C2R_Login_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2R_Login_Req)
                 return object;
-            var message = new $root.msg._C2R_Login_Req();
+            var message = new $root.msg.C2R_Login_Req();
             if (object.Account != null)
                 message.Account = String(object.Account);
             if (object.Password != null)
@@ -590,15 +590,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _C2R_Login_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2R_Login_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @static
-         * @param {msg._C2R_Login_Req} message _C2R_Login_Req
+         * @param {msg.C2R_Login_Req} message C2R_Login_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2R_Login_Req.toObject = function toObject(message, options) {
+        C2R_Login_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -614,40 +614,40 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _C2R_Login_Req to JSON.
+         * Converts this C2R_Login_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2R_Login_Req
+         * @memberof msg.C2R_Login_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2R_Login_Req.prototype.toJSON = function toJSON() {
+        C2R_Login_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2R_Login_Req;
+        return C2R_Login_Req;
     })();
 
-    msg._R2C_Login_Ack = (function() {
+    msg.R2C_Login_Ack = (function() {
 
         /**
-         * Properties of a _R2C_Login_Ack.
+         * Properties of a R2C_Login_Ack.
          * @memberof msg
-         * @interface I_R2C_Login_Ack
-         * @property {number|null} [Error] _R2C_Login_Ack Error
-         * @property {string|null} [Message] _R2C_Login_Ack Message
-         * @property {number|Long|null} [Key] _R2C_Login_Ack Key
-         * @property {string|null} [Address] _R2C_Login_Ack Address
+         * @interface IR2C_Login_Ack
+         * @property {number|null} [Error] R2C_Login_Ack Error
+         * @property {string|null} [Message] R2C_Login_Ack Message
+         * @property {number|Long|null} [Key] R2C_Login_Ack Key
+         * @property {string|null} [Address] R2C_Login_Ack Address
          */
 
         /**
-         * Constructs a new _R2C_Login_Ack.
+         * Constructs a new R2C_Login_Ack.
          * @memberof msg
-         * @classdesc Represents a _R2C_Login_Ack.
-         * @implements I_R2C_Login_Ack
+         * @classdesc Represents a R2C_Login_Ack.
+         * @implements IR2C_Login_Ack
          * @constructor
-         * @param {msg.I_R2C_Login_Ack=} [properties] Properties to set
+         * @param {msg.IR2C_Login_Ack=} [properties] Properties to set
          */
-        function _R2C_Login_Ack(properties) {
+        function R2C_Login_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -655,59 +655,59 @@ $root.msg = (function() {
         }
 
         /**
-         * _R2C_Login_Ack Error.
+         * R2C_Login_Ack Error.
          * @member {number} Error
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @instance
          */
-        _R2C_Login_Ack.prototype.Error = 0;
+        R2C_Login_Ack.prototype.Error = 0;
 
         /**
-         * _R2C_Login_Ack Message.
+         * R2C_Login_Ack Message.
          * @member {string} Message
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @instance
          */
-        _R2C_Login_Ack.prototype.Message = "";
+        R2C_Login_Ack.prototype.Message = "";
 
         /**
-         * _R2C_Login_Ack Key.
+         * R2C_Login_Ack Key.
          * @member {number|Long} Key
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @instance
          */
-        _R2C_Login_Ack.prototype.Key = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        R2C_Login_Ack.prototype.Key = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _R2C_Login_Ack Address.
+         * R2C_Login_Ack Address.
          * @member {string} Address
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @instance
          */
-        _R2C_Login_Ack.prototype.Address = "";
+        R2C_Login_Ack.prototype.Address = "";
 
         /**
-         * Creates a new _R2C_Login_Ack instance using the specified properties.
+         * Creates a new R2C_Login_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
-         * @param {msg.I_R2C_Login_Ack=} [properties] Properties to set
-         * @returns {msg._R2C_Login_Ack} _R2C_Login_Ack instance
+         * @param {msg.IR2C_Login_Ack=} [properties] Properties to set
+         * @returns {msg.R2C_Login_Ack} R2C_Login_Ack instance
          */
-        _R2C_Login_Ack.create = function create(properties) {
-            return new _R2C_Login_Ack(properties);
+        R2C_Login_Ack.create = function create(properties) {
+            return new R2C_Login_Ack(properties);
         };
 
         /**
-         * Encodes the specified _R2C_Login_Ack message. Does not implicitly {@link msg._R2C_Login_Ack.verify|verify} messages.
+         * Encodes the specified R2C_Login_Ack message. Does not implicitly {@link msg.R2C_Login_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
-         * @param {msg.I_R2C_Login_Ack} message _R2C_Login_Ack message or plain object to encode
+         * @param {msg.IR2C_Login_Ack} message R2C_Login_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _R2C_Login_Ack.encode = function encode(message, writer) {
+        R2C_Login_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Key != null && message.hasOwnProperty("Key"))
@@ -722,33 +722,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _R2C_Login_Ack message, length delimited. Does not implicitly {@link msg._R2C_Login_Ack.verify|verify} messages.
+         * Encodes the specified R2C_Login_Ack message, length delimited. Does not implicitly {@link msg.R2C_Login_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
-         * @param {msg.I_R2C_Login_Ack} message _R2C_Login_Ack message or plain object to encode
+         * @param {msg.IR2C_Login_Ack} message R2C_Login_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _R2C_Login_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        R2C_Login_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _R2C_Login_Ack message from the specified reader or buffer.
+         * Decodes a R2C_Login_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._R2C_Login_Ack} _R2C_Login_Ack
+         * @returns {msg.R2C_Login_Ack} R2C_Login_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _R2C_Login_Ack.decode = function decode(reader, length) {
+        R2C_Login_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._R2C_Login_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.R2C_Login_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -773,30 +773,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _R2C_Login_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a R2C_Login_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._R2C_Login_Ack} _R2C_Login_Ack
+         * @returns {msg.R2C_Login_Ack} R2C_Login_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _R2C_Login_Ack.decodeDelimited = function decodeDelimited(reader) {
+        R2C_Login_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _R2C_Login_Ack message.
+         * Verifies a R2C_Login_Ack message.
          * @function verify
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _R2C_Login_Ack.verify = function verify(message) {
+        R2C_Login_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -815,17 +815,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _R2C_Login_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a R2C_Login_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._R2C_Login_Ack} _R2C_Login_Ack
+         * @returns {msg.R2C_Login_Ack} R2C_Login_Ack
          */
-        _R2C_Login_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._R2C_Login_Ack)
+        R2C_Login_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.R2C_Login_Ack)
                 return object;
-            var message = new $root.msg._R2C_Login_Ack();
+            var message = new $root.msg.R2C_Login_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -845,15 +845,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _R2C_Login_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a R2C_Login_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @static
-         * @param {msg._R2C_Login_Ack} message _R2C_Login_Ack
+         * @param {msg.R2C_Login_Ack} message R2C_Login_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _R2C_Login_Ack.toObject = function toObject(message, options) {
+        R2C_Login_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -882,38 +882,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _R2C_Login_Ack to JSON.
+         * Converts this R2C_Login_Ack to JSON.
          * @function toJSON
-         * @memberof msg._R2C_Login_Ack
+         * @memberof msg.R2C_Login_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _R2C_Login_Ack.prototype.toJSON = function toJSON() {
+        R2C_Login_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _R2C_Login_Ack;
+        return R2C_Login_Ack;
     })();
 
-    msg._C2R_Register_Req = (function() {
+    msg.C2R_Register_Req = (function() {
 
         /**
-         * Properties of a _C2R_Register_Req.
+         * Properties of a C2R_Register_Req.
          * @memberof msg
-         * @interface I_C2R_Register_Req
-         * @property {string|null} [Account] _C2R_Register_Req Account
-         * @property {string|null} [Password] _C2R_Register_Req Password
+         * @interface IC2R_Register_Req
+         * @property {string|null} [Account] C2R_Register_Req Account
+         * @property {string|null} [Password] C2R_Register_Req Password
          */
 
         /**
-         * Constructs a new _C2R_Register_Req.
+         * Constructs a new C2R_Register_Req.
          * @memberof msg
-         * @classdesc Represents a _C2R_Register_Req.
-         * @implements I_C2R_Register_Req
+         * @classdesc Represents a C2R_Register_Req.
+         * @implements IC2R_Register_Req
          * @constructor
-         * @param {msg.I_C2R_Register_Req=} [properties] Properties to set
+         * @param {msg.IC2R_Register_Req=} [properties] Properties to set
          */
-        function _C2R_Register_Req(properties) {
+        function C2R_Register_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -921,43 +921,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _C2R_Register_Req Account.
+         * C2R_Register_Req Account.
          * @member {string} Account
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @instance
          */
-        _C2R_Register_Req.prototype.Account = "";
+        C2R_Register_Req.prototype.Account = "";
 
         /**
-         * _C2R_Register_Req Password.
+         * C2R_Register_Req Password.
          * @member {string} Password
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @instance
          */
-        _C2R_Register_Req.prototype.Password = "";
+        C2R_Register_Req.prototype.Password = "";
 
         /**
-         * Creates a new _C2R_Register_Req instance using the specified properties.
+         * Creates a new C2R_Register_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
-         * @param {msg.I_C2R_Register_Req=} [properties] Properties to set
-         * @returns {msg._C2R_Register_Req} _C2R_Register_Req instance
+         * @param {msg.IC2R_Register_Req=} [properties] Properties to set
+         * @returns {msg.C2R_Register_Req} C2R_Register_Req instance
          */
-        _C2R_Register_Req.create = function create(properties) {
-            return new _C2R_Register_Req(properties);
+        C2R_Register_Req.create = function create(properties) {
+            return new C2R_Register_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2R_Register_Req message. Does not implicitly {@link msg._C2R_Register_Req.verify|verify} messages.
+         * Encodes the specified C2R_Register_Req message. Does not implicitly {@link msg.C2R_Register_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
-         * @param {msg.I_C2R_Register_Req} message _C2R_Register_Req message or plain object to encode
+         * @param {msg.IC2R_Register_Req} message C2R_Register_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2R_Register_Req.encode = function encode(message, writer) {
+        C2R_Register_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Account != null && message.hasOwnProperty("Account"))
@@ -968,33 +968,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _C2R_Register_Req message, length delimited. Does not implicitly {@link msg._C2R_Register_Req.verify|verify} messages.
+         * Encodes the specified C2R_Register_Req message, length delimited. Does not implicitly {@link msg.C2R_Register_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
-         * @param {msg.I_C2R_Register_Req} message _C2R_Register_Req message or plain object to encode
+         * @param {msg.IC2R_Register_Req} message C2R_Register_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2R_Register_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2R_Register_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2R_Register_Req message from the specified reader or buffer.
+         * Decodes a C2R_Register_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2R_Register_Req} _C2R_Register_Req
+         * @returns {msg.C2R_Register_Req} C2R_Register_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2R_Register_Req.decode = function decode(reader, length) {
+        C2R_Register_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2R_Register_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2R_Register_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -1013,30 +1013,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2R_Register_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2R_Register_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2R_Register_Req} _C2R_Register_Req
+         * @returns {msg.C2R_Register_Req} C2R_Register_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2R_Register_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2R_Register_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2R_Register_Req message.
+         * Verifies a C2R_Register_Req message.
          * @function verify
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2R_Register_Req.verify = function verify(message) {
+        C2R_Register_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Account != null && message.hasOwnProperty("Account"))
@@ -1049,17 +1049,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _C2R_Register_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2R_Register_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2R_Register_Req} _C2R_Register_Req
+         * @returns {msg.C2R_Register_Req} C2R_Register_Req
          */
-        _C2R_Register_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2R_Register_Req)
+        C2R_Register_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2R_Register_Req)
                 return object;
-            var message = new $root.msg._C2R_Register_Req();
+            var message = new $root.msg.C2R_Register_Req();
             if (object.Account != null)
                 message.Account = String(object.Account);
             if (object.Password != null)
@@ -1068,15 +1068,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _C2R_Register_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2R_Register_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @static
-         * @param {msg._C2R_Register_Req} message _C2R_Register_Req
+         * @param {msg.C2R_Register_Req} message C2R_Register_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2R_Register_Req.toObject = function toObject(message, options) {
+        C2R_Register_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -1092,38 +1092,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _C2R_Register_Req to JSON.
+         * Converts this C2R_Register_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2R_Register_Req
+         * @memberof msg.C2R_Register_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2R_Register_Req.prototype.toJSON = function toJSON() {
+        C2R_Register_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2R_Register_Req;
+        return C2R_Register_Req;
     })();
 
-    msg._R2C_Register_Ack = (function() {
+    msg.R2C_Register_Ack = (function() {
 
         /**
-         * Properties of a _R2C_Register_Ack.
+         * Properties of a R2C_Register_Ack.
          * @memberof msg
-         * @interface I_R2C_Register_Ack
-         * @property {number|null} [Error] _R2C_Register_Ack Error
-         * @property {string|null} [Message] _R2C_Register_Ack Message
+         * @interface IR2C_Register_Ack
+         * @property {number|null} [Error] R2C_Register_Ack Error
+         * @property {string|null} [Message] R2C_Register_Ack Message
          */
 
         /**
-         * Constructs a new _R2C_Register_Ack.
+         * Constructs a new R2C_Register_Ack.
          * @memberof msg
-         * @classdesc Represents a _R2C_Register_Ack.
-         * @implements I_R2C_Register_Ack
+         * @classdesc Represents a R2C_Register_Ack.
+         * @implements IR2C_Register_Ack
          * @constructor
-         * @param {msg.I_R2C_Register_Ack=} [properties] Properties to set
+         * @param {msg.IR2C_Register_Ack=} [properties] Properties to set
          */
-        function _R2C_Register_Ack(properties) {
+        function R2C_Register_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1131,43 +1131,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _R2C_Register_Ack Error.
+         * R2C_Register_Ack Error.
          * @member {number} Error
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @instance
          */
-        _R2C_Register_Ack.prototype.Error = 0;
+        R2C_Register_Ack.prototype.Error = 0;
 
         /**
-         * _R2C_Register_Ack Message.
+         * R2C_Register_Ack Message.
          * @member {string} Message
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @instance
          */
-        _R2C_Register_Ack.prototype.Message = "";
+        R2C_Register_Ack.prototype.Message = "";
 
         /**
-         * Creates a new _R2C_Register_Ack instance using the specified properties.
+         * Creates a new R2C_Register_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
-         * @param {msg.I_R2C_Register_Ack=} [properties] Properties to set
-         * @returns {msg._R2C_Register_Ack} _R2C_Register_Ack instance
+         * @param {msg.IR2C_Register_Ack=} [properties] Properties to set
+         * @returns {msg.R2C_Register_Ack} R2C_Register_Ack instance
          */
-        _R2C_Register_Ack.create = function create(properties) {
-            return new _R2C_Register_Ack(properties);
+        R2C_Register_Ack.create = function create(properties) {
+            return new R2C_Register_Ack(properties);
         };
 
         /**
-         * Encodes the specified _R2C_Register_Ack message. Does not implicitly {@link msg._R2C_Register_Ack.verify|verify} messages.
+         * Encodes the specified R2C_Register_Ack message. Does not implicitly {@link msg.R2C_Register_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
-         * @param {msg.I_R2C_Register_Ack} message _R2C_Register_Ack message or plain object to encode
+         * @param {msg.IR2C_Register_Ack} message R2C_Register_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _R2C_Register_Ack.encode = function encode(message, writer) {
+        R2C_Register_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -1178,33 +1178,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _R2C_Register_Ack message, length delimited. Does not implicitly {@link msg._R2C_Register_Ack.verify|verify} messages.
+         * Encodes the specified R2C_Register_Ack message, length delimited. Does not implicitly {@link msg.R2C_Register_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
-         * @param {msg.I_R2C_Register_Ack} message _R2C_Register_Ack message or plain object to encode
+         * @param {msg.IR2C_Register_Ack} message R2C_Register_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _R2C_Register_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        R2C_Register_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _R2C_Register_Ack message from the specified reader or buffer.
+         * Decodes a R2C_Register_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._R2C_Register_Ack} _R2C_Register_Ack
+         * @returns {msg.R2C_Register_Ack} R2C_Register_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _R2C_Register_Ack.decode = function decode(reader, length) {
+        R2C_Register_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._R2C_Register_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.R2C_Register_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -1223,30 +1223,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _R2C_Register_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a R2C_Register_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._R2C_Register_Ack} _R2C_Register_Ack
+         * @returns {msg.R2C_Register_Ack} R2C_Register_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _R2C_Register_Ack.decodeDelimited = function decodeDelimited(reader) {
+        R2C_Register_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _R2C_Register_Ack message.
+         * Verifies a R2C_Register_Ack message.
          * @function verify
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _R2C_Register_Ack.verify = function verify(message) {
+        R2C_Register_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -1259,17 +1259,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _R2C_Register_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a R2C_Register_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._R2C_Register_Ack} _R2C_Register_Ack
+         * @returns {msg.R2C_Register_Ack} R2C_Register_Ack
          */
-        _R2C_Register_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._R2C_Register_Ack)
+        R2C_Register_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.R2C_Register_Ack)
                 return object;
-            var message = new $root.msg._R2C_Register_Ack();
+            var message = new $root.msg.R2C_Register_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -1278,15 +1278,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _R2C_Register_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a R2C_Register_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @static
-         * @param {msg._R2C_Register_Ack} message _R2C_Register_Ack
+         * @param {msg.R2C_Register_Ack} message R2C_Register_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _R2C_Register_Ack.toObject = function toObject(message, options) {
+        R2C_Register_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -1302,37 +1302,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _R2C_Register_Ack to JSON.
+         * Converts this R2C_Register_Ack to JSON.
          * @function toJSON
-         * @memberof msg._R2C_Register_Ack
+         * @memberof msg.R2C_Register_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _R2C_Register_Ack.prototype.toJSON = function toJSON() {
+        R2C_Register_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _R2C_Register_Ack;
+        return R2C_Register_Ack;
     })();
 
-    msg._C2G_LoginGate_Req = (function() {
+    msg.C2G_LoginGate_Req = (function() {
 
         /**
-         * Properties of a _C2G_LoginGate_Req.
+         * Properties of a C2G_LoginGate_Req.
          * @memberof msg
-         * @interface I_C2G_LoginGate_Req
-         * @property {number|Long|null} [Key] _C2G_LoginGate_Req Key
+         * @interface IC2G_LoginGate_Req
+         * @property {number|Long|null} [Key] C2G_LoginGate_Req Key
          */
 
         /**
-         * Constructs a new _C2G_LoginGate_Req.
+         * Constructs a new C2G_LoginGate_Req.
          * @memberof msg
-         * @classdesc Represents a _C2G_LoginGate_Req.
-         * @implements I_C2G_LoginGate_Req
+         * @classdesc Represents a C2G_LoginGate_Req.
+         * @implements IC2G_LoginGate_Req
          * @constructor
-         * @param {msg.I_C2G_LoginGate_Req=} [properties] Properties to set
+         * @param {msg.IC2G_LoginGate_Req=} [properties] Properties to set
          */
-        function _C2G_LoginGate_Req(properties) {
+        function C2G_LoginGate_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1340,35 +1340,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _C2G_LoginGate_Req Key.
+         * C2G_LoginGate_Req Key.
          * @member {number|Long} Key
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @instance
          */
-        _C2G_LoginGate_Req.prototype.Key = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        C2G_LoginGate_Req.prototype.Key = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _C2G_LoginGate_Req instance using the specified properties.
+         * Creates a new C2G_LoginGate_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
-         * @param {msg.I_C2G_LoginGate_Req=} [properties] Properties to set
-         * @returns {msg._C2G_LoginGate_Req} _C2G_LoginGate_Req instance
+         * @param {msg.IC2G_LoginGate_Req=} [properties] Properties to set
+         * @returns {msg.C2G_LoginGate_Req} C2G_LoginGate_Req instance
          */
-        _C2G_LoginGate_Req.create = function create(properties) {
-            return new _C2G_LoginGate_Req(properties);
+        C2G_LoginGate_Req.create = function create(properties) {
+            return new C2G_LoginGate_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2G_LoginGate_Req message. Does not implicitly {@link msg._C2G_LoginGate_Req.verify|verify} messages.
+         * Encodes the specified C2G_LoginGate_Req message. Does not implicitly {@link msg.C2G_LoginGate_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
-         * @param {msg.I_C2G_LoginGate_Req} message _C2G_LoginGate_Req message or plain object to encode
+         * @param {msg.IC2G_LoginGate_Req} message C2G_LoginGate_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_LoginGate_Req.encode = function encode(message, writer) {
+        C2G_LoginGate_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Key != null && message.hasOwnProperty("Key"))
@@ -1377,33 +1377,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _C2G_LoginGate_Req message, length delimited. Does not implicitly {@link msg._C2G_LoginGate_Req.verify|verify} messages.
+         * Encodes the specified C2G_LoginGate_Req message, length delimited. Does not implicitly {@link msg.C2G_LoginGate_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
-         * @param {msg.I_C2G_LoginGate_Req} message _C2G_LoginGate_Req message or plain object to encode
+         * @param {msg.IC2G_LoginGate_Req} message C2G_LoginGate_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_LoginGate_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2G_LoginGate_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2G_LoginGate_Req message from the specified reader or buffer.
+         * Decodes a C2G_LoginGate_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2G_LoginGate_Req} _C2G_LoginGate_Req
+         * @returns {msg.C2G_LoginGate_Req} C2G_LoginGate_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_LoginGate_Req.decode = function decode(reader, length) {
+        C2G_LoginGate_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2G_LoginGate_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2G_LoginGate_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -1419,30 +1419,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2G_LoginGate_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2G_LoginGate_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2G_LoginGate_Req} _C2G_LoginGate_Req
+         * @returns {msg.C2G_LoginGate_Req} C2G_LoginGate_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_LoginGate_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2G_LoginGate_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2G_LoginGate_Req message.
+         * Verifies a C2G_LoginGate_Req message.
          * @function verify
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2G_LoginGate_Req.verify = function verify(message) {
+        C2G_LoginGate_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Key != null && message.hasOwnProperty("Key"))
@@ -1452,17 +1452,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _C2G_LoginGate_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2G_LoginGate_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2G_LoginGate_Req} _C2G_LoginGate_Req
+         * @returns {msg.C2G_LoginGate_Req} C2G_LoginGate_Req
          */
-        _C2G_LoginGate_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2G_LoginGate_Req)
+        C2G_LoginGate_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2G_LoginGate_Req)
                 return object;
-            var message = new $root.msg._C2G_LoginGate_Req();
+            var message = new $root.msg.C2G_LoginGate_Req();
             if (object.Key != null)
                 if ($util.Long)
                     (message.Key = $util.Long.fromValue(object.Key)).unsigned = false;
@@ -1476,15 +1476,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _C2G_LoginGate_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2G_LoginGate_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @static
-         * @param {msg._C2G_LoginGate_Req} message _C2G_LoginGate_Req
+         * @param {msg.C2G_LoginGate_Req} message C2G_LoginGate_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2G_LoginGate_Req.toObject = function toObject(message, options) {
+        C2G_LoginGate_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -1503,40 +1503,40 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _C2G_LoginGate_Req to JSON.
+         * Converts this C2G_LoginGate_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2G_LoginGate_Req
+         * @memberof msg.C2G_LoginGate_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2G_LoginGate_Req.prototype.toJSON = function toJSON() {
+        C2G_LoginGate_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2G_LoginGate_Req;
+        return C2G_LoginGate_Req;
     })();
 
-    msg._G2C_LoginGate_Ack = (function() {
+    msg.G2C_LoginGate_Ack = (function() {
 
         /**
-         * Properties of a _G2C_LoginGate_Ack.
+         * Properties of a G2C_LoginGate_Ack.
          * @memberof msg
-         * @interface I_G2C_LoginGate_Ack
-         * @property {number|null} [Error] _G2C_LoginGate_Ack Error
-         * @property {string|null} [Message] _G2C_LoginGate_Ack Message
-         * @property {number|Long|null} [PlayerID] _G2C_LoginGate_Ack PlayerID
-         * @property {number|Long|null} [UserID] _G2C_LoginGate_Ack UserID
+         * @interface IG2C_LoginGate_Ack
+         * @property {number|null} [Error] G2C_LoginGate_Ack Error
+         * @property {string|null} [Message] G2C_LoginGate_Ack Message
+         * @property {number|Long|null} [PlayerID] G2C_LoginGate_Ack PlayerID
+         * @property {number|Long|null} [UserID] G2C_LoginGate_Ack UserID
          */
 
         /**
-         * Constructs a new _G2C_LoginGate_Ack.
+         * Constructs a new G2C_LoginGate_Ack.
          * @memberof msg
-         * @classdesc Represents a _G2C_LoginGate_Ack.
-         * @implements I_G2C_LoginGate_Ack
+         * @classdesc Represents a G2C_LoginGate_Ack.
+         * @implements IG2C_LoginGate_Ack
          * @constructor
-         * @param {msg.I_G2C_LoginGate_Ack=} [properties] Properties to set
+         * @param {msg.IG2C_LoginGate_Ack=} [properties] Properties to set
          */
-        function _G2C_LoginGate_Ack(properties) {
+        function G2C_LoginGate_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1544,59 +1544,59 @@ $root.msg = (function() {
         }
 
         /**
-         * _G2C_LoginGate_Ack Error.
+         * G2C_LoginGate_Ack Error.
          * @member {number} Error
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @instance
          */
-        _G2C_LoginGate_Ack.prototype.Error = 0;
+        G2C_LoginGate_Ack.prototype.Error = 0;
 
         /**
-         * _G2C_LoginGate_Ack Message.
+         * G2C_LoginGate_Ack Message.
          * @member {string} Message
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @instance
          */
-        _G2C_LoginGate_Ack.prototype.Message = "";
+        G2C_LoginGate_Ack.prototype.Message = "";
 
         /**
-         * _G2C_LoginGate_Ack PlayerID.
+         * G2C_LoginGate_Ack PlayerID.
          * @member {number|Long} PlayerID
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @instance
          */
-        _G2C_LoginGate_Ack.prototype.PlayerID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        G2C_LoginGate_Ack.prototype.PlayerID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _G2C_LoginGate_Ack UserID.
+         * G2C_LoginGate_Ack UserID.
          * @member {number|Long} UserID
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @instance
          */
-        _G2C_LoginGate_Ack.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        G2C_LoginGate_Ack.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _G2C_LoginGate_Ack instance using the specified properties.
+         * Creates a new G2C_LoginGate_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
-         * @param {msg.I_G2C_LoginGate_Ack=} [properties] Properties to set
-         * @returns {msg._G2C_LoginGate_Ack} _G2C_LoginGate_Ack instance
+         * @param {msg.IG2C_LoginGate_Ack=} [properties] Properties to set
+         * @returns {msg.G2C_LoginGate_Ack} G2C_LoginGate_Ack instance
          */
-        _G2C_LoginGate_Ack.create = function create(properties) {
-            return new _G2C_LoginGate_Ack(properties);
+        G2C_LoginGate_Ack.create = function create(properties) {
+            return new G2C_LoginGate_Ack(properties);
         };
 
         /**
-         * Encodes the specified _G2C_LoginGate_Ack message. Does not implicitly {@link msg._G2C_LoginGate_Ack.verify|verify} messages.
+         * Encodes the specified G2C_LoginGate_Ack message. Does not implicitly {@link msg.G2C_LoginGate_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
-         * @param {msg.I_G2C_LoginGate_Ack} message _G2C_LoginGate_Ack message or plain object to encode
+         * @param {msg.IG2C_LoginGate_Ack} message G2C_LoginGate_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_LoginGate_Ack.encode = function encode(message, writer) {
+        G2C_LoginGate_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.PlayerID != null && message.hasOwnProperty("PlayerID"))
@@ -1611,33 +1611,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _G2C_LoginGate_Ack message, length delimited. Does not implicitly {@link msg._G2C_LoginGate_Ack.verify|verify} messages.
+         * Encodes the specified G2C_LoginGate_Ack message, length delimited. Does not implicitly {@link msg.G2C_LoginGate_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
-         * @param {msg.I_G2C_LoginGate_Ack} message _G2C_LoginGate_Ack message or plain object to encode
+         * @param {msg.IG2C_LoginGate_Ack} message G2C_LoginGate_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_LoginGate_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        G2C_LoginGate_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _G2C_LoginGate_Ack message from the specified reader or buffer.
+         * Decodes a G2C_LoginGate_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._G2C_LoginGate_Ack} _G2C_LoginGate_Ack
+         * @returns {msg.G2C_LoginGate_Ack} G2C_LoginGate_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_LoginGate_Ack.decode = function decode(reader, length) {
+        G2C_LoginGate_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._G2C_LoginGate_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.G2C_LoginGate_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -1662,30 +1662,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _G2C_LoginGate_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a G2C_LoginGate_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._G2C_LoginGate_Ack} _G2C_LoginGate_Ack
+         * @returns {msg.G2C_LoginGate_Ack} G2C_LoginGate_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_LoginGate_Ack.decodeDelimited = function decodeDelimited(reader) {
+        G2C_LoginGate_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _G2C_LoginGate_Ack message.
+         * Verifies a G2C_LoginGate_Ack message.
          * @function verify
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _G2C_LoginGate_Ack.verify = function verify(message) {
+        G2C_LoginGate_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -1704,17 +1704,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _G2C_LoginGate_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a G2C_LoginGate_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._G2C_LoginGate_Ack} _G2C_LoginGate_Ack
+         * @returns {msg.G2C_LoginGate_Ack} G2C_LoginGate_Ack
          */
-        _G2C_LoginGate_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._G2C_LoginGate_Ack)
+        G2C_LoginGate_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.G2C_LoginGate_Ack)
                 return object;
-            var message = new $root.msg._G2C_LoginGate_Ack();
+            var message = new $root.msg.G2C_LoginGate_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -1741,15 +1741,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _G2C_LoginGate_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a G2C_LoginGate_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @static
-         * @param {msg._G2C_LoginGate_Ack} message _G2C_LoginGate_Ack
+         * @param {msg.G2C_LoginGate_Ack} message G2C_LoginGate_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _G2C_LoginGate_Ack.toObject = function toObject(message, options) {
+        G2C_LoginGate_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -1785,37 +1785,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _G2C_LoginGate_Ack to JSON.
+         * Converts this G2C_LoginGate_Ack to JSON.
          * @function toJSON
-         * @memberof msg._G2C_LoginGate_Ack
+         * @memberof msg.G2C_LoginGate_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _G2C_LoginGate_Ack.prototype.toJSON = function toJSON() {
+        G2C_LoginGate_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _G2C_LoginGate_Ack;
+        return G2C_LoginGate_Ack;
     })();
 
-    msg._C2G_GetUserInfo_Req = (function() {
+    msg.C2G_GetUserInfo_Req = (function() {
 
         /**
-         * Properties of a _C2G_GetUserInfo_Req.
+         * Properties of a C2G_GetUserInfo_Req.
          * @memberof msg
-         * @interface I_C2G_GetUserInfo_Req
-         * @property {number|Long|null} [UserID] _C2G_GetUserInfo_Req UserID
+         * @interface IC2G_GetUserInfo_Req
+         * @property {number|Long|null} [UserID] C2G_GetUserInfo_Req UserID
          */
 
         /**
-         * Constructs a new _C2G_GetUserInfo_Req.
+         * Constructs a new C2G_GetUserInfo_Req.
          * @memberof msg
-         * @classdesc Represents a _C2G_GetUserInfo_Req.
-         * @implements I_C2G_GetUserInfo_Req
+         * @classdesc Represents a C2G_GetUserInfo_Req.
+         * @implements IC2G_GetUserInfo_Req
          * @constructor
-         * @param {msg.I_C2G_GetUserInfo_Req=} [properties] Properties to set
+         * @param {msg.IC2G_GetUserInfo_Req=} [properties] Properties to set
          */
-        function _C2G_GetUserInfo_Req(properties) {
+        function C2G_GetUserInfo_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1823,35 +1823,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _C2G_GetUserInfo_Req UserID.
+         * C2G_GetUserInfo_Req UserID.
          * @member {number|Long} UserID
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @instance
          */
-        _C2G_GetUserInfo_Req.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        C2G_GetUserInfo_Req.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _C2G_GetUserInfo_Req instance using the specified properties.
+         * Creates a new C2G_GetUserInfo_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
-         * @param {msg.I_C2G_GetUserInfo_Req=} [properties] Properties to set
-         * @returns {msg._C2G_GetUserInfo_Req} _C2G_GetUserInfo_Req instance
+         * @param {msg.IC2G_GetUserInfo_Req=} [properties] Properties to set
+         * @returns {msg.C2G_GetUserInfo_Req} C2G_GetUserInfo_Req instance
          */
-        _C2G_GetUserInfo_Req.create = function create(properties) {
-            return new _C2G_GetUserInfo_Req(properties);
+        C2G_GetUserInfo_Req.create = function create(properties) {
+            return new C2G_GetUserInfo_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2G_GetUserInfo_Req message. Does not implicitly {@link msg._C2G_GetUserInfo_Req.verify|verify} messages.
+         * Encodes the specified C2G_GetUserInfo_Req message. Does not implicitly {@link msg.C2G_GetUserInfo_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
-         * @param {msg.I_C2G_GetUserInfo_Req} message _C2G_GetUserInfo_Req message or plain object to encode
+         * @param {msg.IC2G_GetUserInfo_Req} message C2G_GetUserInfo_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_GetUserInfo_Req.encode = function encode(message, writer) {
+        C2G_GetUserInfo_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -1860,33 +1860,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _C2G_GetUserInfo_Req message, length delimited. Does not implicitly {@link msg._C2G_GetUserInfo_Req.verify|verify} messages.
+         * Encodes the specified C2G_GetUserInfo_Req message, length delimited. Does not implicitly {@link msg.C2G_GetUserInfo_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
-         * @param {msg.I_C2G_GetUserInfo_Req} message _C2G_GetUserInfo_Req message or plain object to encode
+         * @param {msg.IC2G_GetUserInfo_Req} message C2G_GetUserInfo_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_GetUserInfo_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2G_GetUserInfo_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2G_GetUserInfo_Req message from the specified reader or buffer.
+         * Decodes a C2G_GetUserInfo_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2G_GetUserInfo_Req} _C2G_GetUserInfo_Req
+         * @returns {msg.C2G_GetUserInfo_Req} C2G_GetUserInfo_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_GetUserInfo_Req.decode = function decode(reader, length) {
+        C2G_GetUserInfo_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2G_GetUserInfo_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2G_GetUserInfo_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -1902,30 +1902,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2G_GetUserInfo_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2G_GetUserInfo_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2G_GetUserInfo_Req} _C2G_GetUserInfo_Req
+         * @returns {msg.C2G_GetUserInfo_Req} C2G_GetUserInfo_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_GetUserInfo_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2G_GetUserInfo_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2G_GetUserInfo_Req message.
+         * Verifies a C2G_GetUserInfo_Req message.
          * @function verify
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2G_GetUserInfo_Req.verify = function verify(message) {
+        C2G_GetUserInfo_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -1935,17 +1935,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _C2G_GetUserInfo_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2G_GetUserInfo_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2G_GetUserInfo_Req} _C2G_GetUserInfo_Req
+         * @returns {msg.C2G_GetUserInfo_Req} C2G_GetUserInfo_Req
          */
-        _C2G_GetUserInfo_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2G_GetUserInfo_Req)
+        C2G_GetUserInfo_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2G_GetUserInfo_Req)
                 return object;
-            var message = new $root.msg._C2G_GetUserInfo_Req();
+            var message = new $root.msg.C2G_GetUserInfo_Req();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -1959,15 +1959,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _C2G_GetUserInfo_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2G_GetUserInfo_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @static
-         * @param {msg._C2G_GetUserInfo_Req} message _C2G_GetUserInfo_Req
+         * @param {msg.C2G_GetUserInfo_Req} message C2G_GetUserInfo_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2G_GetUserInfo_Req.toObject = function toObject(message, options) {
+        C2G_GetUserInfo_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -1986,40 +1986,40 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _C2G_GetUserInfo_Req to JSON.
+         * Converts this C2G_GetUserInfo_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2G_GetUserInfo_Req
+         * @memberof msg.C2G_GetUserInfo_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2G_GetUserInfo_Req.prototype.toJSON = function toJSON() {
+        C2G_GetUserInfo_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2G_GetUserInfo_Req;
+        return C2G_GetUserInfo_Req;
     })();
 
-    msg._G2C_GetUserInfo_Ack = (function() {
+    msg.G2C_GetUserInfo_Ack = (function() {
 
         /**
-         * Properties of a _G2C_GetUserInfo_Ack.
+         * Properties of a G2C_GetUserInfo_Ack.
          * @memberof msg
-         * @interface I_G2C_GetUserInfo_Ack
-         * @property {number|null} [Error] _G2C_GetUserInfo_Ack Error
-         * @property {string|null} [Message] _G2C_GetUserInfo_Ack Message
-         * @property {string|null} [NickName] _G2C_GetUserInfo_Ack NickName
-         * @property {number|Long|null} [Money] _G2C_GetUserInfo_Ack Money
+         * @interface IG2C_GetUserInfo_Ack
+         * @property {number|null} [Error] G2C_GetUserInfo_Ack Error
+         * @property {string|null} [Message] G2C_GetUserInfo_Ack Message
+         * @property {string|null} [NickName] G2C_GetUserInfo_Ack NickName
+         * @property {number|Long|null} [Money] G2C_GetUserInfo_Ack Money
          */
 
         /**
-         * Constructs a new _G2C_GetUserInfo_Ack.
+         * Constructs a new G2C_GetUserInfo_Ack.
          * @memberof msg
-         * @classdesc Represents a _G2C_GetUserInfo_Ack.
-         * @implements I_G2C_GetUserInfo_Ack
+         * @classdesc Represents a G2C_GetUserInfo_Ack.
+         * @implements IG2C_GetUserInfo_Ack
          * @constructor
-         * @param {msg.I_G2C_GetUserInfo_Ack=} [properties] Properties to set
+         * @param {msg.IG2C_GetUserInfo_Ack=} [properties] Properties to set
          */
-        function _G2C_GetUserInfo_Ack(properties) {
+        function G2C_GetUserInfo_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2027,59 +2027,59 @@ $root.msg = (function() {
         }
 
         /**
-         * _G2C_GetUserInfo_Ack Error.
+         * G2C_GetUserInfo_Ack Error.
          * @member {number} Error
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @instance
          */
-        _G2C_GetUserInfo_Ack.prototype.Error = 0;
+        G2C_GetUserInfo_Ack.prototype.Error = 0;
 
         /**
-         * _G2C_GetUserInfo_Ack Message.
+         * G2C_GetUserInfo_Ack Message.
          * @member {string} Message
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @instance
          */
-        _G2C_GetUserInfo_Ack.prototype.Message = "";
+        G2C_GetUserInfo_Ack.prototype.Message = "";
 
         /**
-         * _G2C_GetUserInfo_Ack NickName.
+         * G2C_GetUserInfo_Ack NickName.
          * @member {string} NickName
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @instance
          */
-        _G2C_GetUserInfo_Ack.prototype.NickName = "";
+        G2C_GetUserInfo_Ack.prototype.NickName = "";
 
         /**
-         * _G2C_GetUserInfo_Ack Money.
+         * G2C_GetUserInfo_Ack Money.
          * @member {number|Long} Money
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @instance
          */
-        _G2C_GetUserInfo_Ack.prototype.Money = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        G2C_GetUserInfo_Ack.prototype.Money = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _G2C_GetUserInfo_Ack instance using the specified properties.
+         * Creates a new G2C_GetUserInfo_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
-         * @param {msg.I_G2C_GetUserInfo_Ack=} [properties] Properties to set
-         * @returns {msg._G2C_GetUserInfo_Ack} _G2C_GetUserInfo_Ack instance
+         * @param {msg.IG2C_GetUserInfo_Ack=} [properties] Properties to set
+         * @returns {msg.G2C_GetUserInfo_Ack} G2C_GetUserInfo_Ack instance
          */
-        _G2C_GetUserInfo_Ack.create = function create(properties) {
-            return new _G2C_GetUserInfo_Ack(properties);
+        G2C_GetUserInfo_Ack.create = function create(properties) {
+            return new G2C_GetUserInfo_Ack(properties);
         };
 
         /**
-         * Encodes the specified _G2C_GetUserInfo_Ack message. Does not implicitly {@link msg._G2C_GetUserInfo_Ack.verify|verify} messages.
+         * Encodes the specified G2C_GetUserInfo_Ack message. Does not implicitly {@link msg.G2C_GetUserInfo_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
-         * @param {msg.I_G2C_GetUserInfo_Ack} message _G2C_GetUserInfo_Ack message or plain object to encode
+         * @param {msg.IG2C_GetUserInfo_Ack} message G2C_GetUserInfo_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_GetUserInfo_Ack.encode = function encode(message, writer) {
+        G2C_GetUserInfo_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.NickName != null && message.hasOwnProperty("NickName"))
@@ -2094,33 +2094,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _G2C_GetUserInfo_Ack message, length delimited. Does not implicitly {@link msg._G2C_GetUserInfo_Ack.verify|verify} messages.
+         * Encodes the specified G2C_GetUserInfo_Ack message, length delimited. Does not implicitly {@link msg.G2C_GetUserInfo_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
-         * @param {msg.I_G2C_GetUserInfo_Ack} message _G2C_GetUserInfo_Ack message or plain object to encode
+         * @param {msg.IG2C_GetUserInfo_Ack} message G2C_GetUserInfo_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_GetUserInfo_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        G2C_GetUserInfo_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _G2C_GetUserInfo_Ack message from the specified reader or buffer.
+         * Decodes a G2C_GetUserInfo_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._G2C_GetUserInfo_Ack} _G2C_GetUserInfo_Ack
+         * @returns {msg.G2C_GetUserInfo_Ack} G2C_GetUserInfo_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_GetUserInfo_Ack.decode = function decode(reader, length) {
+        G2C_GetUserInfo_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._G2C_GetUserInfo_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.G2C_GetUserInfo_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -2145,30 +2145,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _G2C_GetUserInfo_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a G2C_GetUserInfo_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._G2C_GetUserInfo_Ack} _G2C_GetUserInfo_Ack
+         * @returns {msg.G2C_GetUserInfo_Ack} G2C_GetUserInfo_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_GetUserInfo_Ack.decodeDelimited = function decodeDelimited(reader) {
+        G2C_GetUserInfo_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _G2C_GetUserInfo_Ack message.
+         * Verifies a G2C_GetUserInfo_Ack message.
          * @function verify
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _G2C_GetUserInfo_Ack.verify = function verify(message) {
+        G2C_GetUserInfo_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -2187,17 +2187,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _G2C_GetUserInfo_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a G2C_GetUserInfo_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._G2C_GetUserInfo_Ack} _G2C_GetUserInfo_Ack
+         * @returns {msg.G2C_GetUserInfo_Ack} G2C_GetUserInfo_Ack
          */
-        _G2C_GetUserInfo_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._G2C_GetUserInfo_Ack)
+        G2C_GetUserInfo_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.G2C_GetUserInfo_Ack)
                 return object;
-            var message = new $root.msg._G2C_GetUserInfo_Ack();
+            var message = new $root.msg.G2C_GetUserInfo_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -2217,15 +2217,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _G2C_GetUserInfo_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a G2C_GetUserInfo_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @static
-         * @param {msg._G2C_GetUserInfo_Ack} message _G2C_GetUserInfo_Ack
+         * @param {msg.G2C_GetUserInfo_Ack} message G2C_GetUserInfo_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _G2C_GetUserInfo_Ack.toObject = function toObject(message, options) {
+        G2C_GetUserInfo_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -2254,36 +2254,36 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _G2C_GetUserInfo_Ack to JSON.
+         * Converts this G2C_GetUserInfo_Ack to JSON.
          * @function toJSON
-         * @memberof msg._G2C_GetUserInfo_Ack
+         * @memberof msg.G2C_GetUserInfo_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _G2C_GetUserInfo_Ack.prototype.toJSON = function toJSON() {
+        G2C_GetUserInfo_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _G2C_GetUserInfo_Ack;
+        return G2C_GetUserInfo_Ack;
     })();
 
-    msg._C2G_StartMatch_Req = (function() {
+    msg.C2G_StartMatch_Req = (function() {
 
         /**
-         * Properties of a _C2G_StartMatch_Req.
+         * Properties of a C2G_StartMatch_Req.
          * @memberof msg
-         * @interface I_C2G_StartMatch_Req
+         * @interface IC2G_StartMatch_Req
          */
 
         /**
-         * Constructs a new _C2G_StartMatch_Req.
+         * Constructs a new C2G_StartMatch_Req.
          * @memberof msg
-         * @classdesc Represents a _C2G_StartMatch_Req.
-         * @implements I_C2G_StartMatch_Req
+         * @classdesc Represents a C2G_StartMatch_Req.
+         * @implements IC2G_StartMatch_Req
          * @constructor
-         * @param {msg.I_C2G_StartMatch_Req=} [properties] Properties to set
+         * @param {msg.IC2G_StartMatch_Req=} [properties] Properties to set
          */
-        function _C2G_StartMatch_Req(properties) {
+        function C2G_StartMatch_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2291,60 +2291,60 @@ $root.msg = (function() {
         }
 
         /**
-         * Creates a new _C2G_StartMatch_Req instance using the specified properties.
+         * Creates a new C2G_StartMatch_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
-         * @param {msg.I_C2G_StartMatch_Req=} [properties] Properties to set
-         * @returns {msg._C2G_StartMatch_Req} _C2G_StartMatch_Req instance
+         * @param {msg.IC2G_StartMatch_Req=} [properties] Properties to set
+         * @returns {msg.C2G_StartMatch_Req} C2G_StartMatch_Req instance
          */
-        _C2G_StartMatch_Req.create = function create(properties) {
-            return new _C2G_StartMatch_Req(properties);
+        C2G_StartMatch_Req.create = function create(properties) {
+            return new C2G_StartMatch_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2G_StartMatch_Req message. Does not implicitly {@link msg._C2G_StartMatch_Req.verify|verify} messages.
+         * Encodes the specified C2G_StartMatch_Req message. Does not implicitly {@link msg.C2G_StartMatch_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
-         * @param {msg.I_C2G_StartMatch_Req} message _C2G_StartMatch_Req message or plain object to encode
+         * @param {msg.IC2G_StartMatch_Req} message C2G_StartMatch_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_StartMatch_Req.encode = function encode(message, writer) {
+        C2G_StartMatch_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             return writer;
         };
 
         /**
-         * Encodes the specified _C2G_StartMatch_Req message, length delimited. Does not implicitly {@link msg._C2G_StartMatch_Req.verify|verify} messages.
+         * Encodes the specified C2G_StartMatch_Req message, length delimited. Does not implicitly {@link msg.C2G_StartMatch_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
-         * @param {msg.I_C2G_StartMatch_Req} message _C2G_StartMatch_Req message or plain object to encode
+         * @param {msg.IC2G_StartMatch_Req} message C2G_StartMatch_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_StartMatch_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2G_StartMatch_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2G_StartMatch_Req message from the specified reader or buffer.
+         * Decodes a C2G_StartMatch_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2G_StartMatch_Req} _C2G_StartMatch_Req
+         * @returns {msg.C2G_StartMatch_Req} C2G_StartMatch_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_StartMatch_Req.decode = function decode(reader, length) {
+        C2G_StartMatch_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2G_StartMatch_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2G_StartMatch_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -2357,95 +2357,95 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2G_StartMatch_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2G_StartMatch_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2G_StartMatch_Req} _C2G_StartMatch_Req
+         * @returns {msg.C2G_StartMatch_Req} C2G_StartMatch_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_StartMatch_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2G_StartMatch_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2G_StartMatch_Req message.
+         * Verifies a C2G_StartMatch_Req message.
          * @function verify
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2G_StartMatch_Req.verify = function verify(message) {
+        C2G_StartMatch_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             return null;
         };
 
         /**
-         * Creates a _C2G_StartMatch_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2G_StartMatch_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2G_StartMatch_Req} _C2G_StartMatch_Req
+         * @returns {msg.C2G_StartMatch_Req} C2G_StartMatch_Req
          */
-        _C2G_StartMatch_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2G_StartMatch_Req)
+        C2G_StartMatch_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2G_StartMatch_Req)
                 return object;
-            return new $root.msg._C2G_StartMatch_Req();
+            return new $root.msg.C2G_StartMatch_Req();
         };
 
         /**
-         * Creates a plain object from a _C2G_StartMatch_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2G_StartMatch_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @static
-         * @param {msg._C2G_StartMatch_Req} message _C2G_StartMatch_Req
+         * @param {msg.C2G_StartMatch_Req} message C2G_StartMatch_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2G_StartMatch_Req.toObject = function toObject() {
+        C2G_StartMatch_Req.toObject = function toObject() {
             return {};
         };
 
         /**
-         * Converts this _C2G_StartMatch_Req to JSON.
+         * Converts this C2G_StartMatch_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2G_StartMatch_Req
+         * @memberof msg.C2G_StartMatch_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2G_StartMatch_Req.prototype.toJSON = function toJSON() {
+        C2G_StartMatch_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2G_StartMatch_Req;
+        return C2G_StartMatch_Req;
     })();
 
-    msg._G2C_StartMatch_Ack = (function() {
+    msg.G2C_StartMatch_Ack = (function() {
 
         /**
-         * Properties of a _G2C_StartMatch_Ack.
+         * Properties of a G2C_StartMatch_Ack.
          * @memberof msg
-         * @interface I_G2C_StartMatch_Ack
-         * @property {number|null} [Error] _G2C_StartMatch_Ack Error
-         * @property {string|null} [Message] _G2C_StartMatch_Ack Message
+         * @interface IG2C_StartMatch_Ack
+         * @property {number|null} [Error] G2C_StartMatch_Ack Error
+         * @property {string|null} [Message] G2C_StartMatch_Ack Message
          */
 
         /**
-         * Constructs a new _G2C_StartMatch_Ack.
+         * Constructs a new G2C_StartMatch_Ack.
          * @memberof msg
-         * @classdesc Represents a _G2C_StartMatch_Ack.
-         * @implements I_G2C_StartMatch_Ack
+         * @classdesc Represents a G2C_StartMatch_Ack.
+         * @implements IG2C_StartMatch_Ack
          * @constructor
-         * @param {msg.I_G2C_StartMatch_Ack=} [properties] Properties to set
+         * @param {msg.IG2C_StartMatch_Ack=} [properties] Properties to set
          */
-        function _G2C_StartMatch_Ack(properties) {
+        function G2C_StartMatch_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2453,43 +2453,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _G2C_StartMatch_Ack Error.
+         * G2C_StartMatch_Ack Error.
          * @member {number} Error
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @instance
          */
-        _G2C_StartMatch_Ack.prototype.Error = 0;
+        G2C_StartMatch_Ack.prototype.Error = 0;
 
         /**
-         * _G2C_StartMatch_Ack Message.
+         * G2C_StartMatch_Ack Message.
          * @member {string} Message
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @instance
          */
-        _G2C_StartMatch_Ack.prototype.Message = "";
+        G2C_StartMatch_Ack.prototype.Message = "";
 
         /**
-         * Creates a new _G2C_StartMatch_Ack instance using the specified properties.
+         * Creates a new G2C_StartMatch_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
-         * @param {msg.I_G2C_StartMatch_Ack=} [properties] Properties to set
-         * @returns {msg._G2C_StartMatch_Ack} _G2C_StartMatch_Ack instance
+         * @param {msg.IG2C_StartMatch_Ack=} [properties] Properties to set
+         * @returns {msg.G2C_StartMatch_Ack} G2C_StartMatch_Ack instance
          */
-        _G2C_StartMatch_Ack.create = function create(properties) {
-            return new _G2C_StartMatch_Ack(properties);
+        G2C_StartMatch_Ack.create = function create(properties) {
+            return new G2C_StartMatch_Ack(properties);
         };
 
         /**
-         * Encodes the specified _G2C_StartMatch_Ack message. Does not implicitly {@link msg._G2C_StartMatch_Ack.verify|verify} messages.
+         * Encodes the specified G2C_StartMatch_Ack message. Does not implicitly {@link msg.G2C_StartMatch_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
-         * @param {msg.I_G2C_StartMatch_Ack} message _G2C_StartMatch_Ack message or plain object to encode
+         * @param {msg.IG2C_StartMatch_Ack} message G2C_StartMatch_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_StartMatch_Ack.encode = function encode(message, writer) {
+        G2C_StartMatch_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -2500,33 +2500,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _G2C_StartMatch_Ack message, length delimited. Does not implicitly {@link msg._G2C_StartMatch_Ack.verify|verify} messages.
+         * Encodes the specified G2C_StartMatch_Ack message, length delimited. Does not implicitly {@link msg.G2C_StartMatch_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
-         * @param {msg.I_G2C_StartMatch_Ack} message _G2C_StartMatch_Ack message or plain object to encode
+         * @param {msg.IG2C_StartMatch_Ack} message G2C_StartMatch_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_StartMatch_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        G2C_StartMatch_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _G2C_StartMatch_Ack message from the specified reader or buffer.
+         * Decodes a G2C_StartMatch_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._G2C_StartMatch_Ack} _G2C_StartMatch_Ack
+         * @returns {msg.G2C_StartMatch_Ack} G2C_StartMatch_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_StartMatch_Ack.decode = function decode(reader, length) {
+        G2C_StartMatch_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._G2C_StartMatch_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.G2C_StartMatch_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -2545,30 +2545,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _G2C_StartMatch_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a G2C_StartMatch_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._G2C_StartMatch_Ack} _G2C_StartMatch_Ack
+         * @returns {msg.G2C_StartMatch_Ack} G2C_StartMatch_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_StartMatch_Ack.decodeDelimited = function decodeDelimited(reader) {
+        G2C_StartMatch_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _G2C_StartMatch_Ack message.
+         * Verifies a G2C_StartMatch_Ack message.
          * @function verify
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _G2C_StartMatch_Ack.verify = function verify(message) {
+        G2C_StartMatch_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -2581,17 +2581,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _G2C_StartMatch_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a G2C_StartMatch_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._G2C_StartMatch_Ack} _G2C_StartMatch_Ack
+         * @returns {msg.G2C_StartMatch_Ack} G2C_StartMatch_Ack
          */
-        _G2C_StartMatch_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._G2C_StartMatch_Ack)
+        G2C_StartMatch_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.G2C_StartMatch_Ack)
                 return object;
-            var message = new $root.msg._G2C_StartMatch_Ack();
+            var message = new $root.msg.G2C_StartMatch_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -2600,15 +2600,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _G2C_StartMatch_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a G2C_StartMatch_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @static
-         * @param {msg._G2C_StartMatch_Ack} message _G2C_StartMatch_Ack
+         * @param {msg.G2C_StartMatch_Ack} message G2C_StartMatch_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _G2C_StartMatch_Ack.toObject = function toObject(message, options) {
+        G2C_StartMatch_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -2624,36 +2624,36 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _G2C_StartMatch_Ack to JSON.
+         * Converts this G2C_StartMatch_Ack to JSON.
          * @function toJSON
-         * @memberof msg._G2C_StartMatch_Ack
+         * @memberof msg.G2C_StartMatch_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _G2C_StartMatch_Ack.prototype.toJSON = function toJSON() {
+        G2C_StartMatch_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _G2C_StartMatch_Ack;
+        return G2C_StartMatch_Ack;
     })();
 
-    msg._C2G_ReturnLobby_Ntt = (function() {
+    msg.C2G_ReturnLobby_Ntt = (function() {
 
         /**
-         * Properties of a _C2G_ReturnLobby_Ntt.
+         * Properties of a C2G_ReturnLobby_Ntt.
          * @memberof msg
-         * @interface I_C2G_ReturnLobby_Ntt
+         * @interface IC2G_ReturnLobby_Ntt
          */
 
         /**
-         * Constructs a new _C2G_ReturnLobby_Ntt.
+         * Constructs a new C2G_ReturnLobby_Ntt.
          * @memberof msg
-         * @classdesc Represents a _C2G_ReturnLobby_Ntt.
-         * @implements I_C2G_ReturnLobby_Ntt
+         * @classdesc Represents a C2G_ReturnLobby_Ntt.
+         * @implements IC2G_ReturnLobby_Ntt
          * @constructor
-         * @param {msg.I_C2G_ReturnLobby_Ntt=} [properties] Properties to set
+         * @param {msg.IC2G_ReturnLobby_Ntt=} [properties] Properties to set
          */
-        function _C2G_ReturnLobby_Ntt(properties) {
+        function C2G_ReturnLobby_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2661,60 +2661,60 @@ $root.msg = (function() {
         }
 
         /**
-         * Creates a new _C2G_ReturnLobby_Ntt instance using the specified properties.
+         * Creates a new C2G_ReturnLobby_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
-         * @param {msg.I_C2G_ReturnLobby_Ntt=} [properties] Properties to set
-         * @returns {msg._C2G_ReturnLobby_Ntt} _C2G_ReturnLobby_Ntt instance
+         * @param {msg.IC2G_ReturnLobby_Ntt=} [properties] Properties to set
+         * @returns {msg.C2G_ReturnLobby_Ntt} C2G_ReturnLobby_Ntt instance
          */
-        _C2G_ReturnLobby_Ntt.create = function create(properties) {
-            return new _C2G_ReturnLobby_Ntt(properties);
+        C2G_ReturnLobby_Ntt.create = function create(properties) {
+            return new C2G_ReturnLobby_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _C2G_ReturnLobby_Ntt message. Does not implicitly {@link msg._C2G_ReturnLobby_Ntt.verify|verify} messages.
+         * Encodes the specified C2G_ReturnLobby_Ntt message. Does not implicitly {@link msg.C2G_ReturnLobby_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
-         * @param {msg.I_C2G_ReturnLobby_Ntt} message _C2G_ReturnLobby_Ntt message or plain object to encode
+         * @param {msg.IC2G_ReturnLobby_Ntt} message C2G_ReturnLobby_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_ReturnLobby_Ntt.encode = function encode(message, writer) {
+        C2G_ReturnLobby_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             return writer;
         };
 
         /**
-         * Encodes the specified _C2G_ReturnLobby_Ntt message, length delimited. Does not implicitly {@link msg._C2G_ReturnLobby_Ntt.verify|verify} messages.
+         * Encodes the specified C2G_ReturnLobby_Ntt message, length delimited. Does not implicitly {@link msg.C2G_ReturnLobby_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
-         * @param {msg.I_C2G_ReturnLobby_Ntt} message _C2G_ReturnLobby_Ntt message or plain object to encode
+         * @param {msg.IC2G_ReturnLobby_Ntt} message C2G_ReturnLobby_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_ReturnLobby_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        C2G_ReturnLobby_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2G_ReturnLobby_Ntt message from the specified reader or buffer.
+         * Decodes a C2G_ReturnLobby_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2G_ReturnLobby_Ntt} _C2G_ReturnLobby_Ntt
+         * @returns {msg.C2G_ReturnLobby_Ntt} C2G_ReturnLobby_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_ReturnLobby_Ntt.decode = function decode(reader, length) {
+        C2G_ReturnLobby_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2G_ReturnLobby_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2G_ReturnLobby_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -2727,96 +2727,96 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2G_ReturnLobby_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes a C2G_ReturnLobby_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2G_ReturnLobby_Ntt} _C2G_ReturnLobby_Ntt
+         * @returns {msg.C2G_ReturnLobby_Ntt} C2G_ReturnLobby_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_ReturnLobby_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        C2G_ReturnLobby_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2G_ReturnLobby_Ntt message.
+         * Verifies a C2G_ReturnLobby_Ntt message.
          * @function verify
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2G_ReturnLobby_Ntt.verify = function verify(message) {
+        C2G_ReturnLobby_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             return null;
         };
 
         /**
-         * Creates a _C2G_ReturnLobby_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2G_ReturnLobby_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2G_ReturnLobby_Ntt} _C2G_ReturnLobby_Ntt
+         * @returns {msg.C2G_ReturnLobby_Ntt} C2G_ReturnLobby_Ntt
          */
-        _C2G_ReturnLobby_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2G_ReturnLobby_Ntt)
+        C2G_ReturnLobby_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2G_ReturnLobby_Ntt)
                 return object;
-            return new $root.msg._C2G_ReturnLobby_Ntt();
+            return new $root.msg.C2G_ReturnLobby_Ntt();
         };
 
         /**
-         * Creates a plain object from a _C2G_ReturnLobby_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from a C2G_ReturnLobby_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @static
-         * @param {msg._C2G_ReturnLobby_Ntt} message _C2G_ReturnLobby_Ntt
+         * @param {msg.C2G_ReturnLobby_Ntt} message C2G_ReturnLobby_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2G_ReturnLobby_Ntt.toObject = function toObject() {
+        C2G_ReturnLobby_Ntt.toObject = function toObject() {
             return {};
         };
 
         /**
-         * Converts this _C2G_ReturnLobby_Ntt to JSON.
+         * Converts this C2G_ReturnLobby_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._C2G_ReturnLobby_Ntt
+         * @memberof msg.C2G_ReturnLobby_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2G_ReturnLobby_Ntt.prototype.toJSON = function toJSON() {
+        C2G_ReturnLobby_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2G_ReturnLobby_Ntt;
+        return C2G_ReturnLobby_Ntt;
     })();
 
-    msg._C2G_CreateRoom_Req = (function() {
+    msg.C2G_CreateRoom_Req = (function() {
 
         /**
-         * Properties of a _C2G_CreateRoom_Req.
+         * Properties of a C2G_CreateRoom_Req.
          * @memberof msg
-         * @interface I_C2G_CreateRoom_Req
-         * @property {number|null} [Error] _C2G_CreateRoom_Req Error
-         * @property {string|null} [Message] _C2G_CreateRoom_Req Message
-         * @property {number|Long|null} [UserID] _C2G_CreateRoom_Req UserID
+         * @interface IC2G_CreateRoom_Req
+         * @property {number|null} [Error] C2G_CreateRoom_Req Error
+         * @property {string|null} [Message] C2G_CreateRoom_Req Message
+         * @property {number|Long|null} [UserID] C2G_CreateRoom_Req UserID
          */
 
         /**
-         * Constructs a new _C2G_CreateRoom_Req.
+         * Constructs a new C2G_CreateRoom_Req.
          * @memberof msg
-         * @classdesc Represents a _C2G_CreateRoom_Req.
-         * @implements I_C2G_CreateRoom_Req
+         * @classdesc Represents a C2G_CreateRoom_Req.
+         * @implements IC2G_CreateRoom_Req
          * @constructor
-         * @param {msg.I_C2G_CreateRoom_Req=} [properties] Properties to set
+         * @param {msg.IC2G_CreateRoom_Req=} [properties] Properties to set
          */
-        function _C2G_CreateRoom_Req(properties) {
+        function C2G_CreateRoom_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2824,51 +2824,51 @@ $root.msg = (function() {
         }
 
         /**
-         * _C2G_CreateRoom_Req Error.
+         * C2G_CreateRoom_Req Error.
          * @member {number} Error
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @instance
          */
-        _C2G_CreateRoom_Req.prototype.Error = 0;
+        C2G_CreateRoom_Req.prototype.Error = 0;
 
         /**
-         * _C2G_CreateRoom_Req Message.
+         * C2G_CreateRoom_Req Message.
          * @member {string} Message
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @instance
          */
-        _C2G_CreateRoom_Req.prototype.Message = "";
+        C2G_CreateRoom_Req.prototype.Message = "";
 
         /**
-         * _C2G_CreateRoom_Req UserID.
+         * C2G_CreateRoom_Req UserID.
          * @member {number|Long} UserID
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @instance
          */
-        _C2G_CreateRoom_Req.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        C2G_CreateRoom_Req.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _C2G_CreateRoom_Req instance using the specified properties.
+         * Creates a new C2G_CreateRoom_Req instance using the specified properties.
          * @function create
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
-         * @param {msg.I_C2G_CreateRoom_Req=} [properties] Properties to set
-         * @returns {msg._C2G_CreateRoom_Req} _C2G_CreateRoom_Req instance
+         * @param {msg.IC2G_CreateRoom_Req=} [properties] Properties to set
+         * @returns {msg.C2G_CreateRoom_Req} C2G_CreateRoom_Req instance
          */
-        _C2G_CreateRoom_Req.create = function create(properties) {
-            return new _C2G_CreateRoom_Req(properties);
+        C2G_CreateRoom_Req.create = function create(properties) {
+            return new C2G_CreateRoom_Req(properties);
         };
 
         /**
-         * Encodes the specified _C2G_CreateRoom_Req message. Does not implicitly {@link msg._C2G_CreateRoom_Req.verify|verify} messages.
+         * Encodes the specified C2G_CreateRoom_Req message. Does not implicitly {@link msg.C2G_CreateRoom_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
-         * @param {msg.I_C2G_CreateRoom_Req} message _C2G_CreateRoom_Req message or plain object to encode
+         * @param {msg.IC2G_CreateRoom_Req} message C2G_CreateRoom_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_CreateRoom_Req.encode = function encode(message, writer) {
+        C2G_CreateRoom_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -2881,33 +2881,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _C2G_CreateRoom_Req message, length delimited. Does not implicitly {@link msg._C2G_CreateRoom_Req.verify|verify} messages.
+         * Encodes the specified C2G_CreateRoom_Req message, length delimited. Does not implicitly {@link msg.C2G_CreateRoom_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
-         * @param {msg.I_C2G_CreateRoom_Req} message _C2G_CreateRoom_Req message or plain object to encode
+         * @param {msg.IC2G_CreateRoom_Req} message C2G_CreateRoom_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _C2G_CreateRoom_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        C2G_CreateRoom_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _C2G_CreateRoom_Req message from the specified reader or buffer.
+         * Decodes a C2G_CreateRoom_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._C2G_CreateRoom_Req} _C2G_CreateRoom_Req
+         * @returns {msg.C2G_CreateRoom_Req} C2G_CreateRoom_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_CreateRoom_Req.decode = function decode(reader, length) {
+        C2G_CreateRoom_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._C2G_CreateRoom_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.C2G_CreateRoom_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -2929,30 +2929,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _C2G_CreateRoom_Req message from the specified reader or buffer, length delimited.
+         * Decodes a C2G_CreateRoom_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._C2G_CreateRoom_Req} _C2G_CreateRoom_Req
+         * @returns {msg.C2G_CreateRoom_Req} C2G_CreateRoom_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _C2G_CreateRoom_Req.decodeDelimited = function decodeDelimited(reader) {
+        C2G_CreateRoom_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _C2G_CreateRoom_Req message.
+         * Verifies a C2G_CreateRoom_Req message.
          * @function verify
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _C2G_CreateRoom_Req.verify = function verify(message) {
+        C2G_CreateRoom_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -2968,17 +2968,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _C2G_CreateRoom_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates a C2G_CreateRoom_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._C2G_CreateRoom_Req} _C2G_CreateRoom_Req
+         * @returns {msg.C2G_CreateRoom_Req} C2G_CreateRoom_Req
          */
-        _C2G_CreateRoom_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._C2G_CreateRoom_Req)
+        C2G_CreateRoom_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.C2G_CreateRoom_Req)
                 return object;
-            var message = new $root.msg._C2G_CreateRoom_Req();
+            var message = new $root.msg.C2G_CreateRoom_Req();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -2996,15 +2996,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _C2G_CreateRoom_Req message. Also converts values to other types if specified.
+         * Creates a plain object from a C2G_CreateRoom_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @static
-         * @param {msg._C2G_CreateRoom_Req} message _C2G_CreateRoom_Req
+         * @param {msg.C2G_CreateRoom_Req} message C2G_CreateRoom_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _C2G_CreateRoom_Req.toObject = function toObject(message, options) {
+        C2G_CreateRoom_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -3030,36 +3030,36 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _C2G_CreateRoom_Req to JSON.
+         * Converts this C2G_CreateRoom_Req to JSON.
          * @function toJSON
-         * @memberof msg._C2G_CreateRoom_Req
+         * @memberof msg.C2G_CreateRoom_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _C2G_CreateRoom_Req.prototype.toJSON = function toJSON() {
+        C2G_CreateRoom_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _C2G_CreateRoom_Req;
+        return C2G_CreateRoom_Req;
     })();
 
-    msg._G2C_CreateRoom_Ack = (function() {
+    msg.G2C_CreateRoom_Ack = (function() {
 
         /**
-         * Properties of a _G2C_CreateRoom_Ack.
+         * Properties of a G2C_CreateRoom_Ack.
          * @memberof msg
-         * @interface I_G2C_CreateRoom_Ack
+         * @interface IG2C_CreateRoom_Ack
          */
 
         /**
-         * Constructs a new _G2C_CreateRoom_Ack.
+         * Constructs a new G2C_CreateRoom_Ack.
          * @memberof msg
-         * @classdesc Represents a _G2C_CreateRoom_Ack.
-         * @implements I_G2C_CreateRoom_Ack
+         * @classdesc Represents a G2C_CreateRoom_Ack.
+         * @implements IG2C_CreateRoom_Ack
          * @constructor
-         * @param {msg.I_G2C_CreateRoom_Ack=} [properties] Properties to set
+         * @param {msg.IG2C_CreateRoom_Ack=} [properties] Properties to set
          */
-        function _G2C_CreateRoom_Ack(properties) {
+        function G2C_CreateRoom_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3067,60 +3067,60 @@ $root.msg = (function() {
         }
 
         /**
-         * Creates a new _G2C_CreateRoom_Ack instance using the specified properties.
+         * Creates a new G2C_CreateRoom_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
-         * @param {msg.I_G2C_CreateRoom_Ack=} [properties] Properties to set
-         * @returns {msg._G2C_CreateRoom_Ack} _G2C_CreateRoom_Ack instance
+         * @param {msg.IG2C_CreateRoom_Ack=} [properties] Properties to set
+         * @returns {msg.G2C_CreateRoom_Ack} G2C_CreateRoom_Ack instance
          */
-        _G2C_CreateRoom_Ack.create = function create(properties) {
-            return new _G2C_CreateRoom_Ack(properties);
+        G2C_CreateRoom_Ack.create = function create(properties) {
+            return new G2C_CreateRoom_Ack(properties);
         };
 
         /**
-         * Encodes the specified _G2C_CreateRoom_Ack message. Does not implicitly {@link msg._G2C_CreateRoom_Ack.verify|verify} messages.
+         * Encodes the specified G2C_CreateRoom_Ack message. Does not implicitly {@link msg.G2C_CreateRoom_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
-         * @param {msg.I_G2C_CreateRoom_Ack} message _G2C_CreateRoom_Ack message or plain object to encode
+         * @param {msg.IG2C_CreateRoom_Ack} message G2C_CreateRoom_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_CreateRoom_Ack.encode = function encode(message, writer) {
+        G2C_CreateRoom_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             return writer;
         };
 
         /**
-         * Encodes the specified _G2C_CreateRoom_Ack message, length delimited. Does not implicitly {@link msg._G2C_CreateRoom_Ack.verify|verify} messages.
+         * Encodes the specified G2C_CreateRoom_Ack message, length delimited. Does not implicitly {@link msg.G2C_CreateRoom_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
-         * @param {msg.I_G2C_CreateRoom_Ack} message _G2C_CreateRoom_Ack message or plain object to encode
+         * @param {msg.IG2C_CreateRoom_Ack} message G2C_CreateRoom_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_CreateRoom_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        G2C_CreateRoom_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _G2C_CreateRoom_Ack message from the specified reader or buffer.
+         * Decodes a G2C_CreateRoom_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._G2C_CreateRoom_Ack} _G2C_CreateRoom_Ack
+         * @returns {msg.G2C_CreateRoom_Ack} G2C_CreateRoom_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_CreateRoom_Ack.decode = function decode(reader, length) {
+        G2C_CreateRoom_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._G2C_CreateRoom_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.G2C_CreateRoom_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3133,93 +3133,93 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _G2C_CreateRoom_Ack message from the specified reader or buffer, length delimited.
+         * Decodes a G2C_CreateRoom_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._G2C_CreateRoom_Ack} _G2C_CreateRoom_Ack
+         * @returns {msg.G2C_CreateRoom_Ack} G2C_CreateRoom_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_CreateRoom_Ack.decodeDelimited = function decodeDelimited(reader) {
+        G2C_CreateRoom_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _G2C_CreateRoom_Ack message.
+         * Verifies a G2C_CreateRoom_Ack message.
          * @function verify
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _G2C_CreateRoom_Ack.verify = function verify(message) {
+        G2C_CreateRoom_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             return null;
         };
 
         /**
-         * Creates a _G2C_CreateRoom_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates a G2C_CreateRoom_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._G2C_CreateRoom_Ack} _G2C_CreateRoom_Ack
+         * @returns {msg.G2C_CreateRoom_Ack} G2C_CreateRoom_Ack
          */
-        _G2C_CreateRoom_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._G2C_CreateRoom_Ack)
+        G2C_CreateRoom_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.G2C_CreateRoom_Ack)
                 return object;
-            return new $root.msg._G2C_CreateRoom_Ack();
+            return new $root.msg.G2C_CreateRoom_Ack();
         };
 
         /**
-         * Creates a plain object from a _G2C_CreateRoom_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from a G2C_CreateRoom_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @static
-         * @param {msg._G2C_CreateRoom_Ack} message _G2C_CreateRoom_Ack
+         * @param {msg.G2C_CreateRoom_Ack} message G2C_CreateRoom_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _G2C_CreateRoom_Ack.toObject = function toObject() {
+        G2C_CreateRoom_Ack.toObject = function toObject() {
             return {};
         };
 
         /**
-         * Converts this _G2C_CreateRoom_Ack to JSON.
+         * Converts this G2C_CreateRoom_Ack to JSON.
          * @function toJSON
-         * @memberof msg._G2C_CreateRoom_Ack
+         * @memberof msg.G2C_CreateRoom_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _G2C_CreateRoom_Ack.prototype.toJSON = function toJSON() {
+        G2C_CreateRoom_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _G2C_CreateRoom_Ack;
+        return G2C_CreateRoom_Ack;
     })();
 
-    msg._G2C_PlayerDisconnect_Ntt = (function() {
+    msg.G2C_PlayerDisconnect_Ntt = (function() {
 
         /**
-         * Properties of a _G2C_PlayerDisconnect_Ntt.
+         * Properties of a G2C_PlayerDisconnect_Ntt.
          * @memberof msg
-         * @interface I_G2C_PlayerDisconnect_Ntt
+         * @interface IG2C_PlayerDisconnect_Ntt
          */
 
         /**
-         * Constructs a new _G2C_PlayerDisconnect_Ntt.
+         * Constructs a new G2C_PlayerDisconnect_Ntt.
          * @memberof msg
-         * @classdesc Represents a _G2C_PlayerDisconnect_Ntt.
-         * @implements I_G2C_PlayerDisconnect_Ntt
+         * @classdesc Represents a G2C_PlayerDisconnect_Ntt.
+         * @implements IG2C_PlayerDisconnect_Ntt
          * @constructor
-         * @param {msg.I_G2C_PlayerDisconnect_Ntt=} [properties] Properties to set
+         * @param {msg.IG2C_PlayerDisconnect_Ntt=} [properties] Properties to set
          */
-        function _G2C_PlayerDisconnect_Ntt(properties) {
+        function G2C_PlayerDisconnect_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3227,60 +3227,60 @@ $root.msg = (function() {
         }
 
         /**
-         * Creates a new _G2C_PlayerDisconnect_Ntt instance using the specified properties.
+         * Creates a new G2C_PlayerDisconnect_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
-         * @param {msg.I_G2C_PlayerDisconnect_Ntt=} [properties] Properties to set
-         * @returns {msg._G2C_PlayerDisconnect_Ntt} _G2C_PlayerDisconnect_Ntt instance
+         * @param {msg.IG2C_PlayerDisconnect_Ntt=} [properties] Properties to set
+         * @returns {msg.G2C_PlayerDisconnect_Ntt} G2C_PlayerDisconnect_Ntt instance
          */
-        _G2C_PlayerDisconnect_Ntt.create = function create(properties) {
-            return new _G2C_PlayerDisconnect_Ntt(properties);
+        G2C_PlayerDisconnect_Ntt.create = function create(properties) {
+            return new G2C_PlayerDisconnect_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _G2C_PlayerDisconnect_Ntt message. Does not implicitly {@link msg._G2C_PlayerDisconnect_Ntt.verify|verify} messages.
+         * Encodes the specified G2C_PlayerDisconnect_Ntt message. Does not implicitly {@link msg.G2C_PlayerDisconnect_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
-         * @param {msg.I_G2C_PlayerDisconnect_Ntt} message _G2C_PlayerDisconnect_Ntt message or plain object to encode
+         * @param {msg.IG2C_PlayerDisconnect_Ntt} message G2C_PlayerDisconnect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_PlayerDisconnect_Ntt.encode = function encode(message, writer) {
+        G2C_PlayerDisconnect_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             return writer;
         };
 
         /**
-         * Encodes the specified _G2C_PlayerDisconnect_Ntt message, length delimited. Does not implicitly {@link msg._G2C_PlayerDisconnect_Ntt.verify|verify} messages.
+         * Encodes the specified G2C_PlayerDisconnect_Ntt message, length delimited. Does not implicitly {@link msg.G2C_PlayerDisconnect_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
-         * @param {msg.I_G2C_PlayerDisconnect_Ntt} message _G2C_PlayerDisconnect_Ntt message or plain object to encode
+         * @param {msg.IG2C_PlayerDisconnect_Ntt} message G2C_PlayerDisconnect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _G2C_PlayerDisconnect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        G2C_PlayerDisconnect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _G2C_PlayerDisconnect_Ntt message from the specified reader or buffer.
+         * Decodes a G2C_PlayerDisconnect_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._G2C_PlayerDisconnect_Ntt} _G2C_PlayerDisconnect_Ntt
+         * @returns {msg.G2C_PlayerDisconnect_Ntt} G2C_PlayerDisconnect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_PlayerDisconnect_Ntt.decode = function decode(reader, length) {
+        G2C_PlayerDisconnect_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._G2C_PlayerDisconnect_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.G2C_PlayerDisconnect_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3293,94 +3293,94 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _G2C_PlayerDisconnect_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes a G2C_PlayerDisconnect_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._G2C_PlayerDisconnect_Ntt} _G2C_PlayerDisconnect_Ntt
+         * @returns {msg.G2C_PlayerDisconnect_Ntt} G2C_PlayerDisconnect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _G2C_PlayerDisconnect_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        G2C_PlayerDisconnect_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _G2C_PlayerDisconnect_Ntt message.
+         * Verifies a G2C_PlayerDisconnect_Ntt message.
          * @function verify
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _G2C_PlayerDisconnect_Ntt.verify = function verify(message) {
+        G2C_PlayerDisconnect_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             return null;
         };
 
         /**
-         * Creates a _G2C_PlayerDisconnect_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates a G2C_PlayerDisconnect_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._G2C_PlayerDisconnect_Ntt} _G2C_PlayerDisconnect_Ntt
+         * @returns {msg.G2C_PlayerDisconnect_Ntt} G2C_PlayerDisconnect_Ntt
          */
-        _G2C_PlayerDisconnect_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._G2C_PlayerDisconnect_Ntt)
+        G2C_PlayerDisconnect_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.G2C_PlayerDisconnect_Ntt)
                 return object;
-            return new $root.msg._G2C_PlayerDisconnect_Ntt();
+            return new $root.msg.G2C_PlayerDisconnect_Ntt();
         };
 
         /**
-         * Creates a plain object from a _G2C_PlayerDisconnect_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from a G2C_PlayerDisconnect_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @static
-         * @param {msg._G2C_PlayerDisconnect_Ntt} message _G2C_PlayerDisconnect_Ntt
+         * @param {msg.G2C_PlayerDisconnect_Ntt} message G2C_PlayerDisconnect_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _G2C_PlayerDisconnect_Ntt.toObject = function toObject() {
+        G2C_PlayerDisconnect_Ntt.toObject = function toObject() {
             return {};
         };
 
         /**
-         * Converts this _G2C_PlayerDisconnect_Ntt to JSON.
+         * Converts this G2C_PlayerDisconnect_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._G2C_PlayerDisconnect_Ntt
+         * @memberof msg.G2C_PlayerDisconnect_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _G2C_PlayerDisconnect_Ntt.prototype.toJSON = function toJSON() {
+        G2C_PlayerDisconnect_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _G2C_PlayerDisconnect_Ntt;
+        return G2C_PlayerDisconnect_Ntt;
     })();
 
-    msg._Actor_GamerReady_Ntt = (function() {
+    msg.Actor_GamerReady_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerReady_Ntt.
+         * Properties of an Actor_GamerReady_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerReady_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerReady_Ntt UserID
+         * @interface IActor_GamerReady_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerReady_Ntt UserID
          */
 
         /**
-         * Constructs a new _Actor_GamerReady_Ntt.
+         * Constructs a new Actor_GamerReady_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerReady_Ntt.
-         * @implements I_Actor_GamerReady_Ntt
+         * @classdesc Represents an Actor_GamerReady_Ntt.
+         * @implements IActor_GamerReady_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerReady_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerReady_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerReady_Ntt(properties) {
+        function Actor_GamerReady_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3388,35 +3388,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerReady_Ntt UserID.
+         * Actor_GamerReady_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @instance
          */
-        _Actor_GamerReady_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerReady_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _Actor_GamerReady_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerReady_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReady_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerReady_Ntt} _Actor_GamerReady_Ntt instance
+         * @param {msg.IActor_GamerReady_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerReady_Ntt} Actor_GamerReady_Ntt instance
          */
-        _Actor_GamerReady_Ntt.create = function create(properties) {
-            return new _Actor_GamerReady_Ntt(properties);
+        Actor_GamerReady_Ntt.create = function create(properties) {
+            return new Actor_GamerReady_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerReady_Ntt message. Does not implicitly {@link msg._Actor_GamerReady_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerReady_Ntt message. Does not implicitly {@link msg.Actor_GamerReady_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReady_Ntt} message _Actor_GamerReady_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerReady_Ntt} message Actor_GamerReady_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerReady_Ntt.encode = function encode(message, writer) {
+        Actor_GamerReady_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -3425,33 +3425,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerReady_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerReady_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerReady_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerReady_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReady_Ntt} message _Actor_GamerReady_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerReady_Ntt} message Actor_GamerReady_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerReady_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerReady_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerReady_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerReady_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerReady_Ntt} _Actor_GamerReady_Ntt
+         * @returns {msg.Actor_GamerReady_Ntt} Actor_GamerReady_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerReady_Ntt.decode = function decode(reader, length) {
+        Actor_GamerReady_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerReady_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerReady_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3467,30 +3467,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerReady_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerReady_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerReady_Ntt} _Actor_GamerReady_Ntt
+         * @returns {msg.Actor_GamerReady_Ntt} Actor_GamerReady_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerReady_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerReady_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerReady_Ntt message.
+         * Verifies an Actor_GamerReady_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerReady_Ntt.verify = function verify(message) {
+        Actor_GamerReady_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -3500,17 +3500,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerReady_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerReady_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerReady_Ntt} _Actor_GamerReady_Ntt
+         * @returns {msg.Actor_GamerReady_Ntt} Actor_GamerReady_Ntt
          */
-        _Actor_GamerReady_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerReady_Ntt)
+        Actor_GamerReady_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerReady_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerReady_Ntt();
+            var message = new $root.msg.Actor_GamerReady_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -3524,15 +3524,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerReady_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerReady_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @static
-         * @param {msg._Actor_GamerReady_Ntt} message _Actor_GamerReady_Ntt
+         * @param {msg.Actor_GamerReady_Ntt} message Actor_GamerReady_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerReady_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerReady_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -3551,38 +3551,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerReady_Ntt to JSON.
+         * Converts this Actor_GamerReady_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerReady_Ntt
+         * @memberof msg.Actor_GamerReady_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerReady_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerReady_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerReady_Ntt;
+        return Actor_GamerReady_Ntt;
     })();
 
-    msg._Actor_GamerGrabLandlordSelect_Ntt = (function() {
+    msg.Actor_GamerGrabLandlordSelect_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerGrabLandlordSelect_Ntt.
+         * Properties of an Actor_GamerGrabLandlordSelect_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerGrabLandlordSelect_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerGrabLandlordSelect_Ntt UserID
-         * @property {boolean|null} [IsGrab] _Actor_GamerGrabLandlordSelect_Ntt IsGrab
+         * @interface IActor_GamerGrabLandlordSelect_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerGrabLandlordSelect_Ntt UserID
+         * @property {boolean|null} [IsGrab] Actor_GamerGrabLandlordSelect_Ntt IsGrab
          */
 
         /**
-         * Constructs a new _Actor_GamerGrabLandlordSelect_Ntt.
+         * Constructs a new Actor_GamerGrabLandlordSelect_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerGrabLandlordSelect_Ntt.
-         * @implements I_Actor_GamerGrabLandlordSelect_Ntt
+         * @classdesc Represents an Actor_GamerGrabLandlordSelect_Ntt.
+         * @implements IActor_GamerGrabLandlordSelect_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerGrabLandlordSelect_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerGrabLandlordSelect_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerGrabLandlordSelect_Ntt(properties) {
+        function Actor_GamerGrabLandlordSelect_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3590,43 +3590,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerGrabLandlordSelect_Ntt UserID.
+         * Actor_GamerGrabLandlordSelect_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @instance
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerGrabLandlordSelect_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_GamerGrabLandlordSelect_Ntt IsGrab.
+         * Actor_GamerGrabLandlordSelect_Ntt IsGrab.
          * @member {boolean} IsGrab
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @instance
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.prototype.IsGrab = false;
+        Actor_GamerGrabLandlordSelect_Ntt.prototype.IsGrab = false;
 
         /**
-         * Creates a new _Actor_GamerGrabLandlordSelect_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerGrabLandlordSelect_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerGrabLandlordSelect_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerGrabLandlordSelect_Ntt} _Actor_GamerGrabLandlordSelect_Ntt instance
+         * @param {msg.IActor_GamerGrabLandlordSelect_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerGrabLandlordSelect_Ntt} Actor_GamerGrabLandlordSelect_Ntt instance
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.create = function create(properties) {
-            return new _Actor_GamerGrabLandlordSelect_Ntt(properties);
+        Actor_GamerGrabLandlordSelect_Ntt.create = function create(properties) {
+            return new Actor_GamerGrabLandlordSelect_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerGrabLandlordSelect_Ntt message. Does not implicitly {@link msg._Actor_GamerGrabLandlordSelect_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerGrabLandlordSelect_Ntt message. Does not implicitly {@link msg.Actor_GamerGrabLandlordSelect_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerGrabLandlordSelect_Ntt} message _Actor_GamerGrabLandlordSelect_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerGrabLandlordSelect_Ntt} message Actor_GamerGrabLandlordSelect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.encode = function encode(message, writer) {
+        Actor_GamerGrabLandlordSelect_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -3637,33 +3637,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerGrabLandlordSelect_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerGrabLandlordSelect_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerGrabLandlordSelect_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerGrabLandlordSelect_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerGrabLandlordSelect_Ntt} message _Actor_GamerGrabLandlordSelect_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerGrabLandlordSelect_Ntt} message Actor_GamerGrabLandlordSelect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerGrabLandlordSelect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerGrabLandlordSelect_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerGrabLandlordSelect_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerGrabLandlordSelect_Ntt} _Actor_GamerGrabLandlordSelect_Ntt
+         * @returns {msg.Actor_GamerGrabLandlordSelect_Ntt} Actor_GamerGrabLandlordSelect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.decode = function decode(reader, length) {
+        Actor_GamerGrabLandlordSelect_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerGrabLandlordSelect_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerGrabLandlordSelect_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3682,30 +3682,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerGrabLandlordSelect_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerGrabLandlordSelect_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerGrabLandlordSelect_Ntt} _Actor_GamerGrabLandlordSelect_Ntt
+         * @returns {msg.Actor_GamerGrabLandlordSelect_Ntt} Actor_GamerGrabLandlordSelect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerGrabLandlordSelect_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerGrabLandlordSelect_Ntt message.
+         * Verifies an Actor_GamerGrabLandlordSelect_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.verify = function verify(message) {
+        Actor_GamerGrabLandlordSelect_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -3718,17 +3718,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerGrabLandlordSelect_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerGrabLandlordSelect_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerGrabLandlordSelect_Ntt} _Actor_GamerGrabLandlordSelect_Ntt
+         * @returns {msg.Actor_GamerGrabLandlordSelect_Ntt} Actor_GamerGrabLandlordSelect_Ntt
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerGrabLandlordSelect_Ntt)
+        Actor_GamerGrabLandlordSelect_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerGrabLandlordSelect_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerGrabLandlordSelect_Ntt();
+            var message = new $root.msg.Actor_GamerGrabLandlordSelect_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -3744,15 +3744,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerGrabLandlordSelect_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerGrabLandlordSelect_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @static
-         * @param {msg._Actor_GamerGrabLandlordSelect_Ntt} message _Actor_GamerGrabLandlordSelect_Ntt
+         * @param {msg.Actor_GamerGrabLandlordSelect_Ntt} message Actor_GamerGrabLandlordSelect_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerGrabLandlordSelect_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -3775,37 +3775,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerGrabLandlordSelect_Ntt to JSON.
+         * Converts this Actor_GamerGrabLandlordSelect_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerGrabLandlordSelect_Ntt
+         * @memberof msg.Actor_GamerGrabLandlordSelect_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerGrabLandlordSelect_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerGrabLandlordSelect_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerGrabLandlordSelect_Ntt;
+        return Actor_GamerGrabLandlordSelect_Ntt;
     })();
 
-    msg._Actor_GamerPlayCard_Req = (function() {
+    msg.Actor_GamerPlayCard_Req = (function() {
 
         /**
-         * Properties of a _Actor_GamerPlayCard_Req.
+         * Properties of an Actor_GamerPlayCard_Req.
          * @memberof msg
-         * @interface I_Actor_GamerPlayCard_Req
-         * @property {Array.<msg.ICCard>|null} [Cards] _Actor_GamerPlayCard_Req Cards
+         * @interface IActor_GamerPlayCard_Req
+         * @property {Array.<msg.ICCard>|null} [Cards] Actor_GamerPlayCard_Req Cards
          */
 
         /**
-         * Constructs a new _Actor_GamerPlayCard_Req.
+         * Constructs a new Actor_GamerPlayCard_Req.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerPlayCard_Req.
-         * @implements I_Actor_GamerPlayCard_Req
+         * @classdesc Represents an Actor_GamerPlayCard_Req.
+         * @implements IActor_GamerPlayCard_Req
          * @constructor
-         * @param {msg.I_Actor_GamerPlayCard_Req=} [properties] Properties to set
+         * @param {msg.IActor_GamerPlayCard_Req=} [properties] Properties to set
          */
-        function _Actor_GamerPlayCard_Req(properties) {
+        function Actor_GamerPlayCard_Req(properties) {
             this.Cards = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -3814,35 +3814,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerPlayCard_Req Cards.
+         * Actor_GamerPlayCard_Req Cards.
          * @member {Array.<msg.ICCard>} Cards
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @instance
          */
-        _Actor_GamerPlayCard_Req.prototype.Cards = $util.emptyArray;
+        Actor_GamerPlayCard_Req.prototype.Cards = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GamerPlayCard_Req instance using the specified properties.
+         * Creates a new Actor_GamerPlayCard_Req instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Req=} [properties] Properties to set
-         * @returns {msg._Actor_GamerPlayCard_Req} _Actor_GamerPlayCard_Req instance
+         * @param {msg.IActor_GamerPlayCard_Req=} [properties] Properties to set
+         * @returns {msg.Actor_GamerPlayCard_Req} Actor_GamerPlayCard_Req instance
          */
-        _Actor_GamerPlayCard_Req.create = function create(properties) {
-            return new _Actor_GamerPlayCard_Req(properties);
+        Actor_GamerPlayCard_Req.create = function create(properties) {
+            return new Actor_GamerPlayCard_Req(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Req message. Does not implicitly {@link msg._Actor_GamerPlayCard_Req.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Req message. Does not implicitly {@link msg.Actor_GamerPlayCard_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Req} message _Actor_GamerPlayCard_Req message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Req} message Actor_GamerPlayCard_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Req.encode = function encode(message, writer) {
+        Actor_GamerPlayCard_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Cards != null && message.Cards.length)
@@ -3852,33 +3852,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Req message, length delimited. Does not implicitly {@link msg._Actor_GamerPlayCard_Req.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Req message, length delimited. Does not implicitly {@link msg.Actor_GamerPlayCard_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Req} message _Actor_GamerPlayCard_Req message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Req} message Actor_GamerPlayCard_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerPlayCard_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Req message from the specified reader or buffer.
+         * Decodes an Actor_GamerPlayCard_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerPlayCard_Req} _Actor_GamerPlayCard_Req
+         * @returns {msg.Actor_GamerPlayCard_Req} Actor_GamerPlayCard_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Req.decode = function decode(reader, length) {
+        Actor_GamerPlayCard_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerPlayCard_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerPlayCard_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -3896,30 +3896,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Req message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerPlayCard_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerPlayCard_Req} _Actor_GamerPlayCard_Req
+         * @returns {msg.Actor_GamerPlayCard_Req} Actor_GamerPlayCard_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Req.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerPlayCard_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerPlayCard_Req message.
+         * Verifies an Actor_GamerPlayCard_Req message.
          * @function verify
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerPlayCard_Req.verify = function verify(message) {
+        Actor_GamerPlayCard_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Cards != null && message.hasOwnProperty("Cards")) {
@@ -3935,24 +3935,24 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerPlayCard_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerPlayCard_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerPlayCard_Req} _Actor_GamerPlayCard_Req
+         * @returns {msg.Actor_GamerPlayCard_Req} Actor_GamerPlayCard_Req
          */
-        _Actor_GamerPlayCard_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerPlayCard_Req)
+        Actor_GamerPlayCard_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerPlayCard_Req)
                 return object;
-            var message = new $root.msg._Actor_GamerPlayCard_Req();
+            var message = new $root.msg.Actor_GamerPlayCard_Req();
             if (object.Cards) {
                 if (!Array.isArray(object.Cards))
-                    throw TypeError(".msg._Actor_GamerPlayCard_Req.Cards: array expected");
+                    throw TypeError(".msg.Actor_GamerPlayCard_Req.Cards: array expected");
                 message.Cards = [];
                 for (var i = 0; i < object.Cards.length; ++i) {
                     if (typeof object.Cards[i] !== "object")
-                        throw TypeError(".msg._Actor_GamerPlayCard_Req.Cards: object expected");
+                        throw TypeError(".msg.Actor_GamerPlayCard_Req.Cards: object expected");
                     message.Cards[i] = $root.msg.CCard.fromObject(object.Cards[i]);
                 }
             }
@@ -3960,15 +3960,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerPlayCard_Req message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerPlayCard_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @static
-         * @param {msg._Actor_GamerPlayCard_Req} message _Actor_GamerPlayCard_Req
+         * @param {msg.Actor_GamerPlayCard_Req} message Actor_GamerPlayCard_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerPlayCard_Req.toObject = function toObject(message, options) {
+        Actor_GamerPlayCard_Req.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -3983,38 +3983,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerPlayCard_Req to JSON.
+         * Converts this Actor_GamerPlayCard_Req to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerPlayCard_Req
+         * @memberof msg.Actor_GamerPlayCard_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerPlayCard_Req.prototype.toJSON = function toJSON() {
+        Actor_GamerPlayCard_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerPlayCard_Req;
+        return Actor_GamerPlayCard_Req;
     })();
 
-    msg._Actor_GamerPlayCard_Ack = (function() {
+    msg.Actor_GamerPlayCard_Ack = (function() {
 
         /**
-         * Properties of a _Actor_GamerPlayCard_Ack.
+         * Properties of an Actor_GamerPlayCard_Ack.
          * @memberof msg
-         * @interface I_Actor_GamerPlayCard_Ack
-         * @property {number|null} [Error] _Actor_GamerPlayCard_Ack Error
-         * @property {string|null} [Message] _Actor_GamerPlayCard_Ack Message
+         * @interface IActor_GamerPlayCard_Ack
+         * @property {number|null} [Error] Actor_GamerPlayCard_Ack Error
+         * @property {string|null} [Message] Actor_GamerPlayCard_Ack Message
          */
 
         /**
-         * Constructs a new _Actor_GamerPlayCard_Ack.
+         * Constructs a new Actor_GamerPlayCard_Ack.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerPlayCard_Ack.
-         * @implements I_Actor_GamerPlayCard_Ack
+         * @classdesc Represents an Actor_GamerPlayCard_Ack.
+         * @implements IActor_GamerPlayCard_Ack
          * @constructor
-         * @param {msg.I_Actor_GamerPlayCard_Ack=} [properties] Properties to set
+         * @param {msg.IActor_GamerPlayCard_Ack=} [properties] Properties to set
          */
-        function _Actor_GamerPlayCard_Ack(properties) {
+        function Actor_GamerPlayCard_Ack(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -4022,43 +4022,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerPlayCard_Ack Error.
+         * Actor_GamerPlayCard_Ack Error.
          * @member {number} Error
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @instance
          */
-        _Actor_GamerPlayCard_Ack.prototype.Error = 0;
+        Actor_GamerPlayCard_Ack.prototype.Error = 0;
 
         /**
-         * _Actor_GamerPlayCard_Ack Message.
+         * Actor_GamerPlayCard_Ack Message.
          * @member {string} Message
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @instance
          */
-        _Actor_GamerPlayCard_Ack.prototype.Message = "";
+        Actor_GamerPlayCard_Ack.prototype.Message = "";
 
         /**
-         * Creates a new _Actor_GamerPlayCard_Ack instance using the specified properties.
+         * Creates a new Actor_GamerPlayCard_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ack=} [properties] Properties to set
-         * @returns {msg._Actor_GamerPlayCard_Ack} _Actor_GamerPlayCard_Ack instance
+         * @param {msg.IActor_GamerPlayCard_Ack=} [properties] Properties to set
+         * @returns {msg.Actor_GamerPlayCard_Ack} Actor_GamerPlayCard_Ack instance
          */
-        _Actor_GamerPlayCard_Ack.create = function create(properties) {
-            return new _Actor_GamerPlayCard_Ack(properties);
+        Actor_GamerPlayCard_Ack.create = function create(properties) {
+            return new Actor_GamerPlayCard_Ack(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Ack message. Does not implicitly {@link msg._Actor_GamerPlayCard_Ack.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Ack message. Does not implicitly {@link msg.Actor_GamerPlayCard_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ack} message _Actor_GamerPlayCard_Ack message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Ack} message Actor_GamerPlayCard_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Ack.encode = function encode(message, writer) {
+        Actor_GamerPlayCard_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -4069,33 +4069,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Ack message, length delimited. Does not implicitly {@link msg._Actor_GamerPlayCard_Ack.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Ack message, length delimited. Does not implicitly {@link msg.Actor_GamerPlayCard_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ack} message _Actor_GamerPlayCard_Ack message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Ack} message Actor_GamerPlayCard_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerPlayCard_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Ack message from the specified reader or buffer.
+         * Decodes an Actor_GamerPlayCard_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerPlayCard_Ack} _Actor_GamerPlayCard_Ack
+         * @returns {msg.Actor_GamerPlayCard_Ack} Actor_GamerPlayCard_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Ack.decode = function decode(reader, length) {
+        Actor_GamerPlayCard_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerPlayCard_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerPlayCard_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -4114,30 +4114,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Ack message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerPlayCard_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerPlayCard_Ack} _Actor_GamerPlayCard_Ack
+         * @returns {msg.Actor_GamerPlayCard_Ack} Actor_GamerPlayCard_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Ack.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerPlayCard_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerPlayCard_Ack message.
+         * Verifies an Actor_GamerPlayCard_Ack message.
          * @function verify
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerPlayCard_Ack.verify = function verify(message) {
+        Actor_GamerPlayCard_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -4150,17 +4150,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerPlayCard_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerPlayCard_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerPlayCard_Ack} _Actor_GamerPlayCard_Ack
+         * @returns {msg.Actor_GamerPlayCard_Ack} Actor_GamerPlayCard_Ack
          */
-        _Actor_GamerPlayCard_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerPlayCard_Ack)
+        Actor_GamerPlayCard_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerPlayCard_Ack)
                 return object;
-            var message = new $root.msg._Actor_GamerPlayCard_Ack();
+            var message = new $root.msg.Actor_GamerPlayCard_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
@@ -4169,15 +4169,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerPlayCard_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerPlayCard_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @static
-         * @param {msg._Actor_GamerPlayCard_Ack} message _Actor_GamerPlayCard_Ack
+         * @param {msg.Actor_GamerPlayCard_Ack} message Actor_GamerPlayCard_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerPlayCard_Ack.toObject = function toObject(message, options) {
+        Actor_GamerPlayCard_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -4193,38 +4193,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerPlayCard_Ack to JSON.
+         * Converts this Actor_GamerPlayCard_Ack to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerPlayCard_Ack
+         * @memberof msg.Actor_GamerPlayCard_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerPlayCard_Ack.prototype.toJSON = function toJSON() {
+        Actor_GamerPlayCard_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerPlayCard_Ack;
+        return Actor_GamerPlayCard_Ack;
     })();
 
-    msg._Actor_GamerPlayCard_Ntt = (function() {
+    msg.Actor_GamerPlayCard_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerPlayCard_Ntt.
+         * Properties of an Actor_GamerPlayCard_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerPlayCard_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerPlayCard_Ntt UserID
-         * @property {Array.<msg.ICCard>|null} [Cards] _Actor_GamerPlayCard_Ntt Cards
+         * @interface IActor_GamerPlayCard_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerPlayCard_Ntt UserID
+         * @property {Array.<msg.ICCard>|null} [Cards] Actor_GamerPlayCard_Ntt Cards
          */
 
         /**
-         * Constructs a new _Actor_GamerPlayCard_Ntt.
+         * Constructs a new Actor_GamerPlayCard_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerPlayCard_Ntt.
-         * @implements I_Actor_GamerPlayCard_Ntt
+         * @classdesc Represents an Actor_GamerPlayCard_Ntt.
+         * @implements IActor_GamerPlayCard_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerPlayCard_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerPlayCard_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerPlayCard_Ntt(properties) {
+        function Actor_GamerPlayCard_Ntt(properties) {
             this.Cards = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -4233,43 +4233,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerPlayCard_Ntt UserID.
+         * Actor_GamerPlayCard_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @instance
          */
-        _Actor_GamerPlayCard_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerPlayCard_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_GamerPlayCard_Ntt Cards.
+         * Actor_GamerPlayCard_Ntt Cards.
          * @member {Array.<msg.ICCard>} Cards
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @instance
          */
-        _Actor_GamerPlayCard_Ntt.prototype.Cards = $util.emptyArray;
+        Actor_GamerPlayCard_Ntt.prototype.Cards = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GamerPlayCard_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerPlayCard_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerPlayCard_Ntt} _Actor_GamerPlayCard_Ntt instance
+         * @param {msg.IActor_GamerPlayCard_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerPlayCard_Ntt} Actor_GamerPlayCard_Ntt instance
          */
-        _Actor_GamerPlayCard_Ntt.create = function create(properties) {
-            return new _Actor_GamerPlayCard_Ntt(properties);
+        Actor_GamerPlayCard_Ntt.create = function create(properties) {
+            return new Actor_GamerPlayCard_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Ntt message. Does not implicitly {@link msg._Actor_GamerPlayCard_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Ntt message. Does not implicitly {@link msg.Actor_GamerPlayCard_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ntt} message _Actor_GamerPlayCard_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Ntt} message Actor_GamerPlayCard_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Ntt.encode = function encode(message, writer) {
+        Actor_GamerPlayCard_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -4281,33 +4281,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerPlayCard_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerPlayCard_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerPlayCard_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerPlayCard_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_GamerPlayCard_Ntt} message _Actor_GamerPlayCard_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerPlayCard_Ntt} message Actor_GamerPlayCard_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPlayCard_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerPlayCard_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerPlayCard_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerPlayCard_Ntt} _Actor_GamerPlayCard_Ntt
+         * @returns {msg.Actor_GamerPlayCard_Ntt} Actor_GamerPlayCard_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Ntt.decode = function decode(reader, length) {
+        Actor_GamerPlayCard_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerPlayCard_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerPlayCard_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -4328,30 +4328,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerPlayCard_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerPlayCard_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerPlayCard_Ntt} _Actor_GamerPlayCard_Ntt
+         * @returns {msg.Actor_GamerPlayCard_Ntt} Actor_GamerPlayCard_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPlayCard_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerPlayCard_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerPlayCard_Ntt message.
+         * Verifies an Actor_GamerPlayCard_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerPlayCard_Ntt.verify = function verify(message) {
+        Actor_GamerPlayCard_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -4370,17 +4370,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerPlayCard_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerPlayCard_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerPlayCard_Ntt} _Actor_GamerPlayCard_Ntt
+         * @returns {msg.Actor_GamerPlayCard_Ntt} Actor_GamerPlayCard_Ntt
          */
-        _Actor_GamerPlayCard_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerPlayCard_Ntt)
+        Actor_GamerPlayCard_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerPlayCard_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerPlayCard_Ntt();
+            var message = new $root.msg.Actor_GamerPlayCard_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -4392,11 +4392,11 @@ $root.msg = (function() {
                     message.UserID = new $util.LongBits(object.UserID.low >>> 0, object.UserID.high >>> 0).toNumber();
             if (object.Cards) {
                 if (!Array.isArray(object.Cards))
-                    throw TypeError(".msg._Actor_GamerPlayCard_Ntt.Cards: array expected");
+                    throw TypeError(".msg.Actor_GamerPlayCard_Ntt.Cards: array expected");
                 message.Cards = [];
                 for (var i = 0; i < object.Cards.length; ++i) {
                     if (typeof object.Cards[i] !== "object")
-                        throw TypeError(".msg._Actor_GamerPlayCard_Ntt.Cards: object expected");
+                        throw TypeError(".msg.Actor_GamerPlayCard_Ntt.Cards: object expected");
                     message.Cards[i] = $root.msg.CCard.fromObject(object.Cards[i]);
                 }
             }
@@ -4404,15 +4404,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerPlayCard_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerPlayCard_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @static
-         * @param {msg._Actor_GamerPlayCard_Ntt} message _Actor_GamerPlayCard_Ntt
+         * @param {msg.Actor_GamerPlayCard_Ntt} message Actor_GamerPlayCard_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerPlayCard_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerPlayCard_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -4438,36 +4438,36 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerPlayCard_Ntt to JSON.
+         * Converts this Actor_GamerPlayCard_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerPlayCard_Ntt
+         * @memberof msg.Actor_GamerPlayCard_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerPlayCard_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerPlayCard_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerPlayCard_Ntt;
+        return Actor_GamerPlayCard_Ntt;
     })();
 
-    msg._Actor_GamerPrompt_Req = (function() {
+    msg.Actor_GamerPrompt_Req = (function() {
 
         /**
-         * Properties of a _Actor_GamerPrompt_Req.
+         * Properties of an Actor_GamerPrompt_Req.
          * @memberof msg
-         * @interface I_Actor_GamerPrompt_Req
+         * @interface IActor_GamerPrompt_Req
          */
 
         /**
-         * Constructs a new _Actor_GamerPrompt_Req.
+         * Constructs a new Actor_GamerPrompt_Req.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerPrompt_Req.
-         * @implements I_Actor_GamerPrompt_Req
+         * @classdesc Represents an Actor_GamerPrompt_Req.
+         * @implements IActor_GamerPrompt_Req
          * @constructor
-         * @param {msg.I_Actor_GamerPrompt_Req=} [properties] Properties to set
+         * @param {msg.IActor_GamerPrompt_Req=} [properties] Properties to set
          */
-        function _Actor_GamerPrompt_Req(properties) {
+        function Actor_GamerPrompt_Req(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -4475,60 +4475,60 @@ $root.msg = (function() {
         }
 
         /**
-         * Creates a new _Actor_GamerPrompt_Req instance using the specified properties.
+         * Creates a new Actor_GamerPrompt_Req instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Req=} [properties] Properties to set
-         * @returns {msg._Actor_GamerPrompt_Req} _Actor_GamerPrompt_Req instance
+         * @param {msg.IActor_GamerPrompt_Req=} [properties] Properties to set
+         * @returns {msg.Actor_GamerPrompt_Req} Actor_GamerPrompt_Req instance
          */
-        _Actor_GamerPrompt_Req.create = function create(properties) {
-            return new _Actor_GamerPrompt_Req(properties);
+        Actor_GamerPrompt_Req.create = function create(properties) {
+            return new Actor_GamerPrompt_Req(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerPrompt_Req message. Does not implicitly {@link msg._Actor_GamerPrompt_Req.verify|verify} messages.
+         * Encodes the specified Actor_GamerPrompt_Req message. Does not implicitly {@link msg.Actor_GamerPrompt_Req.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Req} message _Actor_GamerPrompt_Req message or plain object to encode
+         * @param {msg.IActor_GamerPrompt_Req} message Actor_GamerPrompt_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPrompt_Req.encode = function encode(message, writer) {
+        Actor_GamerPrompt_Req.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             return writer;
         };
 
         /**
-         * Encodes the specified _Actor_GamerPrompt_Req message, length delimited. Does not implicitly {@link msg._Actor_GamerPrompt_Req.verify|verify} messages.
+         * Encodes the specified Actor_GamerPrompt_Req message, length delimited. Does not implicitly {@link msg.Actor_GamerPrompt_Req.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Req} message _Actor_GamerPrompt_Req message or plain object to encode
+         * @param {msg.IActor_GamerPrompt_Req} message Actor_GamerPrompt_Req message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPrompt_Req.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerPrompt_Req.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerPrompt_Req message from the specified reader or buffer.
+         * Decodes an Actor_GamerPrompt_Req message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerPrompt_Req} _Actor_GamerPrompt_Req
+         * @returns {msg.Actor_GamerPrompt_Req} Actor_GamerPrompt_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPrompt_Req.decode = function decode(reader, length) {
+        Actor_GamerPrompt_Req.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerPrompt_Req();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerPrompt_Req();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -4541,96 +4541,96 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerPrompt_Req message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerPrompt_Req message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerPrompt_Req} _Actor_GamerPrompt_Req
+         * @returns {msg.Actor_GamerPrompt_Req} Actor_GamerPrompt_Req
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPrompt_Req.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerPrompt_Req.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerPrompt_Req message.
+         * Verifies an Actor_GamerPrompt_Req message.
          * @function verify
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerPrompt_Req.verify = function verify(message) {
+        Actor_GamerPrompt_Req.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             return null;
         };
 
         /**
-         * Creates a _Actor_GamerPrompt_Req message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerPrompt_Req message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerPrompt_Req} _Actor_GamerPrompt_Req
+         * @returns {msg.Actor_GamerPrompt_Req} Actor_GamerPrompt_Req
          */
-        _Actor_GamerPrompt_Req.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerPrompt_Req)
+        Actor_GamerPrompt_Req.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerPrompt_Req)
                 return object;
-            return new $root.msg._Actor_GamerPrompt_Req();
+            return new $root.msg.Actor_GamerPrompt_Req();
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerPrompt_Req message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerPrompt_Req message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @static
-         * @param {msg._Actor_GamerPrompt_Req} message _Actor_GamerPrompt_Req
+         * @param {msg.Actor_GamerPrompt_Req} message Actor_GamerPrompt_Req
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerPrompt_Req.toObject = function toObject() {
+        Actor_GamerPrompt_Req.toObject = function toObject() {
             return {};
         };
 
         /**
-         * Converts this _Actor_GamerPrompt_Req to JSON.
+         * Converts this Actor_GamerPrompt_Req to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerPrompt_Req
+         * @memberof msg.Actor_GamerPrompt_Req
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerPrompt_Req.prototype.toJSON = function toJSON() {
+        Actor_GamerPrompt_Req.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerPrompt_Req;
+        return Actor_GamerPrompt_Req;
     })();
 
-    msg._Actor_GamerPrompt_Ack = (function() {
+    msg.Actor_GamerPrompt_Ack = (function() {
 
         /**
-         * Properties of a _Actor_GamerPrompt_Ack.
+         * Properties of an Actor_GamerPrompt_Ack.
          * @memberof msg
-         * @interface I_Actor_GamerPrompt_Ack
-         * @property {number|null} [Error] _Actor_GamerPrompt_Ack Error
-         * @property {string|null} [Message] _Actor_GamerPrompt_Ack Message
-         * @property {Array.<msg.ICCard>|null} [Cards] _Actor_GamerPrompt_Ack Cards
+         * @interface IActor_GamerPrompt_Ack
+         * @property {number|null} [Error] Actor_GamerPrompt_Ack Error
+         * @property {string|null} [Message] Actor_GamerPrompt_Ack Message
+         * @property {Array.<msg.ICCard>|null} [Cards] Actor_GamerPrompt_Ack Cards
          */
 
         /**
-         * Constructs a new _Actor_GamerPrompt_Ack.
+         * Constructs a new Actor_GamerPrompt_Ack.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerPrompt_Ack.
-         * @implements I_Actor_GamerPrompt_Ack
+         * @classdesc Represents an Actor_GamerPrompt_Ack.
+         * @implements IActor_GamerPrompt_Ack
          * @constructor
-         * @param {msg.I_Actor_GamerPrompt_Ack=} [properties] Properties to set
+         * @param {msg.IActor_GamerPrompt_Ack=} [properties] Properties to set
          */
-        function _Actor_GamerPrompt_Ack(properties) {
+        function Actor_GamerPrompt_Ack(properties) {
             this.Cards = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -4639,51 +4639,51 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerPrompt_Ack Error.
+         * Actor_GamerPrompt_Ack Error.
          * @member {number} Error
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @instance
          */
-        _Actor_GamerPrompt_Ack.prototype.Error = 0;
+        Actor_GamerPrompt_Ack.prototype.Error = 0;
 
         /**
-         * _Actor_GamerPrompt_Ack Message.
+         * Actor_GamerPrompt_Ack Message.
          * @member {string} Message
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @instance
          */
-        _Actor_GamerPrompt_Ack.prototype.Message = "";
+        Actor_GamerPrompt_Ack.prototype.Message = "";
 
         /**
-         * _Actor_GamerPrompt_Ack Cards.
+         * Actor_GamerPrompt_Ack Cards.
          * @member {Array.<msg.ICCard>} Cards
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @instance
          */
-        _Actor_GamerPrompt_Ack.prototype.Cards = $util.emptyArray;
+        Actor_GamerPrompt_Ack.prototype.Cards = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GamerPrompt_Ack instance using the specified properties.
+         * Creates a new Actor_GamerPrompt_Ack instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Ack=} [properties] Properties to set
-         * @returns {msg._Actor_GamerPrompt_Ack} _Actor_GamerPrompt_Ack instance
+         * @param {msg.IActor_GamerPrompt_Ack=} [properties] Properties to set
+         * @returns {msg.Actor_GamerPrompt_Ack} Actor_GamerPrompt_Ack instance
          */
-        _Actor_GamerPrompt_Ack.create = function create(properties) {
-            return new _Actor_GamerPrompt_Ack(properties);
+        Actor_GamerPrompt_Ack.create = function create(properties) {
+            return new Actor_GamerPrompt_Ack(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerPrompt_Ack message. Does not implicitly {@link msg._Actor_GamerPrompt_Ack.verify|verify} messages.
+         * Encodes the specified Actor_GamerPrompt_Ack message. Does not implicitly {@link msg.Actor_GamerPrompt_Ack.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Ack} message _Actor_GamerPrompt_Ack message or plain object to encode
+         * @param {msg.IActor_GamerPrompt_Ack} message Actor_GamerPrompt_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPrompt_Ack.encode = function encode(message, writer) {
+        Actor_GamerPrompt_Ack.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Cards != null && message.Cards.length)
@@ -4697,33 +4697,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerPrompt_Ack message, length delimited. Does not implicitly {@link msg._Actor_GamerPrompt_Ack.verify|verify} messages.
+         * Encodes the specified Actor_GamerPrompt_Ack message, length delimited. Does not implicitly {@link msg.Actor_GamerPrompt_Ack.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
-         * @param {msg.I_Actor_GamerPrompt_Ack} message _Actor_GamerPrompt_Ack message or plain object to encode
+         * @param {msg.IActor_GamerPrompt_Ack} message Actor_GamerPrompt_Ack message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerPrompt_Ack.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerPrompt_Ack.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerPrompt_Ack message from the specified reader or buffer.
+         * Decodes an Actor_GamerPrompt_Ack message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerPrompt_Ack} _Actor_GamerPrompt_Ack
+         * @returns {msg.Actor_GamerPrompt_Ack} Actor_GamerPrompt_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPrompt_Ack.decode = function decode(reader, length) {
+        Actor_GamerPrompt_Ack.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerPrompt_Ack();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerPrompt_Ack();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -4747,30 +4747,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerPrompt_Ack message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerPrompt_Ack message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerPrompt_Ack} _Actor_GamerPrompt_Ack
+         * @returns {msg.Actor_GamerPrompt_Ack} Actor_GamerPrompt_Ack
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerPrompt_Ack.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerPrompt_Ack.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerPrompt_Ack message.
+         * Verifies an Actor_GamerPrompt_Ack message.
          * @function verify
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerPrompt_Ack.verify = function verify(message) {
+        Actor_GamerPrompt_Ack.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Error != null && message.hasOwnProperty("Error"))
@@ -4792,28 +4792,28 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerPrompt_Ack message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerPrompt_Ack message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerPrompt_Ack} _Actor_GamerPrompt_Ack
+         * @returns {msg.Actor_GamerPrompt_Ack} Actor_GamerPrompt_Ack
          */
-        _Actor_GamerPrompt_Ack.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerPrompt_Ack)
+        Actor_GamerPrompt_Ack.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerPrompt_Ack)
                 return object;
-            var message = new $root.msg._Actor_GamerPrompt_Ack();
+            var message = new $root.msg.Actor_GamerPrompt_Ack();
             if (object.Error != null)
                 message.Error = object.Error | 0;
             if (object.Message != null)
                 message.Message = String(object.Message);
             if (object.Cards) {
                 if (!Array.isArray(object.Cards))
-                    throw TypeError(".msg._Actor_GamerPrompt_Ack.Cards: array expected");
+                    throw TypeError(".msg.Actor_GamerPrompt_Ack.Cards: array expected");
                 message.Cards = [];
                 for (var i = 0; i < object.Cards.length; ++i) {
                     if (typeof object.Cards[i] !== "object")
-                        throw TypeError(".msg._Actor_GamerPrompt_Ack.Cards: object expected");
+                        throw TypeError(".msg.Actor_GamerPrompt_Ack.Cards: object expected");
                     message.Cards[i] = $root.msg.CCard.fromObject(object.Cards[i]);
                 }
             }
@@ -4821,15 +4821,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerPrompt_Ack message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerPrompt_Ack message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @static
-         * @param {msg._Actor_GamerPrompt_Ack} message _Actor_GamerPrompt_Ack
+         * @param {msg.Actor_GamerPrompt_Ack} message Actor_GamerPrompt_Ack
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerPrompt_Ack.toObject = function toObject(message, options) {
+        Actor_GamerPrompt_Ack.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -4852,37 +4852,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerPrompt_Ack to JSON.
+         * Converts this Actor_GamerPrompt_Ack to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerPrompt_Ack
+         * @memberof msg.Actor_GamerPrompt_Ack
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerPrompt_Ack.prototype.toJSON = function toJSON() {
+        Actor_GamerPrompt_Ack.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerPrompt_Ack;
+        return Actor_GamerPrompt_Ack;
     })();
 
-    msg._Actor_GamerDontPlay_Ntt = (function() {
+    msg.Actor_GamerDontPlay_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerDontPlay_Ntt.
+         * Properties of an Actor_GamerDontPlay_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerDontPlay_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerDontPlay_Ntt UserID
+         * @interface IActor_GamerDontPlay_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerDontPlay_Ntt UserID
          */
 
         /**
-         * Constructs a new _Actor_GamerDontPlay_Ntt.
+         * Constructs a new Actor_GamerDontPlay_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerDontPlay_Ntt.
-         * @implements I_Actor_GamerDontPlay_Ntt
+         * @classdesc Represents an Actor_GamerDontPlay_Ntt.
+         * @implements IActor_GamerDontPlay_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerDontPlay_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerDontPlay_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerDontPlay_Ntt(properties) {
+        function Actor_GamerDontPlay_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -4890,35 +4890,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerDontPlay_Ntt UserID.
+         * Actor_GamerDontPlay_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @instance
          */
-        _Actor_GamerDontPlay_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerDontPlay_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _Actor_GamerDontPlay_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerDontPlay_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
-         * @param {msg.I_Actor_GamerDontPlay_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerDontPlay_Ntt} _Actor_GamerDontPlay_Ntt instance
+         * @param {msg.IActor_GamerDontPlay_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerDontPlay_Ntt} Actor_GamerDontPlay_Ntt instance
          */
-        _Actor_GamerDontPlay_Ntt.create = function create(properties) {
-            return new _Actor_GamerDontPlay_Ntt(properties);
+        Actor_GamerDontPlay_Ntt.create = function create(properties) {
+            return new Actor_GamerDontPlay_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerDontPlay_Ntt message. Does not implicitly {@link msg._Actor_GamerDontPlay_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerDontPlay_Ntt message. Does not implicitly {@link msg.Actor_GamerDontPlay_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
-         * @param {msg.I_Actor_GamerDontPlay_Ntt} message _Actor_GamerDontPlay_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerDontPlay_Ntt} message Actor_GamerDontPlay_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerDontPlay_Ntt.encode = function encode(message, writer) {
+        Actor_GamerDontPlay_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -4927,33 +4927,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerDontPlay_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerDontPlay_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerDontPlay_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerDontPlay_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
-         * @param {msg.I_Actor_GamerDontPlay_Ntt} message _Actor_GamerDontPlay_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerDontPlay_Ntt} message Actor_GamerDontPlay_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerDontPlay_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerDontPlay_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerDontPlay_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerDontPlay_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerDontPlay_Ntt} _Actor_GamerDontPlay_Ntt
+         * @returns {msg.Actor_GamerDontPlay_Ntt} Actor_GamerDontPlay_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerDontPlay_Ntt.decode = function decode(reader, length) {
+        Actor_GamerDontPlay_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerDontPlay_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerDontPlay_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -4969,30 +4969,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerDontPlay_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerDontPlay_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerDontPlay_Ntt} _Actor_GamerDontPlay_Ntt
+         * @returns {msg.Actor_GamerDontPlay_Ntt} Actor_GamerDontPlay_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerDontPlay_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerDontPlay_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerDontPlay_Ntt message.
+         * Verifies an Actor_GamerDontPlay_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerDontPlay_Ntt.verify = function verify(message) {
+        Actor_GamerDontPlay_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -5002,17 +5002,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerDontPlay_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerDontPlay_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerDontPlay_Ntt} _Actor_GamerDontPlay_Ntt
+         * @returns {msg.Actor_GamerDontPlay_Ntt} Actor_GamerDontPlay_Ntt
          */
-        _Actor_GamerDontPlay_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerDontPlay_Ntt)
+        Actor_GamerDontPlay_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerDontPlay_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerDontPlay_Ntt();
+            var message = new $root.msg.Actor_GamerDontPlay_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -5026,15 +5026,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerDontPlay_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerDontPlay_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @static
-         * @param {msg._Actor_GamerDontPlay_Ntt} message _Actor_GamerDontPlay_Ntt
+         * @param {msg.Actor_GamerDontPlay_Ntt} message Actor_GamerDontPlay_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerDontPlay_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerDontPlay_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -5053,38 +5053,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerDontPlay_Ntt to JSON.
+         * Converts this Actor_GamerDontPlay_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerDontPlay_Ntt
+         * @memberof msg.Actor_GamerDontPlay_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerDontPlay_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerDontPlay_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerDontPlay_Ntt;
+        return Actor_GamerDontPlay_Ntt;
     })();
 
-    msg._Actor_Trusteeship_Ntt = (function() {
+    msg.Actor_Trusteeship_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_Trusteeship_Ntt.
+         * Properties of an Actor_Trusteeship_Ntt.
          * @memberof msg
-         * @interface I_Actor_Trusteeship_Ntt
-         * @property {number|Long|null} [UserID] _Actor_Trusteeship_Ntt UserID
-         * @property {boolean|null} [isTrusteeship] _Actor_Trusteeship_Ntt isTrusteeship
+         * @interface IActor_Trusteeship_Ntt
+         * @property {number|Long|null} [UserID] Actor_Trusteeship_Ntt UserID
+         * @property {boolean|null} [isTrusteeship] Actor_Trusteeship_Ntt isTrusteeship
          */
 
         /**
-         * Constructs a new _Actor_Trusteeship_Ntt.
+         * Constructs a new Actor_Trusteeship_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_Trusteeship_Ntt.
-         * @implements I_Actor_Trusteeship_Ntt
+         * @classdesc Represents an Actor_Trusteeship_Ntt.
+         * @implements IActor_Trusteeship_Ntt
          * @constructor
-         * @param {msg.I_Actor_Trusteeship_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_Trusteeship_Ntt=} [properties] Properties to set
          */
-        function _Actor_Trusteeship_Ntt(properties) {
+        function Actor_Trusteeship_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -5092,43 +5092,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_Trusteeship_Ntt UserID.
+         * Actor_Trusteeship_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @instance
          */
-        _Actor_Trusteeship_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_Trusteeship_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_Trusteeship_Ntt isTrusteeship.
+         * Actor_Trusteeship_Ntt isTrusteeship.
          * @member {boolean} isTrusteeship
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @instance
          */
-        _Actor_Trusteeship_Ntt.prototype.isTrusteeship = false;
+        Actor_Trusteeship_Ntt.prototype.isTrusteeship = false;
 
         /**
-         * Creates a new _Actor_Trusteeship_Ntt instance using the specified properties.
+         * Creates a new Actor_Trusteeship_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
-         * @param {msg.I_Actor_Trusteeship_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_Trusteeship_Ntt} _Actor_Trusteeship_Ntt instance
+         * @param {msg.IActor_Trusteeship_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_Trusteeship_Ntt} Actor_Trusteeship_Ntt instance
          */
-        _Actor_Trusteeship_Ntt.create = function create(properties) {
-            return new _Actor_Trusteeship_Ntt(properties);
+        Actor_Trusteeship_Ntt.create = function create(properties) {
+            return new Actor_Trusteeship_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_Trusteeship_Ntt message. Does not implicitly {@link msg._Actor_Trusteeship_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_Trusteeship_Ntt message. Does not implicitly {@link msg.Actor_Trusteeship_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
-         * @param {msg.I_Actor_Trusteeship_Ntt} message _Actor_Trusteeship_Ntt message or plain object to encode
+         * @param {msg.IActor_Trusteeship_Ntt} message Actor_Trusteeship_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_Trusteeship_Ntt.encode = function encode(message, writer) {
+        Actor_Trusteeship_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -5139,33 +5139,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_Trusteeship_Ntt message, length delimited. Does not implicitly {@link msg._Actor_Trusteeship_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_Trusteeship_Ntt message, length delimited. Does not implicitly {@link msg.Actor_Trusteeship_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
-         * @param {msg.I_Actor_Trusteeship_Ntt} message _Actor_Trusteeship_Ntt message or plain object to encode
+         * @param {msg.IActor_Trusteeship_Ntt} message Actor_Trusteeship_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_Trusteeship_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_Trusteeship_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_Trusteeship_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_Trusteeship_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_Trusteeship_Ntt} _Actor_Trusteeship_Ntt
+         * @returns {msg.Actor_Trusteeship_Ntt} Actor_Trusteeship_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_Trusteeship_Ntt.decode = function decode(reader, length) {
+        Actor_Trusteeship_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_Trusteeship_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_Trusteeship_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -5184,30 +5184,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_Trusteeship_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_Trusteeship_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_Trusteeship_Ntt} _Actor_Trusteeship_Ntt
+         * @returns {msg.Actor_Trusteeship_Ntt} Actor_Trusteeship_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_Trusteeship_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_Trusteeship_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_Trusteeship_Ntt message.
+         * Verifies an Actor_Trusteeship_Ntt message.
          * @function verify
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_Trusteeship_Ntt.verify = function verify(message) {
+        Actor_Trusteeship_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -5220,17 +5220,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_Trusteeship_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_Trusteeship_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_Trusteeship_Ntt} _Actor_Trusteeship_Ntt
+         * @returns {msg.Actor_Trusteeship_Ntt} Actor_Trusteeship_Ntt
          */
-        _Actor_Trusteeship_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_Trusteeship_Ntt)
+        Actor_Trusteeship_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_Trusteeship_Ntt)
                 return object;
-            var message = new $root.msg._Actor_Trusteeship_Ntt();
+            var message = new $root.msg.Actor_Trusteeship_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -5246,15 +5246,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_Trusteeship_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_Trusteeship_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @static
-         * @param {msg._Actor_Trusteeship_Ntt} message _Actor_Trusteeship_Ntt
+         * @param {msg.Actor_Trusteeship_Ntt} message Actor_Trusteeship_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_Trusteeship_Ntt.toObject = function toObject(message, options) {
+        Actor_Trusteeship_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -5277,42 +5277,42 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_Trusteeship_Ntt to JSON.
+         * Converts this Actor_Trusteeship_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_Trusteeship_Ntt
+         * @memberof msg.Actor_Trusteeship_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_Trusteeship_Ntt.prototype.toJSON = function toJSON() {
+        Actor_Trusteeship_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_Trusteeship_Ntt;
+        return Actor_Trusteeship_Ntt;
     })();
 
-    msg._CGamerInfo = (function() {
+    msg.CGamerInfo = (function() {
 
         /**
-         * Properties of a _CGamerInfo.
+         * Properties of a CGamerInfo.
          * @memberof msg
-         * @interface I_CGamerInfo
-         * @property {number|Long|null} [UserID] _CGamerInfo UserID
-         * @property {string|null} [NickName] _CGamerInfo NickName
-         * @property {number|Long|null} [Money] _CGamerInfo Money
-         * @property {number|null} [SeatID] _CGamerInfo SeatID
-         * @property {boolean|null} [IsReady] _CGamerInfo IsReady
-         * @property {boolean|null} [IsOffline] _CGamerInfo IsOffline
+         * @interface ICGamerInfo
+         * @property {number|Long|null} [UserID] CGamerInfo UserID
+         * @property {string|null} [NickName] CGamerInfo NickName
+         * @property {number|Long|null} [Money] CGamerInfo Money
+         * @property {number|null} [SeatID] CGamerInfo SeatID
+         * @property {boolean|null} [IsReady] CGamerInfo IsReady
+         * @property {boolean|null} [IsOffline] CGamerInfo IsOffline
          */
 
         /**
-         * Constructs a new _CGamerInfo.
+         * Constructs a new CGamerInfo.
          * @memberof msg
-         * @classdesc Represents a _CGamerInfo.
-         * @implements I_CGamerInfo
+         * @classdesc Represents a CGamerInfo.
+         * @implements ICGamerInfo
          * @constructor
-         * @param {msg.I_CGamerInfo=} [properties] Properties to set
+         * @param {msg.ICGamerInfo=} [properties] Properties to set
          */
-        function _CGamerInfo(properties) {
+        function CGamerInfo(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -5320,75 +5320,75 @@ $root.msg = (function() {
         }
 
         /**
-         * _CGamerInfo UserID.
+         * CGamerInfo UserID.
          * @member {number|Long} UserID
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        CGamerInfo.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _CGamerInfo NickName.
+         * CGamerInfo NickName.
          * @member {string} NickName
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.NickName = "";
+        CGamerInfo.prototype.NickName = "";
 
         /**
-         * _CGamerInfo Money.
+         * CGamerInfo Money.
          * @member {number|Long} Money
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.Money = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        CGamerInfo.prototype.Money = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _CGamerInfo SeatID.
+         * CGamerInfo SeatID.
          * @member {number} SeatID
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.SeatID = 0;
+        CGamerInfo.prototype.SeatID = 0;
 
         /**
-         * _CGamerInfo IsReady.
+         * CGamerInfo IsReady.
          * @member {boolean} IsReady
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.IsReady = false;
+        CGamerInfo.prototype.IsReady = false;
 
         /**
-         * _CGamerInfo IsOffline.
+         * CGamerInfo IsOffline.
          * @member {boolean} IsOffline
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          */
-        _CGamerInfo.prototype.IsOffline = false;
+        CGamerInfo.prototype.IsOffline = false;
 
         /**
-         * Creates a new _CGamerInfo instance using the specified properties.
+         * Creates a new CGamerInfo instance using the specified properties.
          * @function create
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
-         * @param {msg.I_CGamerInfo=} [properties] Properties to set
-         * @returns {msg._CGamerInfo} _CGamerInfo instance
+         * @param {msg.ICGamerInfo=} [properties] Properties to set
+         * @returns {msg.CGamerInfo} CGamerInfo instance
          */
-        _CGamerInfo.create = function create(properties) {
-            return new _CGamerInfo(properties);
+        CGamerInfo.create = function create(properties) {
+            return new CGamerInfo(properties);
         };
 
         /**
-         * Encodes the specified _CGamerInfo message. Does not implicitly {@link msg._CGamerInfo.verify|verify} messages.
+         * Encodes the specified CGamerInfo message. Does not implicitly {@link msg.CGamerInfo.verify|verify} messages.
          * @function encode
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
-         * @param {msg.I_CGamerInfo} message _CGamerInfo message or plain object to encode
+         * @param {msg.ICGamerInfo} message CGamerInfo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _CGamerInfo.encode = function encode(message, writer) {
+        CGamerInfo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -5407,33 +5407,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _CGamerInfo message, length delimited. Does not implicitly {@link msg._CGamerInfo.verify|verify} messages.
+         * Encodes the specified CGamerInfo message, length delimited. Does not implicitly {@link msg.CGamerInfo.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
-         * @param {msg.I_CGamerInfo} message _CGamerInfo message or plain object to encode
+         * @param {msg.ICGamerInfo} message CGamerInfo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _CGamerInfo.encodeDelimited = function encodeDelimited(message, writer) {
+        CGamerInfo.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _CGamerInfo message from the specified reader or buffer.
+         * Decodes a CGamerInfo message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._CGamerInfo} _CGamerInfo
+         * @returns {msg.CGamerInfo} CGamerInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _CGamerInfo.decode = function decode(reader, length) {
+        CGamerInfo.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._CGamerInfo();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.CGamerInfo();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -5464,30 +5464,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _CGamerInfo message from the specified reader or buffer, length delimited.
+         * Decodes a CGamerInfo message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._CGamerInfo} _CGamerInfo
+         * @returns {msg.CGamerInfo} CGamerInfo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _CGamerInfo.decodeDelimited = function decodeDelimited(reader) {
+        CGamerInfo.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _CGamerInfo message.
+         * Verifies a CGamerInfo message.
          * @function verify
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _CGamerInfo.verify = function verify(message) {
+        CGamerInfo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -5512,17 +5512,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _CGamerInfo message from a plain object. Also converts values to their respective internal types.
+         * Creates a CGamerInfo message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._CGamerInfo} _CGamerInfo
+         * @returns {msg.CGamerInfo} CGamerInfo
          */
-        _CGamerInfo.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._CGamerInfo)
+        CGamerInfo.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.CGamerInfo)
                 return object;
-            var message = new $root.msg._CGamerInfo();
+            var message = new $root.msg.CGamerInfo();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -5553,15 +5553,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _CGamerInfo message. Also converts values to other types if specified.
+         * Creates a plain object from a CGamerInfo message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @static
-         * @param {msg._CGamerInfo} message _CGamerInfo
+         * @param {msg.CGamerInfo} message CGamerInfo
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _CGamerInfo.toObject = function toObject(message, options) {
+        CGamerInfo.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -5603,37 +5603,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _CGamerInfo to JSON.
+         * Converts this CGamerInfo to JSON.
          * @function toJSON
-         * @memberof msg._CGamerInfo
+         * @memberof msg.CGamerInfo
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _CGamerInfo.prototype.toJSON = function toJSON() {
+        CGamerInfo.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _CGamerInfo;
+        return CGamerInfo;
     })();
 
-    msg._CGamerCards = (function() {
+    msg.CGamerCards = (function() {
 
         /**
-         * Properties of a _CGamerCards.
+         * Properties of a CGamerCards.
          * @memberof msg
-         * @interface I_CGamerCards
-         * @property {Array.<msg.ICCard>|null} [GamerCards] _CGamerCards GamerCards
+         * @interface ICGamerCards
+         * @property {Array.<msg.ICCard>|null} [GamerCards] CGamerCards GamerCards
          */
 
         /**
-         * Constructs a new _CGamerCards.
+         * Constructs a new CGamerCards.
          * @memberof msg
-         * @classdesc Represents a _CGamerCards.
-         * @implements I_CGamerCards
+         * @classdesc Represents a CGamerCards.
+         * @implements ICGamerCards
          * @constructor
-         * @param {msg.I_CGamerCards=} [properties] Properties to set
+         * @param {msg.ICGamerCards=} [properties] Properties to set
          */
-        function _CGamerCards(properties) {
+        function CGamerCards(properties) {
             this.GamerCards = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -5642,35 +5642,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _CGamerCards GamerCards.
+         * CGamerCards GamerCards.
          * @member {Array.<msg.ICCard>} GamerCards
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @instance
          */
-        _CGamerCards.prototype.GamerCards = $util.emptyArray;
+        CGamerCards.prototype.GamerCards = $util.emptyArray;
 
         /**
-         * Creates a new _CGamerCards instance using the specified properties.
+         * Creates a new CGamerCards instance using the specified properties.
          * @function create
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
-         * @param {msg.I_CGamerCards=} [properties] Properties to set
-         * @returns {msg._CGamerCards} _CGamerCards instance
+         * @param {msg.ICGamerCards=} [properties] Properties to set
+         * @returns {msg.CGamerCards} CGamerCards instance
          */
-        _CGamerCards.create = function create(properties) {
-            return new _CGamerCards(properties);
+        CGamerCards.create = function create(properties) {
+            return new CGamerCards(properties);
         };
 
         /**
-         * Encodes the specified _CGamerCards message. Does not implicitly {@link msg._CGamerCards.verify|verify} messages.
+         * Encodes the specified CGamerCards message. Does not implicitly {@link msg.CGamerCards.verify|verify} messages.
          * @function encode
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
-         * @param {msg.I_CGamerCards} message _CGamerCards message or plain object to encode
+         * @param {msg.ICGamerCards} message CGamerCards message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _CGamerCards.encode = function encode(message, writer) {
+        CGamerCards.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.GamerCards != null && message.GamerCards.length)
@@ -5680,33 +5680,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _CGamerCards message, length delimited. Does not implicitly {@link msg._CGamerCards.verify|verify} messages.
+         * Encodes the specified CGamerCards message, length delimited. Does not implicitly {@link msg.CGamerCards.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
-         * @param {msg.I_CGamerCards} message _CGamerCards message or plain object to encode
+         * @param {msg.ICGamerCards} message CGamerCards message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _CGamerCards.encodeDelimited = function encodeDelimited(message, writer) {
+        CGamerCards.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _CGamerCards message from the specified reader or buffer.
+         * Decodes a CGamerCards message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._CGamerCards} _CGamerCards
+         * @returns {msg.CGamerCards} CGamerCards
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _CGamerCards.decode = function decode(reader, length) {
+        CGamerCards.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._CGamerCards();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.CGamerCards();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -5724,30 +5724,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _CGamerCards message from the specified reader or buffer, length delimited.
+         * Decodes a CGamerCards message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._CGamerCards} _CGamerCards
+         * @returns {msg.CGamerCards} CGamerCards
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _CGamerCards.decodeDelimited = function decodeDelimited(reader) {
+        CGamerCards.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _CGamerCards message.
+         * Verifies a CGamerCards message.
          * @function verify
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _CGamerCards.verify = function verify(message) {
+        CGamerCards.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.GamerCards != null && message.hasOwnProperty("GamerCards")) {
@@ -5763,24 +5763,24 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _CGamerCards message from a plain object. Also converts values to their respective internal types.
+         * Creates a CGamerCards message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._CGamerCards} _CGamerCards
+         * @returns {msg.CGamerCards} CGamerCards
          */
-        _CGamerCards.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._CGamerCards)
+        CGamerCards.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.CGamerCards)
                 return object;
-            var message = new $root.msg._CGamerCards();
+            var message = new $root.msg.CGamerCards();
             if (object.GamerCards) {
                 if (!Array.isArray(object.GamerCards))
-                    throw TypeError(".msg._CGamerCards.GamerCards: array expected");
+                    throw TypeError(".msg.CGamerCards.GamerCards: array expected");
                 message.GamerCards = [];
                 for (var i = 0; i < object.GamerCards.length; ++i) {
                     if (typeof object.GamerCards[i] !== "object")
-                        throw TypeError(".msg._CGamerCards.GamerCards: object expected");
+                        throw TypeError(".msg.CGamerCards.GamerCards: object expected");
                     message.GamerCards[i] = $root.msg.CCard.fromObject(object.GamerCards[i]);
                 }
             }
@@ -5788,15 +5788,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _CGamerCards message. Also converts values to other types if specified.
+         * Creates a plain object from a CGamerCards message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @static
-         * @param {msg._CGamerCards} message _CGamerCards
+         * @param {msg.CGamerCards} message CGamerCards
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _CGamerCards.toObject = function toObject(message, options) {
+        CGamerCards.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -5811,37 +5811,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _CGamerCards to JSON.
+         * Converts this CGamerCards to JSON.
          * @function toJSON
-         * @memberof msg._CGamerCards
+         * @memberof msg.CGamerCards
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _CGamerCards.prototype.toJSON = function toJSON() {
+        CGamerCards.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _CGamerCards;
+        return CGamerCards;
     })();
 
-    msg._Actor_GamerEnterRoom_Ntt = (function() {
+    msg.Actor_GamerEnterRoom_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerEnterRoom_Ntt.
+         * Properties of an Actor_GamerEnterRoom_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerEnterRoom_Ntt
-         * @property {msg.I_CGamerInfo|null} [Gamer] _Actor_GamerEnterRoom_Ntt Gamer
+         * @interface IActor_GamerEnterRoom_Ntt
+         * @property {msg.ICGamerInfo|null} [Gamer] Actor_GamerEnterRoom_Ntt Gamer
          */
 
         /**
-         * Constructs a new _Actor_GamerEnterRoom_Ntt.
+         * Constructs a new Actor_GamerEnterRoom_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerEnterRoom_Ntt.
-         * @implements I_Actor_GamerEnterRoom_Ntt
+         * @classdesc Represents an Actor_GamerEnterRoom_Ntt.
+         * @implements IActor_GamerEnterRoom_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerEnterRoom_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerEnterRoom_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerEnterRoom_Ntt(properties) {
+        function Actor_GamerEnterRoom_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -5849,75 +5849,75 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerEnterRoom_Ntt Gamer.
-         * @member {msg.I_CGamerInfo|null|undefined} Gamer
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * Actor_GamerEnterRoom_Ntt Gamer.
+         * @member {msg.ICGamerInfo|null|undefined} Gamer
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @instance
          */
-        _Actor_GamerEnterRoom_Ntt.prototype.Gamer = null;
+        Actor_GamerEnterRoom_Ntt.prototype.Gamer = null;
 
         /**
-         * Creates a new _Actor_GamerEnterRoom_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerEnterRoom_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerEnterRoom_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerEnterRoom_Ntt} _Actor_GamerEnterRoom_Ntt instance
+         * @param {msg.IActor_GamerEnterRoom_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerEnterRoom_Ntt} Actor_GamerEnterRoom_Ntt instance
          */
-        _Actor_GamerEnterRoom_Ntt.create = function create(properties) {
-            return new _Actor_GamerEnterRoom_Ntt(properties);
+        Actor_GamerEnterRoom_Ntt.create = function create(properties) {
+            return new Actor_GamerEnterRoom_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerEnterRoom_Ntt message. Does not implicitly {@link msg._Actor_GamerEnterRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerEnterRoom_Ntt message. Does not implicitly {@link msg.Actor_GamerEnterRoom_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerEnterRoom_Ntt} message _Actor_GamerEnterRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerEnterRoom_Ntt} message Actor_GamerEnterRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerEnterRoom_Ntt.encode = function encode(message, writer) {
+        Actor_GamerEnterRoom_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Gamer != null && message.hasOwnProperty("Gamer"))
-                $root.msg._CGamerInfo.encode(message.Gamer, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                $root.msg.CGamerInfo.encode(message.Gamer, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             return writer;
         };
 
         /**
-         * Encodes the specified _Actor_GamerEnterRoom_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerEnterRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerEnterRoom_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerEnterRoom_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerEnterRoom_Ntt} message _Actor_GamerEnterRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerEnterRoom_Ntt} message Actor_GamerEnterRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerEnterRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerEnterRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerEnterRoom_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerEnterRoom_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerEnterRoom_Ntt} _Actor_GamerEnterRoom_Ntt
+         * @returns {msg.Actor_GamerEnterRoom_Ntt} Actor_GamerEnterRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerEnterRoom_Ntt.decode = function decode(reader, length) {
+        Actor_GamerEnterRoom_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerEnterRoom_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerEnterRoom_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
-                    message.Gamer = $root.msg._CGamerInfo.decode(reader, reader.uint32());
+                    message.Gamer = $root.msg.CGamerInfo.decode(reader, reader.uint32());
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -5928,34 +5928,34 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerEnterRoom_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerEnterRoom_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerEnterRoom_Ntt} _Actor_GamerEnterRoom_Ntt
+         * @returns {msg.Actor_GamerEnterRoom_Ntt} Actor_GamerEnterRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerEnterRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerEnterRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerEnterRoom_Ntt message.
+         * Verifies an Actor_GamerEnterRoom_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerEnterRoom_Ntt.verify = function verify(message) {
+        Actor_GamerEnterRoom_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Gamer != null && message.hasOwnProperty("Gamer")) {
-                var error = $root.msg._CGamerInfo.verify(message.Gamer);
+                var error = $root.msg.CGamerInfo.verify(message.Gamer);
                 if (error)
                     return "Gamer." + error;
             }
@@ -5963,77 +5963,77 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerEnterRoom_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerEnterRoom_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerEnterRoom_Ntt} _Actor_GamerEnterRoom_Ntt
+         * @returns {msg.Actor_GamerEnterRoom_Ntt} Actor_GamerEnterRoom_Ntt
          */
-        _Actor_GamerEnterRoom_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerEnterRoom_Ntt)
+        Actor_GamerEnterRoom_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerEnterRoom_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerEnterRoom_Ntt();
+            var message = new $root.msg.Actor_GamerEnterRoom_Ntt();
             if (object.Gamer != null) {
                 if (typeof object.Gamer !== "object")
-                    throw TypeError(".msg._Actor_GamerEnterRoom_Ntt.Gamer: object expected");
-                message.Gamer = $root.msg._CGamerInfo.fromObject(object.Gamer);
+                    throw TypeError(".msg.Actor_GamerEnterRoom_Ntt.Gamer: object expected");
+                message.Gamer = $root.msg.CGamerInfo.fromObject(object.Gamer);
             }
             return message;
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerEnterRoom_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerEnterRoom_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @static
-         * @param {msg._Actor_GamerEnterRoom_Ntt} message _Actor_GamerEnterRoom_Ntt
+         * @param {msg.Actor_GamerEnterRoom_Ntt} message Actor_GamerEnterRoom_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerEnterRoom_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerEnterRoom_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
             if (options.defaults)
                 object.Gamer = null;
             if (message.Gamer != null && message.hasOwnProperty("Gamer"))
-                object.Gamer = $root.msg._CGamerInfo.toObject(message.Gamer, options);
+                object.Gamer = $root.msg.CGamerInfo.toObject(message.Gamer, options);
             return object;
         };
 
         /**
-         * Converts this _Actor_GamerEnterRoom_Ntt to JSON.
+         * Converts this Actor_GamerEnterRoom_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerEnterRoom_Ntt
+         * @memberof msg.Actor_GamerEnterRoom_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerEnterRoom_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerEnterRoom_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerEnterRoom_Ntt;
+        return Actor_GamerEnterRoom_Ntt;
     })();
 
-    msg._Actor_GamersInRoom_Ntt = (function() {
+    msg.Actor_GamersInRoom_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamersInRoom_Ntt.
+         * Properties of an Actor_GamersInRoom_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamersInRoom_Ntt
-         * @property {Array.<msg.I_CGamerInfo>|null} [Gamers] _Actor_GamersInRoom_Ntt Gamers
+         * @interface IActor_GamersInRoom_Ntt
+         * @property {Array.<msg.ICGamerInfo>|null} [Gamers] Actor_GamersInRoom_Ntt Gamers
          */
 
         /**
-         * Constructs a new _Actor_GamersInRoom_Ntt.
+         * Constructs a new Actor_GamersInRoom_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamersInRoom_Ntt.
-         * @implements I_Actor_GamersInRoom_Ntt
+         * @classdesc Represents an Actor_GamersInRoom_Ntt.
+         * @implements IActor_GamersInRoom_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamersInRoom_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamersInRoom_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamersInRoom_Ntt(properties) {
+        function Actor_GamersInRoom_Ntt(properties) {
             this.Gamers = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -6042,78 +6042,78 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamersInRoom_Ntt Gamers.
-         * @member {Array.<msg.I_CGamerInfo>} Gamers
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * Actor_GamersInRoom_Ntt Gamers.
+         * @member {Array.<msg.ICGamerInfo>} Gamers
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @instance
          */
-        _Actor_GamersInRoom_Ntt.prototype.Gamers = $util.emptyArray;
+        Actor_GamersInRoom_Ntt.prototype.Gamers = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GamersInRoom_Ntt instance using the specified properties.
+         * Creates a new Actor_GamersInRoom_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamersInRoom_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamersInRoom_Ntt} _Actor_GamersInRoom_Ntt instance
+         * @param {msg.IActor_GamersInRoom_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamersInRoom_Ntt} Actor_GamersInRoom_Ntt instance
          */
-        _Actor_GamersInRoom_Ntt.create = function create(properties) {
-            return new _Actor_GamersInRoom_Ntt(properties);
+        Actor_GamersInRoom_Ntt.create = function create(properties) {
+            return new Actor_GamersInRoom_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamersInRoom_Ntt message. Does not implicitly {@link msg._Actor_GamersInRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamersInRoom_Ntt message. Does not implicitly {@link msg.Actor_GamersInRoom_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamersInRoom_Ntt} message _Actor_GamersInRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamersInRoom_Ntt} message Actor_GamersInRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamersInRoom_Ntt.encode = function encode(message, writer) {
+        Actor_GamersInRoom_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Gamers != null && message.Gamers.length)
                 for (var i = 0; i < message.Gamers.length; ++i)
-                    $root.msg._CGamerInfo.encode(message.Gamers[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    $root.msg.CGamerInfo.encode(message.Gamers[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
 
         /**
-         * Encodes the specified _Actor_GamersInRoom_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamersInRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamersInRoom_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamersInRoom_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamersInRoom_Ntt} message _Actor_GamersInRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamersInRoom_Ntt} message Actor_GamersInRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamersInRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamersInRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamersInRoom_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamersInRoom_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamersInRoom_Ntt} _Actor_GamersInRoom_Ntt
+         * @returns {msg.Actor_GamersInRoom_Ntt} Actor_GamersInRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamersInRoom_Ntt.decode = function decode(reader, length) {
+        Actor_GamersInRoom_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamersInRoom_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamersInRoom_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 3:
                     if (!(message.Gamers && message.Gamers.length))
                         message.Gamers = [];
-                    message.Gamers.push($root.msg._CGamerInfo.decode(reader, reader.uint32()));
+                    message.Gamers.push($root.msg.CGamerInfo.decode(reader, reader.uint32()));
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -6124,37 +6124,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamersInRoom_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamersInRoom_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamersInRoom_Ntt} _Actor_GamersInRoom_Ntt
+         * @returns {msg.Actor_GamersInRoom_Ntt} Actor_GamersInRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamersInRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamersInRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamersInRoom_Ntt message.
+         * Verifies an Actor_GamersInRoom_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamersInRoom_Ntt.verify = function verify(message) {
+        Actor_GamersInRoom_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Gamers != null && message.hasOwnProperty("Gamers")) {
                 if (!Array.isArray(message.Gamers))
                     return "Gamers: array expected";
                 for (var i = 0; i < message.Gamers.length; ++i) {
-                    var error = $root.msg._CGamerInfo.verify(message.Gamers[i]);
+                    var error = $root.msg.CGamerInfo.verify(message.Gamers[i]);
                     if (error)
                         return "Gamers." + error;
                 }
@@ -6163,40 +6163,40 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamersInRoom_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamersInRoom_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamersInRoom_Ntt} _Actor_GamersInRoom_Ntt
+         * @returns {msg.Actor_GamersInRoom_Ntt} Actor_GamersInRoom_Ntt
          */
-        _Actor_GamersInRoom_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamersInRoom_Ntt)
+        Actor_GamersInRoom_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamersInRoom_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamersInRoom_Ntt();
+            var message = new $root.msg.Actor_GamersInRoom_Ntt();
             if (object.Gamers) {
                 if (!Array.isArray(object.Gamers))
-                    throw TypeError(".msg._Actor_GamersInRoom_Ntt.Gamers: array expected");
+                    throw TypeError(".msg.Actor_GamersInRoom_Ntt.Gamers: array expected");
                 message.Gamers = [];
                 for (var i = 0; i < object.Gamers.length; ++i) {
                     if (typeof object.Gamers[i] !== "object")
-                        throw TypeError(".msg._Actor_GamersInRoom_Ntt.Gamers: object expected");
-                    message.Gamers[i] = $root.msg._CGamerInfo.fromObject(object.Gamers[i]);
+                        throw TypeError(".msg.Actor_GamersInRoom_Ntt.Gamers: object expected");
+                    message.Gamers[i] = $root.msg.CGamerInfo.fromObject(object.Gamers[i]);
                 }
             }
             return message;
         };
 
         /**
-         * Creates a plain object from a _Actor_GamersInRoom_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamersInRoom_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @static
-         * @param {msg._Actor_GamersInRoom_Ntt} message _Actor_GamersInRoom_Ntt
+         * @param {msg.Actor_GamersInRoom_Ntt} message Actor_GamersInRoom_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamersInRoom_Ntt.toObject = function toObject(message, options) {
+        Actor_GamersInRoom_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -6205,43 +6205,43 @@ $root.msg = (function() {
             if (message.Gamers && message.Gamers.length) {
                 object.Gamers = [];
                 for (var j = 0; j < message.Gamers.length; ++j)
-                    object.Gamers[j] = $root.msg._CGamerInfo.toObject(message.Gamers[j], options);
+                    object.Gamers[j] = $root.msg.CGamerInfo.toObject(message.Gamers[j], options);
             }
             return object;
         };
 
         /**
-         * Converts this _Actor_GamersInRoom_Ntt to JSON.
+         * Converts this Actor_GamersInRoom_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamersInRoom_Ntt
+         * @memberof msg.Actor_GamersInRoom_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamersInRoom_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamersInRoom_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamersInRoom_Ntt;
+        return Actor_GamersInRoom_Ntt;
     })();
 
-    msg._Actor_GamerExitRoom_Ntt = (function() {
+    msg.Actor_GamerExitRoom_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerExitRoom_Ntt.
+         * Properties of an Actor_GamerExitRoom_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerExitRoom_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerExitRoom_Ntt UserID
+         * @interface IActor_GamerExitRoom_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerExitRoom_Ntt UserID
          */
 
         /**
-         * Constructs a new _Actor_GamerExitRoom_Ntt.
+         * Constructs a new Actor_GamerExitRoom_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerExitRoom_Ntt.
-         * @implements I_Actor_GamerExitRoom_Ntt
+         * @classdesc Represents an Actor_GamerExitRoom_Ntt.
+         * @implements IActor_GamerExitRoom_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerExitRoom_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerExitRoom_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerExitRoom_Ntt(properties) {
+        function Actor_GamerExitRoom_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -6249,35 +6249,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerExitRoom_Ntt UserID.
+         * Actor_GamerExitRoom_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @instance
          */
-        _Actor_GamerExitRoom_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerExitRoom_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _Actor_GamerExitRoom_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerExitRoom_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerExitRoom_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerExitRoom_Ntt} _Actor_GamerExitRoom_Ntt instance
+         * @param {msg.IActor_GamerExitRoom_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerExitRoom_Ntt} Actor_GamerExitRoom_Ntt instance
          */
-        _Actor_GamerExitRoom_Ntt.create = function create(properties) {
-            return new _Actor_GamerExitRoom_Ntt(properties);
+        Actor_GamerExitRoom_Ntt.create = function create(properties) {
+            return new Actor_GamerExitRoom_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerExitRoom_Ntt message. Does not implicitly {@link msg._Actor_GamerExitRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerExitRoom_Ntt message. Does not implicitly {@link msg.Actor_GamerExitRoom_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerExitRoom_Ntt} message _Actor_GamerExitRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerExitRoom_Ntt} message Actor_GamerExitRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerExitRoom_Ntt.encode = function encode(message, writer) {
+        Actor_GamerExitRoom_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -6286,33 +6286,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerExitRoom_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerExitRoom_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerExitRoom_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerExitRoom_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
-         * @param {msg.I_Actor_GamerExitRoom_Ntt} message _Actor_GamerExitRoom_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerExitRoom_Ntt} message Actor_GamerExitRoom_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerExitRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerExitRoom_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerExitRoom_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerExitRoom_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerExitRoom_Ntt} _Actor_GamerExitRoom_Ntt
+         * @returns {msg.Actor_GamerExitRoom_Ntt} Actor_GamerExitRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerExitRoom_Ntt.decode = function decode(reader, length) {
+        Actor_GamerExitRoom_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerExitRoom_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerExitRoom_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -6328,30 +6328,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerExitRoom_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerExitRoom_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerExitRoom_Ntt} _Actor_GamerExitRoom_Ntt
+         * @returns {msg.Actor_GamerExitRoom_Ntt} Actor_GamerExitRoom_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerExitRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerExitRoom_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerExitRoom_Ntt message.
+         * Verifies an Actor_GamerExitRoom_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerExitRoom_Ntt.verify = function verify(message) {
+        Actor_GamerExitRoom_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -6361,17 +6361,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerExitRoom_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerExitRoom_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerExitRoom_Ntt} _Actor_GamerExitRoom_Ntt
+         * @returns {msg.Actor_GamerExitRoom_Ntt} Actor_GamerExitRoom_Ntt
          */
-        _Actor_GamerExitRoom_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerExitRoom_Ntt)
+        Actor_GamerExitRoom_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerExitRoom_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerExitRoom_Ntt();
+            var message = new $root.msg.Actor_GamerExitRoom_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -6385,15 +6385,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerExitRoom_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerExitRoom_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @static
-         * @param {msg._Actor_GamerExitRoom_Ntt} message _Actor_GamerExitRoom_Ntt
+         * @param {msg.Actor_GamerExitRoom_Ntt} message Actor_GamerExitRoom_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerExitRoom_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerExitRoom_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -6412,41 +6412,41 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerExitRoom_Ntt to JSON.
+         * Converts this Actor_GamerExitRoom_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerExitRoom_Ntt
+         * @memberof msg.Actor_GamerExitRoom_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerExitRoom_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerExitRoom_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerExitRoom_Ntt;
+        return Actor_GamerExitRoom_Ntt;
     })();
 
-    msg._Actor_GamerReconnect_Ntt = (function() {
+    msg.Actor_GamerReconnect_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerReconnect_Ntt.
+         * Properties of an Actor_GamerReconnect_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerReconnect_Ntt
-         * @property {number|null} [Multiples] _Actor_GamerReconnect_Ntt Multiples
-         * @property {Array.<msg.ICCard>|null} [LordCards] _Actor_GamerReconnect_Ntt LordCards
-         * @property {Array.<msg.CIdentity>|null} [GamersIdentity] _Actor_GamerReconnect_Ntt GamersIdentity
-         * @property {Array.<msg.I_CGamerCards>|null} [DesksCards] _Actor_GamerReconnect_Ntt DesksCards
-         * @property {Array.<boolean>|null} [GamerGrabLandlordState] _Actor_GamerReconnect_Ntt GamerGrabLandlordState
+         * @interface IActor_GamerReconnect_Ntt
+         * @property {number|null} [Multiples] Actor_GamerReconnect_Ntt Multiples
+         * @property {Array.<msg.ICCard>|null} [LordCards] Actor_GamerReconnect_Ntt LordCards
+         * @property {Array.<msg.CIdentity>|null} [GamersIdentity] Actor_GamerReconnect_Ntt GamersIdentity
+         * @property {Array.<msg.ICGamerCards>|null} [DesksCards] Actor_GamerReconnect_Ntt DesksCards
+         * @property {Array.<boolean>|null} [GamerGrabLandlordState] Actor_GamerReconnect_Ntt GamerGrabLandlordState
          */
 
         /**
-         * Constructs a new _Actor_GamerReconnect_Ntt.
+         * Constructs a new Actor_GamerReconnect_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerReconnect_Ntt.
-         * @implements I_Actor_GamerReconnect_Ntt
+         * @classdesc Represents an Actor_GamerReconnect_Ntt.
+         * @implements IActor_GamerReconnect_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerReconnect_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerReconnect_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerReconnect_Ntt(properties) {
+        function Actor_GamerReconnect_Ntt(properties) {
             this.LordCards = [];
             this.GamersIdentity = [];
             this.DesksCards = [];
@@ -6458,67 +6458,67 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerReconnect_Ntt Multiples.
+         * Actor_GamerReconnect_Ntt Multiples.
          * @member {number} Multiples
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          */
-        _Actor_GamerReconnect_Ntt.prototype.Multiples = 0;
+        Actor_GamerReconnect_Ntt.prototype.Multiples = 0;
 
         /**
-         * _Actor_GamerReconnect_Ntt LordCards.
+         * Actor_GamerReconnect_Ntt LordCards.
          * @member {Array.<msg.ICCard>} LordCards
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          */
-        _Actor_GamerReconnect_Ntt.prototype.LordCards = $util.emptyArray;
+        Actor_GamerReconnect_Ntt.prototype.LordCards = $util.emptyArray;
 
         /**
-         * _Actor_GamerReconnect_Ntt GamersIdentity.
+         * Actor_GamerReconnect_Ntt GamersIdentity.
          * @member {Array.<msg.CIdentity>} GamersIdentity
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          */
-        _Actor_GamerReconnect_Ntt.prototype.GamersIdentity = $util.emptyArray;
+        Actor_GamerReconnect_Ntt.prototype.GamersIdentity = $util.emptyArray;
 
         /**
-         * _Actor_GamerReconnect_Ntt DesksCards.
-         * @member {Array.<msg.I_CGamerCards>} DesksCards
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * Actor_GamerReconnect_Ntt DesksCards.
+         * @member {Array.<msg.ICGamerCards>} DesksCards
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          */
-        _Actor_GamerReconnect_Ntt.prototype.DesksCards = $util.emptyArray;
+        Actor_GamerReconnect_Ntt.prototype.DesksCards = $util.emptyArray;
 
         /**
-         * _Actor_GamerReconnect_Ntt GamerGrabLandlordState.
+         * Actor_GamerReconnect_Ntt GamerGrabLandlordState.
          * @member {Array.<boolean>} GamerGrabLandlordState
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          */
-        _Actor_GamerReconnect_Ntt.prototype.GamerGrabLandlordState = $util.emptyArray;
+        Actor_GamerReconnect_Ntt.prototype.GamerGrabLandlordState = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GamerReconnect_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerReconnect_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReconnect_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerReconnect_Ntt} _Actor_GamerReconnect_Ntt instance
+         * @param {msg.IActor_GamerReconnect_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerReconnect_Ntt} Actor_GamerReconnect_Ntt instance
          */
-        _Actor_GamerReconnect_Ntt.create = function create(properties) {
-            return new _Actor_GamerReconnect_Ntt(properties);
+        Actor_GamerReconnect_Ntt.create = function create(properties) {
+            return new Actor_GamerReconnect_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerReconnect_Ntt message. Does not implicitly {@link msg._Actor_GamerReconnect_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerReconnect_Ntt message. Does not implicitly {@link msg.Actor_GamerReconnect_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReconnect_Ntt} message _Actor_GamerReconnect_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerReconnect_Ntt} message Actor_GamerReconnect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerReconnect_Ntt.encode = function encode(message, writer) {
+        Actor_GamerReconnect_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Multiples != null && message.hasOwnProperty("Multiples"))
@@ -6534,7 +6534,7 @@ $root.msg = (function() {
             }
             if (message.DesksCards != null && message.DesksCards.length)
                 for (var i = 0; i < message.DesksCards.length; ++i)
-                    $root.msg._CGamerCards.encode(message.DesksCards[i], writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
+                    $root.msg.CGamerCards.encode(message.DesksCards[i], writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
             if (message.GamerGrabLandlordState != null && message.GamerGrabLandlordState.length) {
                 writer.uint32(/* id 12, wireType 2 =*/98).fork();
                 for (var i = 0; i < message.GamerGrabLandlordState.length; ++i)
@@ -6545,33 +6545,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerReconnect_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerReconnect_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerReconnect_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerReconnect_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
-         * @param {msg.I_Actor_GamerReconnect_Ntt} message _Actor_GamerReconnect_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerReconnect_Ntt} message Actor_GamerReconnect_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerReconnect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerReconnect_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerReconnect_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerReconnect_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerReconnect_Ntt} _Actor_GamerReconnect_Ntt
+         * @returns {msg.Actor_GamerReconnect_Ntt} Actor_GamerReconnect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerReconnect_Ntt.decode = function decode(reader, length) {
+        Actor_GamerReconnect_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerReconnect_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerReconnect_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -6596,7 +6596,7 @@ $root.msg = (function() {
                 case 11:
                     if (!(message.DesksCards && message.DesksCards.length))
                         message.DesksCards = [];
-                    message.DesksCards.push($root.msg._CGamerCards.decode(reader, reader.uint32()));
+                    message.DesksCards.push($root.msg.CGamerCards.decode(reader, reader.uint32()));
                     break;
                 case 12:
                     if (!(message.GamerGrabLandlordState && message.GamerGrabLandlordState.length))
@@ -6617,30 +6617,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerReconnect_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerReconnect_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerReconnect_Ntt} _Actor_GamerReconnect_Ntt
+         * @returns {msg.Actor_GamerReconnect_Ntt} Actor_GamerReconnect_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerReconnect_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerReconnect_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerReconnect_Ntt message.
+         * Verifies an Actor_GamerReconnect_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerReconnect_Ntt.verify = function verify(message) {
+        Actor_GamerReconnect_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Multiples != null && message.hasOwnProperty("Multiples"))
@@ -6672,7 +6672,7 @@ $root.msg = (function() {
                 if (!Array.isArray(message.DesksCards))
                     return "DesksCards: array expected";
                 for (var i = 0; i < message.DesksCards.length; ++i) {
-                    var error = $root.msg._CGamerCards.verify(message.DesksCards[i]);
+                    var error = $root.msg.CGamerCards.verify(message.DesksCards[i]);
                     if (error)
                         return "DesksCards." + error;
                 }
@@ -6688,32 +6688,32 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerReconnect_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerReconnect_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerReconnect_Ntt} _Actor_GamerReconnect_Ntt
+         * @returns {msg.Actor_GamerReconnect_Ntt} Actor_GamerReconnect_Ntt
          */
-        _Actor_GamerReconnect_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerReconnect_Ntt)
+        Actor_GamerReconnect_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerReconnect_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerReconnect_Ntt();
+            var message = new $root.msg.Actor_GamerReconnect_Ntt();
             if (object.Multiples != null)
                 message.Multiples = object.Multiples | 0;
             if (object.LordCards) {
                 if (!Array.isArray(object.LordCards))
-                    throw TypeError(".msg._Actor_GamerReconnect_Ntt.LordCards: array expected");
+                    throw TypeError(".msg.Actor_GamerReconnect_Ntt.LordCards: array expected");
                 message.LordCards = [];
                 for (var i = 0; i < object.LordCards.length; ++i) {
                     if (typeof object.LordCards[i] !== "object")
-                        throw TypeError(".msg._Actor_GamerReconnect_Ntt.LordCards: object expected");
+                        throw TypeError(".msg.Actor_GamerReconnect_Ntt.LordCards: object expected");
                     message.LordCards[i] = $root.msg.CCard.fromObject(object.LordCards[i]);
                 }
             }
             if (object.GamersIdentity) {
                 if (!Array.isArray(object.GamersIdentity))
-                    throw TypeError(".msg._Actor_GamerReconnect_Ntt.GamersIdentity: array expected");
+                    throw TypeError(".msg.Actor_GamerReconnect_Ntt.GamersIdentity: array expected");
                 message.GamersIdentity = [];
                 for (var i = 0; i < object.GamersIdentity.length; ++i)
                     switch (object.GamersIdentity[i]) {
@@ -6734,17 +6734,17 @@ $root.msg = (function() {
             }
             if (object.DesksCards) {
                 if (!Array.isArray(object.DesksCards))
-                    throw TypeError(".msg._Actor_GamerReconnect_Ntt.DesksCards: array expected");
+                    throw TypeError(".msg.Actor_GamerReconnect_Ntt.DesksCards: array expected");
                 message.DesksCards = [];
                 for (var i = 0; i < object.DesksCards.length; ++i) {
                     if (typeof object.DesksCards[i] !== "object")
-                        throw TypeError(".msg._Actor_GamerReconnect_Ntt.DesksCards: object expected");
-                    message.DesksCards[i] = $root.msg._CGamerCards.fromObject(object.DesksCards[i]);
+                        throw TypeError(".msg.Actor_GamerReconnect_Ntt.DesksCards: object expected");
+                    message.DesksCards[i] = $root.msg.CGamerCards.fromObject(object.DesksCards[i]);
                 }
             }
             if (object.GamerGrabLandlordState) {
                 if (!Array.isArray(object.GamerGrabLandlordState))
-                    throw TypeError(".msg._Actor_GamerReconnect_Ntt.GamerGrabLandlordState: array expected");
+                    throw TypeError(".msg.Actor_GamerReconnect_Ntt.GamerGrabLandlordState: array expected");
                 message.GamerGrabLandlordState = [];
                 for (var i = 0; i < object.GamerGrabLandlordState.length; ++i)
                     message.GamerGrabLandlordState[i] = Boolean(object.GamerGrabLandlordState[i]);
@@ -6753,15 +6753,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerReconnect_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerReconnect_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @static
-         * @param {msg._Actor_GamerReconnect_Ntt} message _Actor_GamerReconnect_Ntt
+         * @param {msg.Actor_GamerReconnect_Ntt} message Actor_GamerReconnect_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerReconnect_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerReconnect_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -6788,7 +6788,7 @@ $root.msg = (function() {
             if (message.DesksCards && message.DesksCards.length) {
                 object.DesksCards = [];
                 for (var j = 0; j < message.DesksCards.length; ++j)
-                    object.DesksCards[j] = $root.msg._CGamerCards.toObject(message.DesksCards[j], options);
+                    object.DesksCards[j] = $root.msg.CGamerCards.toObject(message.DesksCards[j], options);
             }
             if (message.GamerGrabLandlordState && message.GamerGrabLandlordState.length) {
                 object.GamerGrabLandlordState = [];
@@ -6799,39 +6799,39 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerReconnect_Ntt to JSON.
+         * Converts this Actor_GamerReconnect_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerReconnect_Ntt
+         * @memberof msg.Actor_GamerReconnect_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerReconnect_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerReconnect_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerReconnect_Ntt;
+        return Actor_GamerReconnect_Ntt;
     })();
 
-    msg._Actor_GameStart_Ntt = (function() {
+    msg.Actor_GameStart_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GameStart_Ntt.
+         * Properties of an Actor_GameStart_Ntt.
          * @memberof msg
-         * @interface I_Actor_GameStart_Ntt
-         * @property {Array.<number|Long>|null} [GamersUserID] _Actor_GameStart_Ntt GamersUserID
-         * @property {Array.<number>|null} [GamersCardsCount] _Actor_GameStart_Ntt GamersCardsCount
-         * @property {Array.<msg.I_CGamerCards>|null} [GamersCards] _Actor_GameStart_Ntt GamersCards
+         * @interface IActor_GameStart_Ntt
+         * @property {Array.<number|Long>|null} [GamersUserID] Actor_GameStart_Ntt GamersUserID
+         * @property {Array.<number>|null} [GamersCardsCount] Actor_GameStart_Ntt GamersCardsCount
+         * @property {Array.<msg.ICGamerCards>|null} [GamersCards] Actor_GameStart_Ntt GamersCards
          */
 
         /**
-         * Constructs a new _Actor_GameStart_Ntt.
+         * Constructs a new Actor_GameStart_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GameStart_Ntt.
-         * @implements I_Actor_GameStart_Ntt
+         * @classdesc Represents an Actor_GameStart_Ntt.
+         * @implements IActor_GameStart_Ntt
          * @constructor
-         * @param {msg.I_Actor_GameStart_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GameStart_Ntt=} [properties] Properties to set
          */
-        function _Actor_GameStart_Ntt(properties) {
+        function Actor_GameStart_Ntt(properties) {
             this.GamersUserID = [];
             this.GamersCardsCount = [];
             this.GamersCards = [];
@@ -6842,51 +6842,51 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GameStart_Ntt GamersUserID.
+         * Actor_GameStart_Ntt GamersUserID.
          * @member {Array.<number|Long>} GamersUserID
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @instance
          */
-        _Actor_GameStart_Ntt.prototype.GamersUserID = $util.emptyArray;
+        Actor_GameStart_Ntt.prototype.GamersUserID = $util.emptyArray;
 
         /**
-         * _Actor_GameStart_Ntt GamersCardsCount.
+         * Actor_GameStart_Ntt GamersCardsCount.
          * @member {Array.<number>} GamersCardsCount
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @instance
          */
-        _Actor_GameStart_Ntt.prototype.GamersCardsCount = $util.emptyArray;
+        Actor_GameStart_Ntt.prototype.GamersCardsCount = $util.emptyArray;
 
         /**
-         * _Actor_GameStart_Ntt GamersCards.
-         * @member {Array.<msg.I_CGamerCards>} GamersCards
-         * @memberof msg._Actor_GameStart_Ntt
+         * Actor_GameStart_Ntt GamersCards.
+         * @member {Array.<msg.ICGamerCards>} GamersCards
+         * @memberof msg.Actor_GameStart_Ntt
          * @instance
          */
-        _Actor_GameStart_Ntt.prototype.GamersCards = $util.emptyArray;
+        Actor_GameStart_Ntt.prototype.GamersCards = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_GameStart_Ntt instance using the specified properties.
+         * Creates a new Actor_GameStart_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
-         * @param {msg.I_Actor_GameStart_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GameStart_Ntt} _Actor_GameStart_Ntt instance
+         * @param {msg.IActor_GameStart_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GameStart_Ntt} Actor_GameStart_Ntt instance
          */
-        _Actor_GameStart_Ntt.create = function create(properties) {
-            return new _Actor_GameStart_Ntt(properties);
+        Actor_GameStart_Ntt.create = function create(properties) {
+            return new Actor_GameStart_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GameStart_Ntt message. Does not implicitly {@link msg._Actor_GameStart_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GameStart_Ntt message. Does not implicitly {@link msg.Actor_GameStart_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
-         * @param {msg.I_Actor_GameStart_Ntt} message _Actor_GameStart_Ntt message or plain object to encode
+         * @param {msg.IActor_GameStart_Ntt} message Actor_GameStart_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GameStart_Ntt.encode = function encode(message, writer) {
+        Actor_GameStart_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.GamersUserID != null && message.GamersUserID.length) {
@@ -6897,7 +6897,7 @@ $root.msg = (function() {
             }
             if (message.GamersCards != null && message.GamersCards.length)
                 for (var i = 0; i < message.GamersCards.length; ++i)
-                    $root.msg._CGamerCards.encode(message.GamersCards[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    $root.msg.CGamerCards.encode(message.GamersCards[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             if (message.GamersCardsCount != null && message.GamersCardsCount.length) {
                 writer.uint32(/* id 3, wireType 2 =*/26).fork();
                 for (var i = 0; i < message.GamersCardsCount.length; ++i)
@@ -6908,33 +6908,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GameStart_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GameStart_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GameStart_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GameStart_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
-         * @param {msg.I_Actor_GameStart_Ntt} message _Actor_GameStart_Ntt message or plain object to encode
+         * @param {msg.IActor_GameStart_Ntt} message Actor_GameStart_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GameStart_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GameStart_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GameStart_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GameStart_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GameStart_Ntt} _Actor_GameStart_Ntt
+         * @returns {msg.Actor_GameStart_Ntt} Actor_GameStart_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GameStart_Ntt.decode = function decode(reader, length) {
+        Actor_GameStart_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GameStart_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GameStart_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -6961,7 +6961,7 @@ $root.msg = (function() {
                 case 2:
                     if (!(message.GamersCards && message.GamersCards.length))
                         message.GamersCards = [];
-                    message.GamersCards.push($root.msg._CGamerCards.decode(reader, reader.uint32()));
+                    message.GamersCards.push($root.msg.CGamerCards.decode(reader, reader.uint32()));
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -6972,30 +6972,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GameStart_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GameStart_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GameStart_Ntt} _Actor_GameStart_Ntt
+         * @returns {msg.Actor_GameStart_Ntt} Actor_GameStart_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GameStart_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GameStart_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GameStart_Ntt message.
+         * Verifies an Actor_GameStart_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GameStart_Ntt.verify = function verify(message) {
+        Actor_GameStart_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.GamersUserID != null && message.hasOwnProperty("GamersUserID")) {
@@ -7016,7 +7016,7 @@ $root.msg = (function() {
                 if (!Array.isArray(message.GamersCards))
                     return "GamersCards: array expected";
                 for (var i = 0; i < message.GamersCards.length; ++i) {
-                    var error = $root.msg._CGamerCards.verify(message.GamersCards[i]);
+                    var error = $root.msg.CGamerCards.verify(message.GamersCards[i]);
                     if (error)
                         return "GamersCards." + error;
                 }
@@ -7025,20 +7025,20 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GameStart_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GameStart_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GameStart_Ntt} _Actor_GameStart_Ntt
+         * @returns {msg.Actor_GameStart_Ntt} Actor_GameStart_Ntt
          */
-        _Actor_GameStart_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GameStart_Ntt)
+        Actor_GameStart_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GameStart_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GameStart_Ntt();
+            var message = new $root.msg.Actor_GameStart_Ntt();
             if (object.GamersUserID) {
                 if (!Array.isArray(object.GamersUserID))
-                    throw TypeError(".msg._Actor_GameStart_Ntt.GamersUserID: array expected");
+                    throw TypeError(".msg.Actor_GameStart_Ntt.GamersUserID: array expected");
                 message.GamersUserID = [];
                 for (var i = 0; i < object.GamersUserID.length; ++i)
                     if ($util.Long)
@@ -7052,34 +7052,34 @@ $root.msg = (function() {
             }
             if (object.GamersCardsCount) {
                 if (!Array.isArray(object.GamersCardsCount))
-                    throw TypeError(".msg._Actor_GameStart_Ntt.GamersCardsCount: array expected");
+                    throw TypeError(".msg.Actor_GameStart_Ntt.GamersCardsCount: array expected");
                 message.GamersCardsCount = [];
                 for (var i = 0; i < object.GamersCardsCount.length; ++i)
                     message.GamersCardsCount[i] = object.GamersCardsCount[i] | 0;
             }
             if (object.GamersCards) {
                 if (!Array.isArray(object.GamersCards))
-                    throw TypeError(".msg._Actor_GameStart_Ntt.GamersCards: array expected");
+                    throw TypeError(".msg.Actor_GameStart_Ntt.GamersCards: array expected");
                 message.GamersCards = [];
                 for (var i = 0; i < object.GamersCards.length; ++i) {
                     if (typeof object.GamersCards[i] !== "object")
-                        throw TypeError(".msg._Actor_GameStart_Ntt.GamersCards: object expected");
-                    message.GamersCards[i] = $root.msg._CGamerCards.fromObject(object.GamersCards[i]);
+                        throw TypeError(".msg.Actor_GameStart_Ntt.GamersCards: object expected");
+                    message.GamersCards[i] = $root.msg.CGamerCards.fromObject(object.GamersCards[i]);
                 }
             }
             return message;
         };
 
         /**
-         * Creates a plain object from a _Actor_GameStart_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GameStart_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @static
-         * @param {msg._Actor_GameStart_Ntt} message _Actor_GameStart_Ntt
+         * @param {msg.Actor_GameStart_Ntt} message Actor_GameStart_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GameStart_Ntt.toObject = function toObject(message, options) {
+        Actor_GameStart_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -7099,7 +7099,7 @@ $root.msg = (function() {
             if (message.GamersCards && message.GamersCards.length) {
                 object.GamersCards = [];
                 for (var j = 0; j < message.GamersCards.length; ++j)
-                    object.GamersCards[j] = $root.msg._CGamerCards.toObject(message.GamersCards[j], options);
+                    object.GamersCards[j] = $root.msg.CGamerCards.toObject(message.GamersCards[j], options);
             }
             if (message.GamersCardsCount && message.GamersCardsCount.length) {
                 object.GamersCardsCount = [];
@@ -7110,37 +7110,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GameStart_Ntt to JSON.
+         * Converts this Actor_GameStart_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GameStart_Ntt
+         * @memberof msg.Actor_GameStart_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GameStart_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GameStart_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GameStart_Ntt;
+        return Actor_GameStart_Ntt;
     })();
 
-    msg._Actor_AuthorityGrabLandlord_Ntt = (function() {
+    msg.Actor_AuthorityGrabLandlord_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_AuthorityGrabLandlord_Ntt.
+         * Properties of an Actor_AuthorityGrabLandlord_Ntt.
          * @memberof msg
-         * @interface I_Actor_AuthorityGrabLandlord_Ntt
-         * @property {number|Long|null} [UserID] _Actor_AuthorityGrabLandlord_Ntt UserID
+         * @interface IActor_AuthorityGrabLandlord_Ntt
+         * @property {number|Long|null} [UserID] Actor_AuthorityGrabLandlord_Ntt UserID
          */
 
         /**
-         * Constructs a new _Actor_AuthorityGrabLandlord_Ntt.
+         * Constructs a new Actor_AuthorityGrabLandlord_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_AuthorityGrabLandlord_Ntt.
-         * @implements I_Actor_AuthorityGrabLandlord_Ntt
+         * @classdesc Represents an Actor_AuthorityGrabLandlord_Ntt.
+         * @implements IActor_AuthorityGrabLandlord_Ntt
          * @constructor
-         * @param {msg.I_Actor_AuthorityGrabLandlord_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_AuthorityGrabLandlord_Ntt=} [properties] Properties to set
          */
-        function _Actor_AuthorityGrabLandlord_Ntt(properties) {
+        function Actor_AuthorityGrabLandlord_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -7148,35 +7148,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_AuthorityGrabLandlord_Ntt UserID.
+         * Actor_AuthorityGrabLandlord_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @instance
          */
-        _Actor_AuthorityGrabLandlord_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_AuthorityGrabLandlord_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _Actor_AuthorityGrabLandlord_Ntt instance using the specified properties.
+         * Creates a new Actor_AuthorityGrabLandlord_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityGrabLandlord_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_AuthorityGrabLandlord_Ntt} _Actor_AuthorityGrabLandlord_Ntt instance
+         * @param {msg.IActor_AuthorityGrabLandlord_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_AuthorityGrabLandlord_Ntt} Actor_AuthorityGrabLandlord_Ntt instance
          */
-        _Actor_AuthorityGrabLandlord_Ntt.create = function create(properties) {
-            return new _Actor_AuthorityGrabLandlord_Ntt(properties);
+        Actor_AuthorityGrabLandlord_Ntt.create = function create(properties) {
+            return new Actor_AuthorityGrabLandlord_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_AuthorityGrabLandlord_Ntt message. Does not implicitly {@link msg._Actor_AuthorityGrabLandlord_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_AuthorityGrabLandlord_Ntt message. Does not implicitly {@link msg.Actor_AuthorityGrabLandlord_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityGrabLandlord_Ntt} message _Actor_AuthorityGrabLandlord_Ntt message or plain object to encode
+         * @param {msg.IActor_AuthorityGrabLandlord_Ntt} message Actor_AuthorityGrabLandlord_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_AuthorityGrabLandlord_Ntt.encode = function encode(message, writer) {
+        Actor_AuthorityGrabLandlord_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7185,33 +7185,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_AuthorityGrabLandlord_Ntt message, length delimited. Does not implicitly {@link msg._Actor_AuthorityGrabLandlord_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_AuthorityGrabLandlord_Ntt message, length delimited. Does not implicitly {@link msg.Actor_AuthorityGrabLandlord_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityGrabLandlord_Ntt} message _Actor_AuthorityGrabLandlord_Ntt message or plain object to encode
+         * @param {msg.IActor_AuthorityGrabLandlord_Ntt} message Actor_AuthorityGrabLandlord_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_AuthorityGrabLandlord_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_AuthorityGrabLandlord_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_AuthorityGrabLandlord_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_AuthorityGrabLandlord_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_AuthorityGrabLandlord_Ntt} _Actor_AuthorityGrabLandlord_Ntt
+         * @returns {msg.Actor_AuthorityGrabLandlord_Ntt} Actor_AuthorityGrabLandlord_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_AuthorityGrabLandlord_Ntt.decode = function decode(reader, length) {
+        Actor_AuthorityGrabLandlord_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_AuthorityGrabLandlord_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_AuthorityGrabLandlord_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -7227,30 +7227,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_AuthorityGrabLandlord_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_AuthorityGrabLandlord_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_AuthorityGrabLandlord_Ntt} _Actor_AuthorityGrabLandlord_Ntt
+         * @returns {msg.Actor_AuthorityGrabLandlord_Ntt} Actor_AuthorityGrabLandlord_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_AuthorityGrabLandlord_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_AuthorityGrabLandlord_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_AuthorityGrabLandlord_Ntt message.
+         * Verifies an Actor_AuthorityGrabLandlord_Ntt message.
          * @function verify
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_AuthorityGrabLandlord_Ntt.verify = function verify(message) {
+        Actor_AuthorityGrabLandlord_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7260,17 +7260,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_AuthorityGrabLandlord_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_AuthorityGrabLandlord_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_AuthorityGrabLandlord_Ntt} _Actor_AuthorityGrabLandlord_Ntt
+         * @returns {msg.Actor_AuthorityGrabLandlord_Ntt} Actor_AuthorityGrabLandlord_Ntt
          */
-        _Actor_AuthorityGrabLandlord_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_AuthorityGrabLandlord_Ntt)
+        Actor_AuthorityGrabLandlord_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_AuthorityGrabLandlord_Ntt)
                 return object;
-            var message = new $root.msg._Actor_AuthorityGrabLandlord_Ntt();
+            var message = new $root.msg.Actor_AuthorityGrabLandlord_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -7284,15 +7284,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_AuthorityGrabLandlord_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_AuthorityGrabLandlord_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @static
-         * @param {msg._Actor_AuthorityGrabLandlord_Ntt} message _Actor_AuthorityGrabLandlord_Ntt
+         * @param {msg.Actor_AuthorityGrabLandlord_Ntt} message Actor_AuthorityGrabLandlord_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_AuthorityGrabLandlord_Ntt.toObject = function toObject(message, options) {
+        Actor_AuthorityGrabLandlord_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -7311,38 +7311,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_AuthorityGrabLandlord_Ntt to JSON.
+         * Converts this Actor_AuthorityGrabLandlord_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_AuthorityGrabLandlord_Ntt
+         * @memberof msg.Actor_AuthorityGrabLandlord_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_AuthorityGrabLandlord_Ntt.prototype.toJSON = function toJSON() {
+        Actor_AuthorityGrabLandlord_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_AuthorityGrabLandlord_Ntt;
+        return Actor_AuthorityGrabLandlord_Ntt;
     })();
 
-    msg._Actor_AuthorityPlayCard_Ntt = (function() {
+    msg.Actor_AuthorityPlayCard_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_AuthorityPlayCard_Ntt.
+         * Properties of an Actor_AuthorityPlayCard_Ntt.
          * @memberof msg
-         * @interface I_Actor_AuthorityPlayCard_Ntt
-         * @property {number|Long|null} [UserID] _Actor_AuthorityPlayCard_Ntt UserID
-         * @property {boolean|null} [IsFirst] _Actor_AuthorityPlayCard_Ntt IsFirst
+         * @interface IActor_AuthorityPlayCard_Ntt
+         * @property {number|Long|null} [UserID] Actor_AuthorityPlayCard_Ntt UserID
+         * @property {boolean|null} [IsFirst] Actor_AuthorityPlayCard_Ntt IsFirst
          */
 
         /**
-         * Constructs a new _Actor_AuthorityPlayCard_Ntt.
+         * Constructs a new Actor_AuthorityPlayCard_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_AuthorityPlayCard_Ntt.
-         * @implements I_Actor_AuthorityPlayCard_Ntt
+         * @classdesc Represents an Actor_AuthorityPlayCard_Ntt.
+         * @implements IActor_AuthorityPlayCard_Ntt
          * @constructor
-         * @param {msg.I_Actor_AuthorityPlayCard_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_AuthorityPlayCard_Ntt=} [properties] Properties to set
          */
-        function _Actor_AuthorityPlayCard_Ntt(properties) {
+        function Actor_AuthorityPlayCard_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -7350,43 +7350,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_AuthorityPlayCard_Ntt UserID.
+         * Actor_AuthorityPlayCard_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @instance
          */
-        _Actor_AuthorityPlayCard_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_AuthorityPlayCard_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_AuthorityPlayCard_Ntt IsFirst.
+         * Actor_AuthorityPlayCard_Ntt IsFirst.
          * @member {boolean} IsFirst
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @instance
          */
-        _Actor_AuthorityPlayCard_Ntt.prototype.IsFirst = false;
+        Actor_AuthorityPlayCard_Ntt.prototype.IsFirst = false;
 
         /**
-         * Creates a new _Actor_AuthorityPlayCard_Ntt instance using the specified properties.
+         * Creates a new Actor_AuthorityPlayCard_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityPlayCard_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_AuthorityPlayCard_Ntt} _Actor_AuthorityPlayCard_Ntt instance
+         * @param {msg.IActor_AuthorityPlayCard_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_AuthorityPlayCard_Ntt} Actor_AuthorityPlayCard_Ntt instance
          */
-        _Actor_AuthorityPlayCard_Ntt.create = function create(properties) {
-            return new _Actor_AuthorityPlayCard_Ntt(properties);
+        Actor_AuthorityPlayCard_Ntt.create = function create(properties) {
+            return new Actor_AuthorityPlayCard_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_AuthorityPlayCard_Ntt message. Does not implicitly {@link msg._Actor_AuthorityPlayCard_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_AuthorityPlayCard_Ntt message. Does not implicitly {@link msg.Actor_AuthorityPlayCard_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityPlayCard_Ntt} message _Actor_AuthorityPlayCard_Ntt message or plain object to encode
+         * @param {msg.IActor_AuthorityPlayCard_Ntt} message Actor_AuthorityPlayCard_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_AuthorityPlayCard_Ntt.encode = function encode(message, writer) {
+        Actor_AuthorityPlayCard_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7397,33 +7397,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_AuthorityPlayCard_Ntt message, length delimited. Does not implicitly {@link msg._Actor_AuthorityPlayCard_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_AuthorityPlayCard_Ntt message, length delimited. Does not implicitly {@link msg.Actor_AuthorityPlayCard_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
-         * @param {msg.I_Actor_AuthorityPlayCard_Ntt} message _Actor_AuthorityPlayCard_Ntt message or plain object to encode
+         * @param {msg.IActor_AuthorityPlayCard_Ntt} message Actor_AuthorityPlayCard_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_AuthorityPlayCard_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_AuthorityPlayCard_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_AuthorityPlayCard_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_AuthorityPlayCard_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_AuthorityPlayCard_Ntt} _Actor_AuthorityPlayCard_Ntt
+         * @returns {msg.Actor_AuthorityPlayCard_Ntt} Actor_AuthorityPlayCard_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_AuthorityPlayCard_Ntt.decode = function decode(reader, length) {
+        Actor_AuthorityPlayCard_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_AuthorityPlayCard_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_AuthorityPlayCard_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -7442,30 +7442,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_AuthorityPlayCard_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_AuthorityPlayCard_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_AuthorityPlayCard_Ntt} _Actor_AuthorityPlayCard_Ntt
+         * @returns {msg.Actor_AuthorityPlayCard_Ntt} Actor_AuthorityPlayCard_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_AuthorityPlayCard_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_AuthorityPlayCard_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_AuthorityPlayCard_Ntt message.
+         * Verifies an Actor_AuthorityPlayCard_Ntt message.
          * @function verify
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_AuthorityPlayCard_Ntt.verify = function verify(message) {
+        Actor_AuthorityPlayCard_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7478,17 +7478,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_AuthorityPlayCard_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_AuthorityPlayCard_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_AuthorityPlayCard_Ntt} _Actor_AuthorityPlayCard_Ntt
+         * @returns {msg.Actor_AuthorityPlayCard_Ntt} Actor_AuthorityPlayCard_Ntt
          */
-        _Actor_AuthorityPlayCard_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_AuthorityPlayCard_Ntt)
+        Actor_AuthorityPlayCard_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_AuthorityPlayCard_Ntt)
                 return object;
-            var message = new $root.msg._Actor_AuthorityPlayCard_Ntt();
+            var message = new $root.msg.Actor_AuthorityPlayCard_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -7504,15 +7504,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_AuthorityPlayCard_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_AuthorityPlayCard_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @static
-         * @param {msg._Actor_AuthorityPlayCard_Ntt} message _Actor_AuthorityPlayCard_Ntt
+         * @param {msg.Actor_AuthorityPlayCard_Ntt} message Actor_AuthorityPlayCard_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_AuthorityPlayCard_Ntt.toObject = function toObject(message, options) {
+        Actor_AuthorityPlayCard_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -7535,37 +7535,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_AuthorityPlayCard_Ntt to JSON.
+         * Converts this Actor_AuthorityPlayCard_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_AuthorityPlayCard_Ntt
+         * @memberof msg.Actor_AuthorityPlayCard_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_AuthorityPlayCard_Ntt.prototype.toJSON = function toJSON() {
+        Actor_AuthorityPlayCard_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_AuthorityPlayCard_Ntt;
+        return Actor_AuthorityPlayCard_Ntt;
     })();
 
-    msg._Actor_SetMultiples_Ntt = (function() {
+    msg.Actor_SetMultiples_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_SetMultiples_Ntt.
+         * Properties of an Actor_SetMultiples_Ntt.
          * @memberof msg
-         * @interface I_Actor_SetMultiples_Ntt
-         * @property {number|null} [Multiples] _Actor_SetMultiples_Ntt Multiples
+         * @interface IActor_SetMultiples_Ntt
+         * @property {number|null} [Multiples] Actor_SetMultiples_Ntt Multiples
          */
 
         /**
-         * Constructs a new _Actor_SetMultiples_Ntt.
+         * Constructs a new Actor_SetMultiples_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_SetMultiples_Ntt.
-         * @implements I_Actor_SetMultiples_Ntt
+         * @classdesc Represents an Actor_SetMultiples_Ntt.
+         * @implements IActor_SetMultiples_Ntt
          * @constructor
-         * @param {msg.I_Actor_SetMultiples_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_SetMultiples_Ntt=} [properties] Properties to set
          */
-        function _Actor_SetMultiples_Ntt(properties) {
+        function Actor_SetMultiples_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -7573,35 +7573,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_SetMultiples_Ntt Multiples.
+         * Actor_SetMultiples_Ntt Multiples.
          * @member {number} Multiples
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @instance
          */
-        _Actor_SetMultiples_Ntt.prototype.Multiples = 0;
+        Actor_SetMultiples_Ntt.prototype.Multiples = 0;
 
         /**
-         * Creates a new _Actor_SetMultiples_Ntt instance using the specified properties.
+         * Creates a new Actor_SetMultiples_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
-         * @param {msg.I_Actor_SetMultiples_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_SetMultiples_Ntt} _Actor_SetMultiples_Ntt instance
+         * @param {msg.IActor_SetMultiples_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_SetMultiples_Ntt} Actor_SetMultiples_Ntt instance
          */
-        _Actor_SetMultiples_Ntt.create = function create(properties) {
-            return new _Actor_SetMultiples_Ntt(properties);
+        Actor_SetMultiples_Ntt.create = function create(properties) {
+            return new Actor_SetMultiples_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_SetMultiples_Ntt message. Does not implicitly {@link msg._Actor_SetMultiples_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_SetMultiples_Ntt message. Does not implicitly {@link msg.Actor_SetMultiples_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
-         * @param {msg.I_Actor_SetMultiples_Ntt} message _Actor_SetMultiples_Ntt message or plain object to encode
+         * @param {msg.IActor_SetMultiples_Ntt} message Actor_SetMultiples_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_SetMultiples_Ntt.encode = function encode(message, writer) {
+        Actor_SetMultiples_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Multiples != null && message.hasOwnProperty("Multiples"))
@@ -7610,33 +7610,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_SetMultiples_Ntt message, length delimited. Does not implicitly {@link msg._Actor_SetMultiples_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_SetMultiples_Ntt message, length delimited. Does not implicitly {@link msg.Actor_SetMultiples_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
-         * @param {msg.I_Actor_SetMultiples_Ntt} message _Actor_SetMultiples_Ntt message or plain object to encode
+         * @param {msg.IActor_SetMultiples_Ntt} message Actor_SetMultiples_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_SetMultiples_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_SetMultiples_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_SetMultiples_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_SetMultiples_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_SetMultiples_Ntt} _Actor_SetMultiples_Ntt
+         * @returns {msg.Actor_SetMultiples_Ntt} Actor_SetMultiples_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_SetMultiples_Ntt.decode = function decode(reader, length) {
+        Actor_SetMultiples_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_SetMultiples_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_SetMultiples_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -7652,30 +7652,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_SetMultiples_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_SetMultiples_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_SetMultiples_Ntt} _Actor_SetMultiples_Ntt
+         * @returns {msg.Actor_SetMultiples_Ntt} Actor_SetMultiples_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_SetMultiples_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_SetMultiples_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_SetMultiples_Ntt message.
+         * Verifies an Actor_SetMultiples_Ntt message.
          * @function verify
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_SetMultiples_Ntt.verify = function verify(message) {
+        Actor_SetMultiples_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Multiples != null && message.hasOwnProperty("Multiples"))
@@ -7685,32 +7685,32 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_SetMultiples_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_SetMultiples_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_SetMultiples_Ntt} _Actor_SetMultiples_Ntt
+         * @returns {msg.Actor_SetMultiples_Ntt} Actor_SetMultiples_Ntt
          */
-        _Actor_SetMultiples_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_SetMultiples_Ntt)
+        Actor_SetMultiples_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_SetMultiples_Ntt)
                 return object;
-            var message = new $root.msg._Actor_SetMultiples_Ntt();
+            var message = new $root.msg.Actor_SetMultiples_Ntt();
             if (object.Multiples != null)
                 message.Multiples = object.Multiples | 0;
             return message;
         };
 
         /**
-         * Creates a plain object from a _Actor_SetMultiples_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_SetMultiples_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @static
-         * @param {msg._Actor_SetMultiples_Ntt} message _Actor_SetMultiples_Ntt
+         * @param {msg.Actor_SetMultiples_Ntt} message Actor_SetMultiples_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_SetMultiples_Ntt.toObject = function toObject(message, options) {
+        Actor_SetMultiples_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -7722,38 +7722,38 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_SetMultiples_Ntt to JSON.
+         * Converts this Actor_SetMultiples_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_SetMultiples_Ntt
+         * @memberof msg.Actor_SetMultiples_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_SetMultiples_Ntt.prototype.toJSON = function toJSON() {
+        Actor_SetMultiples_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_SetMultiples_Ntt;
+        return Actor_SetMultiples_Ntt;
     })();
 
-    msg._Actor_SetLandlord_Ntt = (function() {
+    msg.Actor_SetLandlord_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_SetLandlord_Ntt.
+         * Properties of an Actor_SetLandlord_Ntt.
          * @memberof msg
-         * @interface I_Actor_SetLandlord_Ntt
-         * @property {number|Long|null} [UserID] _Actor_SetLandlord_Ntt UserID
-         * @property {Array.<msg.ICCard>|null} [LordCards] _Actor_SetLandlord_Ntt LordCards
+         * @interface IActor_SetLandlord_Ntt
+         * @property {number|Long|null} [UserID] Actor_SetLandlord_Ntt UserID
+         * @property {Array.<msg.ICCard>|null} [LordCards] Actor_SetLandlord_Ntt LordCards
          */
 
         /**
-         * Constructs a new _Actor_SetLandlord_Ntt.
+         * Constructs a new Actor_SetLandlord_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_SetLandlord_Ntt.
-         * @implements I_Actor_SetLandlord_Ntt
+         * @classdesc Represents an Actor_SetLandlord_Ntt.
+         * @implements IActor_SetLandlord_Ntt
          * @constructor
-         * @param {msg.I_Actor_SetLandlord_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_SetLandlord_Ntt=} [properties] Properties to set
          */
-        function _Actor_SetLandlord_Ntt(properties) {
+        function Actor_SetLandlord_Ntt(properties) {
             this.LordCards = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -7762,43 +7762,43 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_SetLandlord_Ntt UserID.
+         * Actor_SetLandlord_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @instance
          */
-        _Actor_SetLandlord_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_SetLandlord_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_SetLandlord_Ntt LordCards.
+         * Actor_SetLandlord_Ntt LordCards.
          * @member {Array.<msg.ICCard>} LordCards
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @instance
          */
-        _Actor_SetLandlord_Ntt.prototype.LordCards = $util.emptyArray;
+        Actor_SetLandlord_Ntt.prototype.LordCards = $util.emptyArray;
 
         /**
-         * Creates a new _Actor_SetLandlord_Ntt instance using the specified properties.
+         * Creates a new Actor_SetLandlord_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_SetLandlord_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_SetLandlord_Ntt} _Actor_SetLandlord_Ntt instance
+         * @param {msg.IActor_SetLandlord_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_SetLandlord_Ntt} Actor_SetLandlord_Ntt instance
          */
-        _Actor_SetLandlord_Ntt.create = function create(properties) {
-            return new _Actor_SetLandlord_Ntt(properties);
+        Actor_SetLandlord_Ntt.create = function create(properties) {
+            return new Actor_SetLandlord_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_SetLandlord_Ntt message. Does not implicitly {@link msg._Actor_SetLandlord_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_SetLandlord_Ntt message. Does not implicitly {@link msg.Actor_SetLandlord_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_SetLandlord_Ntt} message _Actor_SetLandlord_Ntt message or plain object to encode
+         * @param {msg.IActor_SetLandlord_Ntt} message Actor_SetLandlord_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_SetLandlord_Ntt.encode = function encode(message, writer) {
+        Actor_SetLandlord_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7810,33 +7810,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_SetLandlord_Ntt message, length delimited. Does not implicitly {@link msg._Actor_SetLandlord_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_SetLandlord_Ntt message, length delimited. Does not implicitly {@link msg.Actor_SetLandlord_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
-         * @param {msg.I_Actor_SetLandlord_Ntt} message _Actor_SetLandlord_Ntt message or plain object to encode
+         * @param {msg.IActor_SetLandlord_Ntt} message Actor_SetLandlord_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_SetLandlord_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_SetLandlord_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_SetLandlord_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_SetLandlord_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_SetLandlord_Ntt} _Actor_SetLandlord_Ntt
+         * @returns {msg.Actor_SetLandlord_Ntt} Actor_SetLandlord_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_SetLandlord_Ntt.decode = function decode(reader, length) {
+        Actor_SetLandlord_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_SetLandlord_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_SetLandlord_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -7857,30 +7857,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_SetLandlord_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_SetLandlord_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_SetLandlord_Ntt} _Actor_SetLandlord_Ntt
+         * @returns {msg.Actor_SetLandlord_Ntt} Actor_SetLandlord_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_SetLandlord_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_SetLandlord_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_SetLandlord_Ntt message.
+         * Verifies an Actor_SetLandlord_Ntt message.
          * @function verify
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_SetLandlord_Ntt.verify = function verify(message) {
+        Actor_SetLandlord_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -7899,17 +7899,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_SetLandlord_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_SetLandlord_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_SetLandlord_Ntt} _Actor_SetLandlord_Ntt
+         * @returns {msg.Actor_SetLandlord_Ntt} Actor_SetLandlord_Ntt
          */
-        _Actor_SetLandlord_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_SetLandlord_Ntt)
+        Actor_SetLandlord_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_SetLandlord_Ntt)
                 return object;
-            var message = new $root.msg._Actor_SetLandlord_Ntt();
+            var message = new $root.msg.Actor_SetLandlord_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -7921,11 +7921,11 @@ $root.msg = (function() {
                     message.UserID = new $util.LongBits(object.UserID.low >>> 0, object.UserID.high >>> 0).toNumber();
             if (object.LordCards) {
                 if (!Array.isArray(object.LordCards))
-                    throw TypeError(".msg._Actor_SetLandlord_Ntt.LordCards: array expected");
+                    throw TypeError(".msg.Actor_SetLandlord_Ntt.LordCards: array expected");
                 message.LordCards = [];
                 for (var i = 0; i < object.LordCards.length; ++i) {
                     if (typeof object.LordCards[i] !== "object")
-                        throw TypeError(".msg._Actor_SetLandlord_Ntt.LordCards: object expected");
+                        throw TypeError(".msg.Actor_SetLandlord_Ntt.LordCards: object expected");
                     message.LordCards[i] = $root.msg.CCard.fromObject(object.LordCards[i]);
                 }
             }
@@ -7933,15 +7933,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_SetLandlord_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_SetLandlord_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @static
-         * @param {msg._Actor_SetLandlord_Ntt} message _Actor_SetLandlord_Ntt
+         * @param {msg.Actor_SetLandlord_Ntt} message Actor_SetLandlord_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_SetLandlord_Ntt.toObject = function toObject(message, options) {
+        Actor_SetLandlord_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -7967,39 +7967,39 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_SetLandlord_Ntt to JSON.
+         * Converts this Actor_SetLandlord_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_SetLandlord_Ntt
+         * @memberof msg.Actor_SetLandlord_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_SetLandlord_Ntt.prototype.toJSON = function toJSON() {
+        Actor_SetLandlord_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_SetLandlord_Ntt;
+        return Actor_SetLandlord_Ntt;
     })();
 
-    msg._Actor_Gameover_Ntt = (function() {
+    msg.Actor_Gameover_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_Gameover_Ntt.
+         * Properties of an Actor_Gameover_Ntt.
          * @memberof msg
-         * @interface I_Actor_Gameover_Ntt
-         * @property {msg.CIdentity|null} [Winner] _Actor_Gameover_Ntt Winner
-         * @property {number|Long|null} [BasePointPerMatch] _Actor_Gameover_Ntt BasePointPerMatch
-         * @property {number|null} [Multiples] _Actor_Gameover_Ntt Multiples
+         * @interface IActor_Gameover_Ntt
+         * @property {msg.CIdentity|null} [Winner] Actor_Gameover_Ntt Winner
+         * @property {number|Long|null} [BasePointPerMatch] Actor_Gameover_Ntt BasePointPerMatch
+         * @property {number|null} [Multiples] Actor_Gameover_Ntt Multiples
          */
 
         /**
-         * Constructs a new _Actor_Gameover_Ntt.
+         * Constructs a new Actor_Gameover_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_Gameover_Ntt.
-         * @implements I_Actor_Gameover_Ntt
+         * @classdesc Represents an Actor_Gameover_Ntt.
+         * @implements IActor_Gameover_Ntt
          * @constructor
-         * @param {msg.I_Actor_Gameover_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_Gameover_Ntt=} [properties] Properties to set
          */
-        function _Actor_Gameover_Ntt(properties) {
+        function Actor_Gameover_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -8007,51 +8007,51 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_Gameover_Ntt Winner.
+         * Actor_Gameover_Ntt Winner.
          * @member {msg.CIdentity} Winner
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @instance
          */
-        _Actor_Gameover_Ntt.prototype.Winner = 0;
+        Actor_Gameover_Ntt.prototype.Winner = 0;
 
         /**
-         * _Actor_Gameover_Ntt BasePointPerMatch.
+         * Actor_Gameover_Ntt BasePointPerMatch.
          * @member {number|Long} BasePointPerMatch
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @instance
          */
-        _Actor_Gameover_Ntt.prototype.BasePointPerMatch = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_Gameover_Ntt.prototype.BasePointPerMatch = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * _Actor_Gameover_Ntt Multiples.
+         * Actor_Gameover_Ntt Multiples.
          * @member {number} Multiples
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @instance
          */
-        _Actor_Gameover_Ntt.prototype.Multiples = 0;
+        Actor_Gameover_Ntt.prototype.Multiples = 0;
 
         /**
-         * Creates a new _Actor_Gameover_Ntt instance using the specified properties.
+         * Creates a new Actor_Gameover_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
-         * @param {msg.I_Actor_Gameover_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_Gameover_Ntt} _Actor_Gameover_Ntt instance
+         * @param {msg.IActor_Gameover_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_Gameover_Ntt} Actor_Gameover_Ntt instance
          */
-        _Actor_Gameover_Ntt.create = function create(properties) {
-            return new _Actor_Gameover_Ntt(properties);
+        Actor_Gameover_Ntt.create = function create(properties) {
+            return new Actor_Gameover_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_Gameover_Ntt message. Does not implicitly {@link msg._Actor_Gameover_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_Gameover_Ntt message. Does not implicitly {@link msg.Actor_Gameover_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
-         * @param {msg.I_Actor_Gameover_Ntt} message _Actor_Gameover_Ntt message or plain object to encode
+         * @param {msg.IActor_Gameover_Ntt} message Actor_Gameover_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_Gameover_Ntt.encode = function encode(message, writer) {
+        Actor_Gameover_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.Winner != null && message.hasOwnProperty("Winner"))
@@ -8064,33 +8064,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_Gameover_Ntt message, length delimited. Does not implicitly {@link msg._Actor_Gameover_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_Gameover_Ntt message, length delimited. Does not implicitly {@link msg.Actor_Gameover_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
-         * @param {msg.I_Actor_Gameover_Ntt} message _Actor_Gameover_Ntt message or plain object to encode
+         * @param {msg.IActor_Gameover_Ntt} message Actor_Gameover_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_Gameover_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_Gameover_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_Gameover_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_Gameover_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_Gameover_Ntt} _Actor_Gameover_Ntt
+         * @returns {msg.Actor_Gameover_Ntt} Actor_Gameover_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_Gameover_Ntt.decode = function decode(reader, length) {
+        Actor_Gameover_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_Gameover_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_Gameover_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -8112,30 +8112,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_Gameover_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_Gameover_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_Gameover_Ntt} _Actor_Gameover_Ntt
+         * @returns {msg.Actor_Gameover_Ntt} Actor_Gameover_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_Gameover_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_Gameover_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_Gameover_Ntt message.
+         * Verifies an Actor_Gameover_Ntt message.
          * @function verify
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_Gameover_Ntt.verify = function verify(message) {
+        Actor_Gameover_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.Winner != null && message.hasOwnProperty("Winner"))
@@ -8157,17 +8157,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_Gameover_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_Gameover_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_Gameover_Ntt} _Actor_Gameover_Ntt
+         * @returns {msg.Actor_Gameover_Ntt} Actor_Gameover_Ntt
          */
-        _Actor_Gameover_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_Gameover_Ntt)
+        Actor_Gameover_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_Gameover_Ntt)
                 return object;
-            var message = new $root.msg._Actor_Gameover_Ntt();
+            var message = new $root.msg.Actor_Gameover_Ntt();
             switch (object.Winner) {
             case "CIdentity_NULL":
             case 0:
@@ -8197,15 +8197,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_Gameover_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_Gameover_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @static
-         * @param {msg._Actor_Gameover_Ntt} message _Actor_Gameover_Ntt
+         * @param {msg.Actor_Gameover_Ntt} message Actor_Gameover_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_Gameover_Ntt.toObject = function toObject(message, options) {
+        Actor_Gameover_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -8231,37 +8231,37 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_Gameover_Ntt to JSON.
+         * Converts this Actor_Gameover_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_Gameover_Ntt
+         * @memberof msg.Actor_Gameover_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_Gameover_Ntt.prototype.toJSON = function toJSON() {
+        Actor_Gameover_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_Gameover_Ntt;
+        return Actor_Gameover_Ntt;
     })();
 
-    msg._Actor_GamerMoneyLess_Ntt = (function() {
+    msg.Actor_GamerMoneyLess_Ntt = (function() {
 
         /**
-         * Properties of a _Actor_GamerMoneyLess_Ntt.
+         * Properties of an Actor_GamerMoneyLess_Ntt.
          * @memberof msg
-         * @interface I_Actor_GamerMoneyLess_Ntt
-         * @property {number|Long|null} [UserID] _Actor_GamerMoneyLess_Ntt UserID
+         * @interface IActor_GamerMoneyLess_Ntt
+         * @property {number|Long|null} [UserID] Actor_GamerMoneyLess_Ntt UserID
          */
 
         /**
-         * Constructs a new _Actor_GamerMoneyLess_Ntt.
+         * Constructs a new Actor_GamerMoneyLess_Ntt.
          * @memberof msg
-         * @classdesc Represents a _Actor_GamerMoneyLess_Ntt.
-         * @implements I_Actor_GamerMoneyLess_Ntt
+         * @classdesc Represents an Actor_GamerMoneyLess_Ntt.
+         * @implements IActor_GamerMoneyLess_Ntt
          * @constructor
-         * @param {msg.I_Actor_GamerMoneyLess_Ntt=} [properties] Properties to set
+         * @param {msg.IActor_GamerMoneyLess_Ntt=} [properties] Properties to set
          */
-        function _Actor_GamerMoneyLess_Ntt(properties) {
+        function Actor_GamerMoneyLess_Ntt(properties) {
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -8269,35 +8269,35 @@ $root.msg = (function() {
         }
 
         /**
-         * _Actor_GamerMoneyLess_Ntt UserID.
+         * Actor_GamerMoneyLess_Ntt UserID.
          * @member {number|Long} UserID
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @instance
          */
-        _Actor_GamerMoneyLess_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        Actor_GamerMoneyLess_Ntt.prototype.UserID = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
-         * Creates a new _Actor_GamerMoneyLess_Ntt instance using the specified properties.
+         * Creates a new Actor_GamerMoneyLess_Ntt instance using the specified properties.
          * @function create
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
-         * @param {msg.I_Actor_GamerMoneyLess_Ntt=} [properties] Properties to set
-         * @returns {msg._Actor_GamerMoneyLess_Ntt} _Actor_GamerMoneyLess_Ntt instance
+         * @param {msg.IActor_GamerMoneyLess_Ntt=} [properties] Properties to set
+         * @returns {msg.Actor_GamerMoneyLess_Ntt} Actor_GamerMoneyLess_Ntt instance
          */
-        _Actor_GamerMoneyLess_Ntt.create = function create(properties) {
-            return new _Actor_GamerMoneyLess_Ntt(properties);
+        Actor_GamerMoneyLess_Ntt.create = function create(properties) {
+            return new Actor_GamerMoneyLess_Ntt(properties);
         };
 
         /**
-         * Encodes the specified _Actor_GamerMoneyLess_Ntt message. Does not implicitly {@link msg._Actor_GamerMoneyLess_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerMoneyLess_Ntt message. Does not implicitly {@link msg.Actor_GamerMoneyLess_Ntt.verify|verify} messages.
          * @function encode
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
-         * @param {msg.I_Actor_GamerMoneyLess_Ntt} message _Actor_GamerMoneyLess_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerMoneyLess_Ntt} message Actor_GamerMoneyLess_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerMoneyLess_Ntt.encode = function encode(message, writer) {
+        Actor_GamerMoneyLess_Ntt.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -8306,33 +8306,33 @@ $root.msg = (function() {
         };
 
         /**
-         * Encodes the specified _Actor_GamerMoneyLess_Ntt message, length delimited. Does not implicitly {@link msg._Actor_GamerMoneyLess_Ntt.verify|verify} messages.
+         * Encodes the specified Actor_GamerMoneyLess_Ntt message, length delimited. Does not implicitly {@link msg.Actor_GamerMoneyLess_Ntt.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
-         * @param {msg.I_Actor_GamerMoneyLess_Ntt} message _Actor_GamerMoneyLess_Ntt message or plain object to encode
+         * @param {msg.IActor_GamerMoneyLess_Ntt} message Actor_GamerMoneyLess_Ntt message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        _Actor_GamerMoneyLess_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
+        Actor_GamerMoneyLess_Ntt.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a _Actor_GamerMoneyLess_Ntt message from the specified reader or buffer.
+         * Decodes an Actor_GamerMoneyLess_Ntt message from the specified reader or buffer.
          * @function decode
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {msg._Actor_GamerMoneyLess_Ntt} _Actor_GamerMoneyLess_Ntt
+         * @returns {msg.Actor_GamerMoneyLess_Ntt} Actor_GamerMoneyLess_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerMoneyLess_Ntt.decode = function decode(reader, length) {
+        Actor_GamerMoneyLess_Ntt.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg._Actor_GamerMoneyLess_Ntt();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.msg.Actor_GamerMoneyLess_Ntt();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
@@ -8348,30 +8348,30 @@ $root.msg = (function() {
         };
 
         /**
-         * Decodes a _Actor_GamerMoneyLess_Ntt message from the specified reader or buffer, length delimited.
+         * Decodes an Actor_GamerMoneyLess_Ntt message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {msg._Actor_GamerMoneyLess_Ntt} _Actor_GamerMoneyLess_Ntt
+         * @returns {msg.Actor_GamerMoneyLess_Ntt} Actor_GamerMoneyLess_Ntt
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        _Actor_GamerMoneyLess_Ntt.decodeDelimited = function decodeDelimited(reader) {
+        Actor_GamerMoneyLess_Ntt.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a _Actor_GamerMoneyLess_Ntt message.
+         * Verifies an Actor_GamerMoneyLess_Ntt message.
          * @function verify
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        _Actor_GamerMoneyLess_Ntt.verify = function verify(message) {
+        Actor_GamerMoneyLess_Ntt.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             if (message.UserID != null && message.hasOwnProperty("UserID"))
@@ -8381,17 +8381,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a _Actor_GamerMoneyLess_Ntt message from a plain object. Also converts values to their respective internal types.
+         * Creates an Actor_GamerMoneyLess_Ntt message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {msg._Actor_GamerMoneyLess_Ntt} _Actor_GamerMoneyLess_Ntt
+         * @returns {msg.Actor_GamerMoneyLess_Ntt} Actor_GamerMoneyLess_Ntt
          */
-        _Actor_GamerMoneyLess_Ntt.fromObject = function fromObject(object) {
-            if (object instanceof $root.msg._Actor_GamerMoneyLess_Ntt)
+        Actor_GamerMoneyLess_Ntt.fromObject = function fromObject(object) {
+            if (object instanceof $root.msg.Actor_GamerMoneyLess_Ntt)
                 return object;
-            var message = new $root.msg._Actor_GamerMoneyLess_Ntt();
+            var message = new $root.msg.Actor_GamerMoneyLess_Ntt();
             if (object.UserID != null)
                 if ($util.Long)
                     (message.UserID = $util.Long.fromValue(object.UserID)).unsigned = false;
@@ -8405,15 +8405,15 @@ $root.msg = (function() {
         };
 
         /**
-         * Creates a plain object from a _Actor_GamerMoneyLess_Ntt message. Also converts values to other types if specified.
+         * Creates a plain object from an Actor_GamerMoneyLess_Ntt message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @static
-         * @param {msg._Actor_GamerMoneyLess_Ntt} message _Actor_GamerMoneyLess_Ntt
+         * @param {msg.Actor_GamerMoneyLess_Ntt} message Actor_GamerMoneyLess_Ntt
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        _Actor_GamerMoneyLess_Ntt.toObject = function toObject(message, options) {
+        Actor_GamerMoneyLess_Ntt.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
@@ -8432,17 +8432,17 @@ $root.msg = (function() {
         };
 
         /**
-         * Converts this _Actor_GamerMoneyLess_Ntt to JSON.
+         * Converts this Actor_GamerMoneyLess_Ntt to JSON.
          * @function toJSON
-         * @memberof msg._Actor_GamerMoneyLess_Ntt
+         * @memberof msg.Actor_GamerMoneyLess_Ntt
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        _Actor_GamerMoneyLess_Ntt.prototype.toJSON = function toJSON() {
+        Actor_GamerMoneyLess_Ntt.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
-        return _Actor_GamerMoneyLess_Ntt;
+        return Actor_GamerMoneyLess_Ntt;
     })();
 
     /**

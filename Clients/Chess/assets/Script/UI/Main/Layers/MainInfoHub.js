@@ -6,9 +6,9 @@ cc.Class({
         coin_lb: cc.Label,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
-        this.BindUI(G.Event_UI.SHOW_MAIN_INFO_HUB);
+        this.BindUI(G.UI_Event.SHOW_MAIN_INFO_HUB);
     },
 
     Execute(eventCode, message){

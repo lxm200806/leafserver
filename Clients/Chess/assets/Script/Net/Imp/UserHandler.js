@@ -27,30 +27,30 @@ var UserHandler = cc.Class({
             this.TipBar("创建角色失败");
             return;
         } 
-        this.DispatchUI(G.Event_UI.SHOW_PLAYER_PANEL, false);
+        this.DispatchUI(G.UI_Event.SHOW_PLAYER_PANEL, false);
 
         G.GameModel.user = _msg.user;
-        this.DispatchUI(G.Event_UI.SHOW_MAIN_INFO_HUB, true);
-        this.DispatchUI(G.Event_UI.SHOW_QUICKMATCH_PANEL, true);
+        this.DispatchUI(G.UI_Event.SHOW_MAIN_INFO_HUB, true);
+        this.DispatchUI(G.UI_Event.SHOW_QUICKMATCH_PANEL, true);
 
-        // this.DispatchUI(G.Event_UI.ROOM_PANEL_ACTIVE, true);
-        // this.DispatchUI(G.Event_UI.SHOW_ENTER_ROOM, true);
+        // this.DispatchUI(G.UI_Event.ROOM_PANEL_ACTIVE, true);
+        // this.DispatchUI(G.UI_Event.SHOW_ENTER_ROOM, true);
 
         this.TipBar("创建角色成功");
     },
 
     UserInfoAck: function(_msg){
         if(_msg.ackCode != 0){
-            this.DispatchUI(G.Event_UI.SHOW_PLAYER_PANEL, true);
+            this.DispatchUI(G.UI_Event.SHOW_PLAYER_PANEL, true);
             return;
         }
 
         G.GameModel.user = _msg.user;
-        this.DispatchUI(G.Event_UI.SHOW_MAIN_INFO_HUB, true);
-        this.DispatchUI(G.Event_UI.SHOW_QUICKMATCH_PANEL, true);
+        this.DispatchUI(G.UI_Event.SHOW_MAIN_INFO_HUB, true);
+        this.DispatchUI(G.UI_Event.SHOW_QUICKMATCH_PANEL, true);
 
-        // this.DispatchUI(G.Event_UI.ROOM_PANEL_ACTIVE, true);
-        // this.DispatchUI(G.Event_UI.SHOW_ENTER_ROOM, true);
+        // this.DispatchUI(G.UI_Event.ROOM_PANEL_ACTIVE, true);
+        // this.DispatchUI(G.UI_Event.SHOW_ENTER_ROOM, true);
     },
 
     UserOnlineAck: function(_msg){

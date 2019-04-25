@@ -8,7 +8,7 @@ cc.Class({
         cardPrefab: cc.Prefab,
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
 
     },

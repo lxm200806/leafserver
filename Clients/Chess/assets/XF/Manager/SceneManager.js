@@ -23,7 +23,7 @@ var SceneManager = cc.Class({
         }
     },
 
-    Init: function () {
+    XFInit() {
         G.SceneManager.Instance = this;
 
     },

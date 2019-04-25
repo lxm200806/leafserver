@@ -7,8 +7,8 @@ cc.Class({
         handCardsNode: cc.Node,
     },
 
-    Init(){
-        PlayerBase.prototype.Init.apply(this);
+    XFInit(){
+        PlayerBase.prototype.XFInit.apply(this);
 
         this.InitData();
     },
@@ -32,7 +32,7 @@ cc.Class({
 
     TipGrabLandlord(){
         PlayerBase.prototype.TipGrabLandlord.apply(this);
-        this.DispatchUI(G.Event_UI.Fight_ShowGrabLandlordPanel, true);
+        this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, true);
     },
 
     GetHandCards(){

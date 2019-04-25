@@ -6,18 +6,18 @@ cc.Class({
     properties: {
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
 
-        this.BindUI(G.Event_UI.Fight_ShowGrabLandlordPanel);
+        this.BindUI(G.UI_Event.Fight_ShowGrabLandlordPanel);
     },
 
     Execute: function(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Fight_ShowGrabLandlordPanel:
+            case G.UI_Event.Fight_ShowGrabLandlordPanel:
                 this.ClosePanel(message);
                 break;
-            case G.Event_UI.Fight_ResetGameStartUI:
+            case G.UI_Event.Fight_ResetGameStartUI:
                 this.ClosePanel(false);
                 break;
             default:
@@ -34,7 +34,7 @@ cc.Class({
         req.IsGrab = true;
         G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.DispatchUI(G.Event_UI.Fight_ShowGrabLandlordPanel, false);
+        this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnQingDiZhu(){
@@ -43,7 +43,7 @@ cc.Class({
         req.IsGrab = true;
         G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.DispatchUI(G.Event_UI.Fight_ShowGrabLandlordPanel, false);
+        this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnBuJiao(){
@@ -52,7 +52,7 @@ cc.Class({
         req.IsGrab = false;
         G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.DispatchUI(G.Event_UI.Fight_ShowGrabLandlordPanel, false);
+        this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnBuQiang(){
@@ -61,7 +61,7 @@ cc.Class({
         req.IsGrab = false;
         G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.DispatchUI(G.Event_UI.Fight_ShowGrabLandlordPanel, false);
+        this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
 });

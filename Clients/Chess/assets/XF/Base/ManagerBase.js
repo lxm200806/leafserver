@@ -14,7 +14,7 @@ var ManagerBase = cc.Class({
     onLoad: function(){
 
         this._messageMap = new Map();
-        this.Init();
+        this.XFInit();
     },
 
     Execute: function(eventCode, message){

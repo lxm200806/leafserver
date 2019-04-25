@@ -10,19 +10,19 @@ cc.Class({
         say_node: cc.Node,
     },
 
-    Init() {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI.Fight_ResetGameStartUI);
-        this.BindUI(G.Event_UI.Fight_ResetTurn);
+        this.BindUI(G.UI_Event.Fight_ResetGameStartUI);
+        this.BindUI(G.UI_Event.Fight_ResetTurn);
     },
 
     Execute(eventCode, message) {
         switch (eventCode) {
-            case G.Event_UI.Fight_ResetGameStartUI:
+            case G.UI_Event.Fight_ResetGameStartUI:
                 this.Fight_ResetGameStartUI(message);
                 break;
-            case G.Event_UI.Fight_ResetTurn:
+            case G.UI_Event.Fight_ResetTurn:
                 this.ResetTurn();
                 break;
             default:
@@ -111,7 +111,7 @@ cc.Class({
     },
 
     PreTurnMe(){
-        this.DispatchUI(G.Event_UI.Fight_ResetTurn);
+        this.DispatchUI(G.UI_Event.Fight_ResetTurn);
     },
     
     TurnMe(){

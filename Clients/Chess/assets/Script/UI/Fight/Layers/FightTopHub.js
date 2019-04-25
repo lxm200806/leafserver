@@ -4,7 +4,7 @@ cc.Class({
     properties: {
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
 
     },
@@ -20,8 +20,8 @@ cc.Class({
     OnBackClicked(){
         var msg = new G.PB._C2G_ReturnLobby_Ntt();
         G.NetManager.Instance.Send(msg, G.Opcode._C2G_ReturnLobby_Ntt);
-        this.DispatchUI(G.Event_UI.Canvas_ShowMain, true);
-        this.DispatchUI(G.Event_UI.Canvas_ShowFight, false);
+        this.DispatchUI(G.UI_Event.Canvas_ShowMain, true);
+        this.DispatchUI(G.UI_Event.Canvas_ShowFight, false);
     },
 
 });

@@ -13,6 +13,10 @@ cc.Class({
         this.node.active = _value;
     },
 
+    TipBar(message){
+        this.DispatchUI(G.UI_Event.TIP_BAR, message);
+    },
+
     onEnable(){
         if(this.isScrowTouch){
             this.node.on('touchstart', function(){
@@ -21,7 +25,6 @@ cc.Class({
 
         }
     },
-
     onDisable(){
         this.node.targetOff(this.node);
     },

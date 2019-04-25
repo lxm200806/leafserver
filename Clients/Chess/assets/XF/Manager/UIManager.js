@@ -2,7 +2,7 @@ var UIManager = cc.Class({
 
     extends: require('ManagerBase'),
     // use this for initialization
-    Init: function () {
+    XFInit() {
         
         G.UIManager.Instance = this;
     },

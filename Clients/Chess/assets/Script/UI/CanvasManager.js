@@ -8,23 +8,23 @@ cc.Class({
         fightPrefab: cc.Prefab,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
 
-        this.BindUI(G.Event_UI.Canvas_ShowLogin);
-        this.BindUI(G.Event_UI.Canvas_ShowMain);
-        this.BindUI(G.Event_UI.Canvas_ShowFight);
+        this.BindUI(G.UI_Event.Canvas_ShowLogin);
+        this.BindUI(G.UI_Event.Canvas_ShowMain);
+        this.BindUI(G.UI_Event.Canvas_ShowFight);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Canvas_ShowLogin:
+            case G.UI_Event.Canvas_ShowLogin:
                 this.On_Canvas_ShowLogin(message);
                 break;
-            case G.Event_UI.Canvas_ShowMain:
+            case G.UI_Event.Canvas_ShowMain:
                 this.On_Canvas_ShowMain(message);
                 break;
-            case G.Event_UI.Canvas_ShowFight:
+            case G.UI_Event.Canvas_ShowFight:
                 this.On_Canvas_ShowFight(message);
                 break;
             default:

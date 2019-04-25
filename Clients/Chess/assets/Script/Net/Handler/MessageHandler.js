@@ -5,6 +5,9 @@ var MessageHandler = cc.Class({
 
     OnReceive(_opCode, _data){
         switch (_opCode) {
+            case Opcode._R2C_Register_Ack:
+                this._R2C_Register_Ack(cc.xf.msg.R2C_Register_Ack.decode(_data));
+                break;
             case Opcode._Actor_GamerEnterRoom_Ntt:
                 this._Actor_GamerEnterRoom_Ntt(G.PB._Actor_GamerEnterRoom_Ntt.decode(_data));
                 break;
@@ -44,6 +47,10 @@ var MessageHandler = cc.Class({
         }
     },
 
+    _R2C_Register_Ack(_msg){
+        console.log('_R2C_Register_Ack');
+
+    },
     _Actor_GamerEnterRoom_Ntt(_msg){
         console.log("_Actor_GamerEnterRoom_Ntt");
     },
@@ -55,7 +62,7 @@ var MessageHandler = cc.Class({
     },
     _Actor_GamerReady_Ntt(_msg){
         console.log("_Actor_GamerReady_Ntt");
-        this.DispatchUI(G.Event_UI._Actor_GamerReady_Ntt, _msg);
+        this.DispatchUI(G.UI_Event._Actor_GamerReady_Ntt, _msg);
     },
     _Actor_GamerReconnect_Ntt(_msg){
         console.log("_Actor_GamerReconnect_Ntt");

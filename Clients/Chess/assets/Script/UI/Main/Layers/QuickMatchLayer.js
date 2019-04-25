@@ -6,7 +6,7 @@ cc.Class({
     properties: {
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
     },
 
@@ -29,9 +29,9 @@ cc.Class({
 
             G.GM.RoomState = Enums.RoomState.Matching;
             self.TipBar('匹配中...');
-            self.DispatchUI(G.Event_UI.Canvas_ShowFight, true);
-            self.DispatchUI(G.Event_UI.Canvas_ShowMain, false);
-            self.DispatchUI(G.Event_UI.Fight_ShowMatchingPanel, true);
+            self.DispatchUI(G.UI_Event.Canvas_ShowFight, true);
+            self.DispatchUI(G.UI_Event.Canvas_ShowMain, false);
+            self.DispatchUI(G.UI_Event.Fight_ShowMatchingPanel, true);
 
         })
     },

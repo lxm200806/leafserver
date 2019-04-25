@@ -7,27 +7,27 @@ cc.Class({
         grabLandlordPrefab: cc.Prefab,
     },
 
-    Init: function () {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI.Canvas_ShowFight);
-        this.BindUI(G.Event_UI.Fight_ShowMatchingPanel);
-        this.BindUI(G.Event_UI.Fight_ShowReadyPanel);
-        this.BindUI(G.Event_UI.Fight_ShowGrabLandlordPanel);
+        this.BindUI(G.UI_Event.Canvas_ShowFight);
+        this.BindUI(G.UI_Event.Fight_ShowMatchingPanel);
+        this.BindUI(G.UI_Event.Fight_ShowReadyPanel);
+        this.BindUI(G.UI_Event.Fight_ShowGrabLandlordPanel);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Canvas_ShowFight:
+            case G.UI_Event.Canvas_ShowFight:
                 this.ClosePanel(message);
                 break;
-            case G.Event_UI.Fight_ShowMatchingPanel:
+            case G.UI_Event.Fight_ShowMatchingPanel:
                 this.ShowPanelWithMessage(this.matchingPanelPrefab, message)
             break;
-            case G.Event_UI.Fight_ShowReadyPanel:
+            case G.UI_Event.Fight_ShowReadyPanel:
                 this.ShowPanelWithMessage(this.readyPanelPrefab, message)
                 break;
-            case G.Event_UI.Fight_ShowGrabLandlordPanel:
+            case G.UI_Event.Fight_ShowGrabLandlordPanel:
                 this.ShowPanelWithMessage(this.grabLandlordPrefab, message);
                 break;
             default:

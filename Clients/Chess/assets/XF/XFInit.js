@@ -35,7 +35,7 @@ var XFInit = cc.Class({
         Instance: null,
     },
 
-    Init: function () {
+    XFInit() {
         XFInit.Instance = this;
 		
 		// let pbkiller = require('../../pbkiller/src/pbkiller');
@@ -47,6 +47,8 @@ var XFInit = cc.Class({
         G.GameManager = require('GameManager');
         G.SceneManager = require('SceneManager');
         G.NetManager = require('NetManager');
+
+        cc.xf.netMgr = G.NetManager;
 		
         this.node.addComponent(G.UIManager);
         this.node.addComponent(G.SceneManager);
@@ -57,6 +59,10 @@ var XFInit = cc.Class({
         G.GameModel = G.GameModel.Instance;
 
         G.Opcode = require('ChessOuterOpcode');
+        cc.xf.Opcode = G.Opcode;
+
+        let protocol = require('protocol');
+        cc.xf.msg = protocol.msg;
 		
     },
 
@@ -72,7 +78,7 @@ var XFInit = cc.Class({
                 G.SceneManager.Instance.Execute(eventCode, message);
                 break;
             case G.AreaCode.Net:
-                G.NetManager.Instance.Execcute(eventCode, message);
+                G.NetManager.Instance.Execute(eventCode, message);
                 break;
             default:
                 break;

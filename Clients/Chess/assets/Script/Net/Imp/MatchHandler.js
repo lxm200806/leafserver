@@ -1,7 +1,7 @@
 var MatchHandler = cc.Class({
     extends: require("HandlerBase"),
 
-    OnReceive: function(_subCode, _data){
+    OnReceive(_subCode, _data){
         console.log('MatchHandler receive subcode[' + _subCode + ']');        
         switch (_subCode) {
             case G.PB.match.EMMatch.E_EnterAck:
@@ -33,41 +33,40 @@ var MatchHandler = cc.Class({
         }
     },
 
-    EnterAck: function(_msg){
+    EnterAck(_msg){
         if(_msg.ackCode != 0) return this.TipBar('进入匹配失败['+_msg.ackCode+']');
     },
 
-    EnterAction: function(_msg){
+    EnterAction(_msg){
         G.GameModel.playerList[_msg.player.siteId] = _msg.player;
-        this.DispatchUI(G.Event_UI.ENTER_ROOM, _msg.player.siteId);
+        this.DispatchUI(G.UI_Event.ENTER_ROOM, _msg.player.siteId);
     },
 
-    LeaveAck: function(_msg){
-
+    LeaveAck(_msg){
     },
 
-    LeaveAction: function(_msg){
+    LeaveAction(_msg){
         G.GameModel.playerList[_msg.siteId] = null;
-        this.DispatchUI(G.Event_UI.OUT_ROOM, _msg.player.siteId);
+        this.DispatchUI(G.UI_Event.OUT_ROOM, _msg.player.siteId);
     },
 
-    ReadyAck: function(_msg){
+    ReadyAck(_msg){
         if(_msg.ackCode != 0) return this.TipBar('准备失败['+_msg.ackCode+"]");
 
         G.GameModel.playerList[_msg.siteId].state = 1;
-        this.DispatchUI(G.Event_UI.READY, _msg.player.siteId);
+        this.DispatchUI(G.UI_Event.READY, _msg.player.siteId);
     },
 
-    ReadyAction: function(_msg){
+    ReadyAction(_msg){
         G.GameModel.playerList[_msg.siteId].state = 1;
-        this.DispatchUI(G.Event_UI.READY, _msg.player.siteId);
+        this.DispatchUI(G.UI_Event.READY, _msg.player.siteId);
     },
 
-    StartFightAck: function(_msg){
+    StartFightAck(_msg){
 
     },
 
-    StartFightAction: function(_msg){
+    StartFightAction(_msg){
 
     }
 

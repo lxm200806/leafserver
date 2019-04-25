@@ -7,7 +7,7 @@ var GMComponent = cc.Class({
         Instance: null,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
         GMComponent.Instance = this;
         G.GM = GMComponent.Instance;

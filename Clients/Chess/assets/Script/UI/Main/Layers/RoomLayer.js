@@ -6,20 +6,20 @@ cc.Class({
         backRoom_node: cc.Node,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
-        this.BindUI(G.Event_UI.Main_CreateRoomButton_Active);
-        this.BindUI(G.Event_UI.Main_BackRoomButton_Active);
+        this.BindUI(G.UI_Event.Main_CreateRoomButton_Active);
+        this.BindUI(G.UI_Event.Main_BackRoomButton_Active);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Main_CreateRoomButton_Active:
+            case G.UI_Event.Main_CreateRoomButton_Active:
                 this.enterRoom_node.active = true;
                 this.createRoom_node.active = true;
                 this.backRoom_node.active = false;
                 break;           
-            case G.Event_UI.Main_BackRoomButton_Active:
+            case G.UI_Event.Main_BackRoomButton_Active:
                 this.backRoom_node.active = true;
                 this.createRoom_node.active = true;
                 this.enterRoom_node.active = false;

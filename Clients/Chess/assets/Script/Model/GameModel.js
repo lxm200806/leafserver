@@ -8,7 +8,7 @@ let GameModel = cc.Class({
         Instance : null,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
         GameModel.Instance = this;
     },

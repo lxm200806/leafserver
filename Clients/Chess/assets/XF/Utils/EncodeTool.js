@@ -4,7 +4,7 @@ var EncodeTool = {};
  * rpc Packet
  * 
  *  Flag    : byte 1个字节 ox80// 0x80,Rpc Req; 0x40  Rpr Reponse; 0 ActorPacket 
- *  OpCode  : Uint16 2个字节
+ *  Opcode  : Uint16 2个字节
  *  RpcID   : Uint32 4个字节
  *  bytes   : Protobuffer 数据
  * 
@@ -49,7 +49,7 @@ EncodeTool.EncodeRpcPacket = function(_pbMsg, _opCode, _rpcId){
  * actor Packet
  * 
  *  Flag    : byte 1个字节 0x00
- *  OpCode  : Uint16 2个字节
+ *  Opcode  : Uint16 2个字节
  *  bytes   : Protobuffer 数据
  * 
 **/
@@ -90,7 +90,7 @@ EncodeTool.EncodeActorPacket = function(_pbMsg, _opCode){
  *  Packet
  * 
  *  Flag    : byte 1个字节 ox80// 0x80,Rpc Req; 0x40  Rpr Reponse; 0 ActorPacket 
- *  OpCode  : Uint16 2个字节
+ *  Opcode  : Uint16 2个字节
  *  RpcID   : Uint32 4个字节 //当为ActorPacket手抖RpcID = 0；
  *  bytes   : Protobuffer 数据
  * 
@@ -107,7 +107,7 @@ EncodeTool.DecodePacket = function(_recBuffer){
 
     var packet = {};
     packet.Flag =  buffView.getUint8(2, true);
-    packet.OpCode = buffView.getUint16(3, true);
+    packet.Opcode = buffView.getUint16(3, true);
     if(packet.Flag == 0){
         packet.RpcID = 0;
         packet.bytes = _recBuffer.slice(5);
@@ -122,13 +122,13 @@ EncodeTool.DecodePacket = function(_recBuffer){
 /**
  * Leaf Server Packet
  * 
- * OpCode : Uint16 2个字节
+ * Opcode : Uint16 2个字节
  * bytes ://protobuffer 数据
  * 
  *  */
-EncodeTool.EncodePacket_Leaf = function(_pbMsg, _opCode){
+EncodeTool.EncodePacket_Leaf = function(_msgBuff, _opCode){
 
-    var msgBuff = _pbMsg.toArrayBuffer();
+    var msgBuff = _msgBuff; //_pbMsg.toArrayBuffer();
     let packetBuff=new Uint8Array(msgBuff.length+2);
 
     let opCodeBinary = this.IntToUint8Array(_opCode,16);
@@ -142,7 +142,7 @@ EncodeTool.EncodePacket_Leaf = function(_pbMsg, _opCode){
     // buffView = new Uint8Array(packetBuff, 2, msgBuff.length);
     // buffView.set(msgView);
 
-    return packetBuff;
+    return packetBuff.buffer;
 
 
 },
@@ -153,13 +153,13 @@ EncodeTool.DecodePacket_Leaf = function(_recBuffer){
 
     let dataUnit8Array = new Uint8Array(_recBuffer);
     let opCode = EncodeTool.Uint8ArrayToInt(dataUnit8Array.slice(0,2));
-    console.log("receive message id = "+id);
+    console.log("receive message opCode = "+opCode);
     dataUnit8Array = dataUnit8Array.slice(2);
-    packet.OpCode = opCode;
+    packet.Opcode = opCode;
     packet.bytes = dataUnit8Array;
 
     // var buffView = new DataView(_recBuffer, 0, 2);    
-    // packet.OpCode = buffView.getUint16(0, true);
+    // packet.Opcode = buffView.getUint16(0, true);
     // packet.bytes =  _recBuffer.slice(2);
 
     return packet;

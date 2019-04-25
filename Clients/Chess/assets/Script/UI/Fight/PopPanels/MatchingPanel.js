@@ -4,15 +4,15 @@ cc.Class({
     properties: {
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
 
-        this.BindUI(G.Event_UI.Fight_ShowMatchingPanel);
+        this.BindUI(G.UI_Event.Fight_ShowMatchingPanel);
     },
 
     Execute: function(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Fight_ShowMatchingPanel:
+            case G.UI_Event.Fight_ShowMatchingPanel:
                 this.ClosePanel(message);
                 break;
             default:

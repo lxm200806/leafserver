@@ -2,12 +2,12 @@
 cc.Class({
     extends: require('UIBase'),
 
-    Init: function () {
+    XFInit() {
         this.InitData();
     },
 
     InitData(){
-        this.DispatchUI(G.Event_UI.Main_CreateRoomButton_Active, true);
+        this.DispatchUI(G.UI_Event.Main_CreateRoomButton_Active, true);
     },
 
 });

@@ -4,13 +4,13 @@ cc.Class({
         text_lb: cc.Label,
     },
 
-    Init(){
+    XFInit(){
         this.InitData();
     },
 
     Execute: function(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.TIP_BAR:
+            case G.UI_Event.TIP_BAR:
                 this.ShowTipBar(message);
                 break;
         
@@ -27,8 +27,8 @@ cc.Class({
         this.HideTipBar();
     },
 
-    Init: function(){
-        this.BindUI(G.Event_UI.TIP_BAR);
+    XFInit(){
+        this.BindUI(G.UI_Event.TIP_BAR);
         this.SetLayerActive(false);
     },
 

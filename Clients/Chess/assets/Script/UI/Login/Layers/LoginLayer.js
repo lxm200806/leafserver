@@ -7,14 +7,14 @@ cc.Class({
         psd_input:    cc.EditBox,
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
-        this.BindUI(G.Event_UI.Login_LoginLayer_Active);
+        this.BindUI(G.UI_Event.Login_LoginLayer_Active);
     },
 
     Execute: function(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Login_LoginLayer_Active:
+            case G.UI_Event.Login_LoginLayer_Active:
                 this.SetLayerActive(message);
                 break;
         
@@ -84,12 +84,12 @@ cc.Class({
         G.GameModel.LocalUser.NickName = response.NickName;
         G.GameModel.LocalUser.Money = response.Money;
         
-        this.DispatchUI(G.Event_UI.Canvas_ShowMain, true);
-        this.DispatchUI(G.Event_UI.Canvas_ShowLogin, false);
+        this.DispatchUI(G.UI_Event.Canvas_ShowMain, true);
+        this.DispatchUI(G.UI_Event.Canvas_ShowLogin, false);
     },
 
     OnRegClick(){
-        this.DispatchUI(G.Event_UI.Login_ShowRegPanel, true);
+        this.DispatchUI(G.UI_Event.Login_ShowRegPanel, true);
     },
 
     OnTestClick() {

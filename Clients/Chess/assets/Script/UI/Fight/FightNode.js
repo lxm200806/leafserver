@@ -8,10 +8,10 @@ cc.Class({
 
     },
 
-    Init() {
+    XFInit() {
         this.InitData();
 
-        this.DispatchUI(G.Event_UI.ShowSelf);
+        this.DispatchUI(G.UI_Event.ShowSelf);
     },
 
     Execute(eventCode, message){
@@ -24,7 +24,7 @@ cc.Class({
     },
 
     InitData(){
-        //this.DispatchUI(G.Event_UI._Actor_GameStart_Ntt, {});
+        //this.DispatchUI(G.UI_Event._Actor_GameStart_Ntt, {});
     },
 
 });

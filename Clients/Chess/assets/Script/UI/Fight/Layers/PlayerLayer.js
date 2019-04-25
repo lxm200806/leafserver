@@ -9,56 +9,56 @@ cc.Class({
 
     },
 
-    Init() {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI._Actor_GamerEnterRoom_Ntt);
-        this.BindUI(G.Event_UI._Actor_GamersInRoom_Ntt);
-        this.BindUI(G.Event_UI._Actor_GamerExitRoom_Ntt);
-        this.BindUI(G.Event_UI._Actor_GamerReady_Ntt);
-        this.BindUI(G.Event_UI._Actor_GameStart_Ntt);
-        this.BindUI(G.Event_UI._Actor_AuthorityGrabLandlord_Ntt);
-        this.BindUI(G.Event_UI._Actor_GamerGrabLandlordSelect_Ntt);
+        this.BindUI(G.UI_Event._Actor_GamerEnterRoom_Ntt);
+        this.BindUI(G.UI_Event._Actor_GamersInRoom_Ntt);
+        this.BindUI(G.UI_Event._Actor_GamerExitRoom_Ntt);
+        this.BindUI(G.UI_Event._Actor_GamerReady_Ntt);
+        this.BindUI(G.UI_Event._Actor_GameStart_Ntt);
+        this.BindUI(G.UI_Event._Actor_AuthorityGrabLandlord_Ntt);
+        this.BindUI(G.UI_Event._Actor_GamerGrabLandlordSelect_Ntt);
 
-        this.BindUI(G.Event_UI.ShowSelf);
-        this.BindUI(G.Event_UI.ENTER_ROOM);
-        this.BindUI(G.Event_UI.OUT_ROOM);
-        this.BindUI(G.Event_UI.READY);
+        this.BindUI(G.UI_Event.ShowSelf);
+        this.BindUI(G.UI_Event.ENTER_ROOM);
+        this.BindUI(G.UI_Event.OUT_ROOM);
+        this.BindUI(G.UI_Event.READY);
     },
 
     Execute(eventCode, message) {
         switch (eventCode) {
-            case G.Event_UI._Actor_GamerEnterRoom_Ntt:
+            case G.UI_Event._Actor_GamerEnterRoom_Ntt:
                 this._Actor_GamerEnterRoom_Ntt(message);
                 break;
-            case G.Event_UI._Actor_GamersInRoom_Ntt:
+            case G.UI_Event._Actor_GamersInRoom_Ntt:
                 this._Actor_GamersInRoom_Ntt(message);
                 break;
-            case G.Event_UI._Actor_GamerExitRoom_Ntt:
+            case G.UI_Event._Actor_GamerExitRoom_Ntt:
                 this._Actor_GamerExitRoom_Ntt(message);
                 break;
-            case G.Event_UI._Actor_GamerReady_Ntt:
+            case G.UI_Event._Actor_GamerReady_Ntt:
                 this._Actor_GamerReady_Ntt(message);
                 break;
-            case G.Event_UI._Actor_GameStart_Ntt:
+            case G.UI_Event._Actor_GameStart_Ntt:
                 this._Actor_GameStart_Ntt(message);
                 break;
-            case G.Event_UI._Actor_AuthorityGrabLandlord_Ntt:
+            case G.UI_Event._Actor_AuthorityGrabLandlord_Ntt:
                 this._Actor_AuthorityGrabLandlord_Ntt(message);
                 break;
-            case G.Event_UI._Actor_GamerGrabLandlordSelect_Ntt:
+            case G.UI_Event._Actor_GamerGrabLandlordSelect_Ntt:
                 this._Actor_GamerGrabLandlordSelect_Ntt(message);
                 break;
-            case G.Event_UI.ShowSelf:
+            case G.UI_Event.ShowSelf:
                 this.ShowSelf();
                 break;
-            case G.Event_UI.ENTER_ROOM:
+            case G.UI_Event.ENTER_ROOM:
                 this.EnterRoom(message);  
                 break;
-            case G.Event_UI.OUT_ROOM:
+            case G.UI_Event.OUT_ROOM:
                 this.OutRoom(message);
                 break;           
-            case G.Event_UI.READY:
+            case G.UI_Event.READY:
                 this.Ready(message);
                 break;
             default:
@@ -77,7 +77,7 @@ cc.Class({
     _Actor_GamerEnterRoom_Ntt(message){
         //匹配中 取消匹配panel
         if(G.GM.RoomState == Enums.RoomState.Matching){
-            this.DispatchUI(G.Event_UI.Fight_ShowMatchingPanel, false);
+            this.DispatchUI(G.UI_Event.Fight_ShowMatchingPanel, false);
             G.GM.RoomState = Enums.RoomState.Playing;
         }
 
@@ -114,7 +114,7 @@ cc.Class({
     _Actor_GameStart_Ntt(message){
         console.log('GameStart StartFaPai');
         G.GameModel.GameState = Enums.GameState.Palying;
-        this.DispatchUI(G.Event_UI.Fight_ResetGameStartUI);
+        this.DispatchUI(G.UI_Event.Fight_ResetGameStartUI);
         for(var i = 0; i < message.GamersCards.length; i++){
             this.CheckPlayer(i);
             var player = this.GetPlayer(i);
@@ -179,7 +179,7 @@ cc.Class({
         this.playerSelf.EnterRoom();
 
         if(!gamer.IsReady){
-            this.DispatchUI(G.Event_UI.Fight_ShowReadyPanel, true);
+            this.DispatchUI(G.UI_Event.Fight_ShowReadyPanel, true);
         }
     },
 

@@ -4,15 +4,15 @@ cc.Class({
     properties: {
     },
 
-    Init: function () {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI.Canvas_ShowMain);
+        this.BindUI(G.UI_Event.Canvas_ShowMain);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Canvas_ShowMain:
+            case G.UI_Event.Canvas_ShowMain:
                 this.ClosePanel(message);
                 break;
             default:

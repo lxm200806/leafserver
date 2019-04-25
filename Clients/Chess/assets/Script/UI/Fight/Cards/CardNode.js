@@ -8,7 +8,7 @@ cc.Class({
     properties: {
     },
 
-    Init: function(){
+    XFInit(){
         this.InitData();
 
     },

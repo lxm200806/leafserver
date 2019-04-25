@@ -6,15 +6,15 @@ cc.Class({
         psd_input:    cc.EditBox,
     },
 
-    Init() {
+    XFInit() {
         this.InitData();
 
-        this.BindUI(G.Event_UI.Login_ShowRegPanel);
+        this.BindUI(G.UI_Event.Login_ShowRegPanel);
     },
 
     Execute(eventCode, message){
         switch (eventCode) {
-            case G.Event_UI.Login_ShowRegPanel:
+            case G.UI_Event.Login_ShowRegPanel:
                 this.ClosePanel(message);
                 break;
         
@@ -46,15 +46,18 @@ cc.Class({
         //             return;
         //         }
         //         self.TipBar('注册成功');
-        //         self.DispatchUI(G.Event_UI.Login_ShowRegPanel, false);
+        //         self.DispatchUI(G.UI_Event.Login_ShowRegPanel, false);
         //     });
         // });
 
-        this.DispatchNet(cc.xf.Net_Event._C2R_Register_Req,{name:name, password:psd});
+        G.NetManager.Instance.Open(null, (ev)=>{
+            this.DispatchNet(cc.xf.Net_Event._C2R_Register_Req,{Account:name, Password:psd});
+        });
+
 
     },
 
     OnCloseClicked: function(){
-        this.DispatchUI(G.Event_UI.Login_ShowRegPanel, false);
+        this.DispatchUI(G.UI_Event.Login_ShowRegPanel, false);
     },
 });
