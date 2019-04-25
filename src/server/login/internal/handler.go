@@ -28,9 +28,11 @@ func aC2R_Register_Req(args []interface{})  {
 	log.Debug("PassWord %v", m.Password)
 
 	// 给发送者回应
-	a.WriteMsg(&msg.R2C_Register_Ack{
+
+	retBuf := &msg.R2C_Register_Ack{
 		Error:0,
 		Message:"ok",
-	})
+	}
+	a.WriteMsg(retBuf)
 
 }
