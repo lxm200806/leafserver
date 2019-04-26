@@ -38,8 +38,8 @@ cc.Class({
         //     var c2R_Register_Req = new G.PB._C2R_Register_Req();
         //     c2R_Register_Req.Account = name;
         //     c2R_Register_Req.Password = psd;
-        //     G.NetManager.Instance.Call(c2R_Register_Req, G.Opcode._C2R_Register_Req, (packet, net)=>{
-        //         var response = G.PB._R2C_Register_Ack.decode(packet.bytes);
+        //     G.NetManager.Instance.Call(c2R_Register_Req, G.Opcode.C2R_Register_Req, (packet, net)=>{
+        //         var response = G.PB.R2C_Register_Ack.decode(packet.bytes);
         //         net.Close();
         //         if(response.Error != 0){
         //             self.TipBar('注册失败 Error[' + response.Error + ']');

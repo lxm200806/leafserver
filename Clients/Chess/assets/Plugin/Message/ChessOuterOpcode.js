@@ -1,8 +1,8 @@
 var Opcode = cc.Enum({
-		C2R_Login_Req : 30001,
-		R2C_Login_Ack : 30002,
-		C2R_Register_Req : 1,
-		R2C_Register_Ack : 30004,
+		C2R_Login_Req : 		1,
+		R2C_Login_Ack : 		2,
+		C2R_Register_Req : 		3,
+		R2C_Register_Ack : 		4,
 		C2G_LoginGate_Req : 30005,
 		G2C_LoginGate_Ack : 30006,
 		C2G_GetUserInfo_Req : 30007,

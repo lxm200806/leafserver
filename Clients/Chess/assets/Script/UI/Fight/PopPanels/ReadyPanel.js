@@ -29,9 +29,9 @@ cc.Class({
     },
 
     OnReady(){
-        var req = new G.PB._Actor_GamerReady_Ntt();
+        var req = new G.PB.Actor_GamerReady_Ntt();
         req.UserID = G.GameModel.LocalUser.UserID;
-        G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerReady_Ntt);
+        G.NetManager.Instance.Send(req, G.Opcode.Actor_GamerReady_Ntt);
 
         this.DispatchUI(G.UI_Event.Fight_ShowReadyPanel, false);
     },

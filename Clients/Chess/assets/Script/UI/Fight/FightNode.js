@@ -24,7 +24,7 @@ cc.Class({
     },
 
     InitData(){
-        //this.DispatchUI(G.UI_Event._Actor_GameStart_Ntt, {});
+        //this.DispatchUI(G.UI_Event.Actor_GameStart_Ntt, {});
     },
 
 });

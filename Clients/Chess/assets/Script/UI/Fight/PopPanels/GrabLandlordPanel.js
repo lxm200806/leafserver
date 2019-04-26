@@ -29,37 +29,37 @@ cc.Class({
     },
 
     OnJiaoDiZhu(){
-        var req = new G.PB._Actor_GamerGrabLandlordSelect_Ntt();
+        var req = new G.PB.Actor_GamerGrabLandlordSelect_Ntt();
         req.UserID = G.GameModel.LocalUser.UserID;
         req.IsGrab = true;
-        G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
+        G.NetManager.Instance.Send(req, G.Opcode.Actor_GamerGrabLandlordSelect_Ntt);
 
         this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnQingDiZhu(){
-        var req = new G.PB._Actor_GamerGrabLandlordSelect_Ntt();
+        var req = new G.PB.Actor_GamerGrabLandlordSelect_Ntt();
         req.UserID = G.GameModel.LocalUser.UserID;
         req.IsGrab = true;
-        G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
+        G.NetManager.Instance.Send(req, G.Opcode.Actor_GamerGrabLandlordSelect_Ntt);
 
         this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnBuJiao(){
-        var req = new G.PB._Actor_GamerReady_Ntt();
+        var req = new G.PB.Actor_GamerReady_Ntt();
         req.UserID = G.GameModel.LocalUser.UserID;
         req.IsGrab = false;
-        G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
+        G.NetManager.Instance.Send(req, G.Opcode.Actor_GamerGrabLandlordSelect_Ntt);
 
         this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },
 
     OnBuQiang(){
-        var req = new G.PB._Actor_GamerReady_Ntt();
+        var req = new G.PB.Actor_GamerReady_Ntt();
         req.UserID = G.GameModel.LocalUser.UserID;
         req.IsGrab = false;
-        G.NetManager.Instance.Send(req, G.Opcode._Actor_GamerGrabLandlordSelect_Ntt);
+        G.NetManager.Instance.Send(req, G.Opcode.Actor_GamerGrabLandlordSelect_Ntt);
 
         this.DispatchUI(G.UI_Event.Fight_ShowGrabLandlordPanel, false);
     },

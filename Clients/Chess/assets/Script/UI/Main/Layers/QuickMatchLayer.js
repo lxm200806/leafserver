@@ -20,7 +20,7 @@ cc.Class({
     OnClickQuickMatch: function(){
         let self = this;
         var req = new G.PB._C2G_StartMatch_Req();
-        G.NetManager.Instance.Call(req, G.Opcode._C2G_StartMatch_Req, (packet, net)=>{
+        G.NetManager.Instance.Call(req, G.Opcode.C2G_StartMatch_Req, (packet, net)=>{
             var response = G.PB._G2C_StartMatch_Ack.decode(packet.bytes);
             if(response.Error != 0){
                 self.TipBar('匹配失败');

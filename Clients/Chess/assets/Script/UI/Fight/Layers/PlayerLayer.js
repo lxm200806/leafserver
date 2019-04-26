@@ -12,13 +12,13 @@ cc.Class({
     XFInit() {
         this.InitData();
 
-        this.BindUI(G.UI_Event._Actor_GamerEnterRoom_Ntt);
-        this.BindUI(G.UI_Event._Actor_GamersInRoom_Ntt);
-        this.BindUI(G.UI_Event._Actor_GamerExitRoom_Ntt);
-        this.BindUI(G.UI_Event._Actor_GamerReady_Ntt);
-        this.BindUI(G.UI_Event._Actor_GameStart_Ntt);
-        this.BindUI(G.UI_Event._Actor_AuthorityGrabLandlord_Ntt);
-        this.BindUI(G.UI_Event._Actor_GamerGrabLandlordSelect_Ntt);
+        this.BindUI(G.UI_Event.Actor_GamerEnterRoom_Ntt);
+        this.BindUI(G.UI_Event.Actor_GamersInRoom_Ntt);
+        this.BindUI(G.UI_Event.Actor_GamerExitRoom_Ntt);
+        this.BindUI(G.UI_Event.Actor_GamerReady_Ntt);
+        this.BindUI(G.UI_Event.Actor_GameStart_Ntt);
+        this.BindUI(G.UI_Event.Actor_AuthorityGrabLandlord_Ntt);
+        this.BindUI(G.UI_Event.Actor_GamerGrabLandlordSelect_Ntt);
 
         this.BindUI(G.UI_Event.ShowSelf);
         this.BindUI(G.UI_Event.ENTER_ROOM);
@@ -28,26 +28,26 @@ cc.Class({
 
     Execute(eventCode, message) {
         switch (eventCode) {
-            case G.UI_Event._Actor_GamerEnterRoom_Ntt:
-                this._Actor_GamerEnterRoom_Ntt(message);
+            case G.UI_Event.Actor_GamerEnterRoom_Ntt:
+                this.Actor_GamerEnterRoom_Ntt(message);
                 break;
-            case G.UI_Event._Actor_GamersInRoom_Ntt:
-                this._Actor_GamersInRoom_Ntt(message);
+            case G.UI_Event.Actor_GamersInRoom_Ntt:
+                this.Actor_GamersInRoom_Ntt(message);
                 break;
-            case G.UI_Event._Actor_GamerExitRoom_Ntt:
-                this._Actor_GamerExitRoom_Ntt(message);
+            case G.UI_Event.Actor_GamerExitRoom_Ntt:
+                this.Actor_GamerExitRoom_Ntt(message);
                 break;
-            case G.UI_Event._Actor_GamerReady_Ntt:
-                this._Actor_GamerReady_Ntt(message);
+            case G.UI_Event.Actor_GamerReady_Ntt:
+                this.Actor_GamerReady_Ntt(message);
                 break;
-            case G.UI_Event._Actor_GameStart_Ntt:
-                this._Actor_GameStart_Ntt(message);
+            case G.UI_Event.Actor_GameStart_Ntt:
+                this.Actor_GameStart_Ntt(message);
                 break;
-            case G.UI_Event._Actor_AuthorityGrabLandlord_Ntt:
-                this._Actor_AuthorityGrabLandlord_Ntt(message);
+            case G.UI_Event.Actor_AuthorityGrabLandlord_Ntt:
+                this.Actor_AuthorityGrabLandlord_Ntt(message);
                 break;
-            case G.UI_Event._Actor_GamerGrabLandlordSelect_Ntt:
-                this._Actor_GamerGrabLandlordSelect_Ntt(message);
+            case G.UI_Event.Actor_GamerGrabLandlordSelect_Ntt:
+                this.Actor_GamerGrabLandlordSelect_Ntt(message);
                 break;
             case G.UI_Event.ShowSelf:
                 this.ShowSelf();
@@ -74,7 +74,7 @@ cc.Class({
         this.m_UserIDSeatIDTable = new Map();
     },
 
-    _Actor_GamerEnterRoom_Ntt(message){
+    Actor_GamerEnterRoom_Ntt(message){
         //匹配中 取消匹配panel
         if(G.GM.RoomState == Enums.RoomState.Matching){
             this.DispatchUI(G.UI_Event.Fight_ShowMatchingPanel, false);
@@ -93,25 +93,25 @@ cc.Class({
         }
     },
 
-    _Actor_GamersInRoom_Ntt(message){
+    Actor_GamersInRoom_Ntt(message){
         for(var i = 0; i < message.Gamers.length; i++){
             var gamer = message.Gamers[i];
             this.EnterRoom(gamer);
         }
     },
 
-    _Actor_GamerExitRoom_Ntt(message){
+    Actor_GamerExitRoom_Ntt(message){
         this.OutRoom(message.UserID);
     },
 
-    _Actor_GamerReady_Ntt(message){
+    Actor_GamerReady_Ntt(message){
         G.GameModel.GameState = Enums.GameState.Ready;
 
         var siteID = this.GetSitIDByUserID(message.UserID);
         this.Ready(siteID);
     },
 
-    _Actor_GameStart_Ntt(message){
+    Actor_GameStart_Ntt(message){
         console.log('GameStart StartFaPai');
         G.GameModel.GameState = Enums.GameState.Palying;
         this.DispatchUI(G.UI_Event.Fight_ResetGameStartUI);
@@ -126,13 +126,13 @@ cc.Class({
         }
     },
 
-    _Actor_AuthorityGrabLandlord_Ntt(message){
+    Actor_AuthorityGrabLandlord_Ntt(message){
         this.CheckPlayerByUserID(message.UserID);
         var player = this.GetPlayerByUserID(message.UserID);
         player.TipGrabLandlord();
     },
 
-    _Actor_GamerGrabLandlordSelect_Ntt(message){
+    Actor_GamerGrabLandlordSelect_Ntt(message){
         this.CheckPlayerByUserID(message.UserID);
         var player = this.GetPlayerByUserID(message.UserID);
         if(message.IsGrab){
