@@ -1,10 +1,9 @@
 {
-  "ver": "2.2.0",
+  "ver": "1.0.0",
   "uuid": "990822bd-3feb-4a7f-b1f0-c5bfc579a64d",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": false,
   "subMetas": {
     "text_tongyiwenzi": {
       "ver": "1.0.3",

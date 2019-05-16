@@ -1,10 +1,9 @@
 {
-  "ver": "2.2.0",
+  "ver": "1.0.0",
   "uuid": "5febb5c3-4c1d-4f77-bcd2-caf8728c22f0",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": false,
   "subMetas": {
     "biaoshi_fangzhu2": {
       "ver": "1.0.3",

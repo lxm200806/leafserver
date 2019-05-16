@@ -46,7 +46,7 @@ func C2R_Register_Req(args []interface{})  {
 	m := args[0].(*msg.C2R_Register_Req)
 	a := args[1].(gate.Agent)
 	account := m.Account
-	password := m.Password
+	//password := m.Password
 	log.Debug("receive register account %v", account)
 
 	reg := regexp.MustCompile(`/^[a-zA-Z\d]\w{2,10}[a-zA-Z\d]$/`)

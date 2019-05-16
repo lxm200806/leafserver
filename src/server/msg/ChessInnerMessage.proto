@@ -1,0 +1,178 @@
+#region Realm-Gate
+
+    message _R2G_GetLoginKey_Req // IRequest
+    {
+        required long UserID = 1;
+    }
+
+    message _G2R_GetLoginKey_Ack // IResponse
+    {
+        required long Key = 1;
+    }
+
+    message _R2G_PlayerKickOut_Req // IRequest
+    {
+        required long UserID = 1;
+    }
+
+    message _G2R_PlayerKickOut_Ack // IResponse
+    {
+
+    }
+
+#endregion
+
+#region Gate-Realm
+
+    message _G2R_PlayerOnline_Ntt // IMessage
+    {
+        required long UserID = 1;
+        required int GateAppID = 2;
+    }
+
+    message _G2R_PlayerOffline_Ntt // IMessage
+    {
+        required long UserID = 1;
+    }
+
+#endregion
+
+#region Gate-Center
+
+    message _G2CT_Login_Req // IRequest
+    {
+        required int64 UserID = 1;
+    }
+
+    message _G2CT_Login_Ack // IResponse
+    {
+    }
+
+    message _G2CT_GetPlayerInfo_Req // IRequest
+    {
+        required int64 UserID = 1;
+    }
+
+    message _G2CT_GetPlayerInfo_Ack // IResponse
+    {
+        required string NickName = 1;
+        required int64 Money = 2;
+    }
+
+    message _G2CT_PlayerOnline_Ntt // IMessage
+    {
+        required long UserID = 1;
+    }
+
+    message _G2CT_PlayerOffline_Ntt // IMessage
+    {
+        required long UserID = 1;
+    }
+
+#endregion
+
+#region Gate-Match
+
+    message _G2M_PlayerEnterMatch_Req // IRequest
+    {
+        required long PlayerID = 1;
+        required long UserID = 2;
+        required long SessionID = 3;
+    }
+
+    message _M2G_PlayerEnterMatch_Ack // IResponse
+    {
+
+    }
+
+    message _G2M_PlayerExitMatch_Req // IRequest
+    {
+        required long UserID = 1;
+    }
+
+    message _M2G_PlayerExitMatch_Ack // IResponse
+    {
+
+    }
+
+#endregion
+
+#region Gate-Map
+
+    message _Actor_PlayerExitRoom_Req //IActorRequest
+    {
+        required long UserID = 1;
+    }
+
+    message _Actor_PlayerExitRoom_Ack //IActorResponse
+    {
+
+    }
+
+#endregion
+
+#region Match-Gate
+    
+    message _Actor_MatchSuccess_Ntt // IActorMessage
+    {
+        required long GamerID = 1;
+    }
+
+#endregion
+
+#region Match-Map
+
+    message _MH2MP_CreateRoom_Req // IRequest
+    {
+
+    }
+
+    message _MP2MH_CreateRoom_Ack // IResponse
+    {
+        required long RoomID = 1;
+    }
+
+    message _Actor_PlayerEnterRoom_Req // IActorRequest
+    {
+        required long PlayerID = 1;
+        required long UserID = 2;
+        required long SessionID = 3;
+    }
+
+    message _Actor_PlayerEnterRoom_Ack // IActorResponse
+    {
+        required long GamerID = 1;
+    }
+
+#endregion
+
+#region Map-Match
+
+    message _MP2MH_PlayerExitRoom_Ntt // IMessage
+    {
+        required long RoomID = 1;
+        required long UserID = 2;
+    }
+
+    message _MP2MH_SyncRoomState_Ntt // IMessage
+    {
+        required long RoomID = 1;
+        required CRoomState State = 2;
+    }
+
+#endregion
+
+#region Map-Center
+
+    message _MP2CT_GetPlayerInfo_Req // IRequest
+    {
+        required int64 UserID = 1;
+    }
+
+    message _MP2CT_GetPlayerInfo_Ack // IResponse
+    {
+        optional string NickName = 1;
+        optional int64 Money = 2;
+    }
+
+#endregion
