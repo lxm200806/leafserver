@@ -1,8 +1,11 @@
 package mysqldbmgr
 
-import "database/sql"
+import (
+	"database/sql"
+	"fmt"
+)
 import _ "github.com/go-sql-driver/mysql"
-import "server/db/model"
+import _ "server/db/model"
 
 func init() {
 	Connect()
@@ -29,22 +32,14 @@ func Instance() *sql.DB {
 	return db
 }
 
-func GetUserByUserName(username string) {
-	db := mysqldbmgr.Instance()
+func GetUserByUserName(username string) I {
+	db := Instance()
 	
-	user := U
-	
-	rows, err := db.Query()
-	rows.Close()
-	
-	if err != nil {
-		panic(err)
-	}
+	stmt,_ := db.Prepare("select * from user where name == ?")
+	defer stmt.Close()
 
-}
+	row = stmt.QueryRow(username).Scan()
+	return row
 
-type 
 
-func Example() {
-	
 }
